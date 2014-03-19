@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/progressbar_waiting1"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting2"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting3"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting4"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting5"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting6"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting7"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting8"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting9"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting10"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting11"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/progressbar_waiting12"
+        android:duration="200"/>
+
+</animation-list>

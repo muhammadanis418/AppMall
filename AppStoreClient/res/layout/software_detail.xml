@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@color/background_color"
+        android:padding="0.0px" >
+
+        <ViewStub
+            android:id="@+id/viewstub"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout="@layout/software_detail_stubview"
+            
+    		android:background="@color/red" />
+
+        <include layout="@layout/waiting_view" />
+    </RelativeLayout>
+
+    <include layout="@layout/no_network_view" />
+
+</LinearLayout>

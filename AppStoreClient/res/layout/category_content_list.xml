@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	<cn.koolcloud.ipos.appstore.views.ElasticHScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#D1EEEE"
+	    android:layout_margin="5dp"
+	    android:scrollbars="none" >
+	
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@android:color/background_light"
+	        android:orientation="horizontal" >
+	
+	        <ImageView
+	            android:layout_width="@dimen/ad_promotion_image_view_width"
+	            android:layout_height="@dimen/ad_promotion_image_view_height"
+	            android:id="@+id/adOneImageView"
+	            android:src="@drawable/pic_ad_default"
+	            android:clickable="true"
+	            android:padding="3dp"
+	            android:background="@drawable/ad_selectable_background" />
+	
+	        <ImageView
+	            android:layout_width="@dimen/ad_promotion_image_view_width"
+	            android:layout_height="@dimen/ad_promotion_image_view_height"
+	            android:src="@drawable/pic_ad_default"
+	            android:id="@+id/adTwoImageView"
+	            android:padding="3dp"
+	            android:background="@drawable/ad_selectable_background" />
+	
+	        <ImageView
+	            android:layout_width="@dimen/ad_promotion_image_view_width"
+	            android:layout_height="@dimen/ad_promotion_image_view_height"
+	            android:src="@drawable/pic_ad_default"
+	            android:id="@+id/adThreeImageView"
+	            android:padding="3dp"
+	            android:background="@drawable/ad_selectable_background" />
+	
+	        <ImageView
+	            android:layout_width="@dimen/ad_promotion_image_view_width"
+	            android:layout_height="@dimen/ad_promotion_image_view_height"
+	            android:src="@drawable/pic_ad_default"
+	            android:id="@+id/adFourImageView"
+	            android:padding="3dp"
+	            android:background="@drawable/ad_selectable_background" />
+	
+	        <!-- <ImageView
+	            android:layout_width="@dimen/ad_promotion_image_view_width"
+	            android:layout_height="@dimen/ad_promotion_image_view_height"
+	            android:src="@drawable/pic_ad_default"
+	            android:id="@+id/adFiveImageView"
+	            android:clickable="true"
+	            android:layout_margin="5dp"
+	            android:background="@drawable/ad_selectable_background" /> -->
+	    </LinearLayout>
+	
+	</cn.koolcloud.ipos.appstore.views.ElasticHScrollView>
+    <include 
+        layout="@layout/appstore_content_list"
+        android:id="@+id/category_content_layout" />
+</LinearLayout>

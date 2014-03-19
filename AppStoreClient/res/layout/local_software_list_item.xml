@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/general_software_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="120.0px"
+    android:minHeight="120.0px" >
+
+    <RelativeLayout
+        android:id="@+id/icon_bg"
+        android:layout_width="114.0px"
+        android:layout_height="114.0px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3.0px" >
+
+        <ImageView
+            android:id="@+id/software_icon"
+            android:layout_width="@dimen/normal_list_item_icon_size"
+            android:layout_height="@dimen/normal_list_item_icon_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18.0px"
+            android:layout_marginTop="18.0px" />
+
+        <ImageView
+            android:id="@+id/sub_triangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/software_item_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10.0px"
+        android:layout_marginTop="10.0px"
+        android:layout_toRightOf="@id/icon_bg"
+        android:ellipsize="end"
+        android:maxWidth="165.0px"
+        android:singleLine="true"
+        android:text="手机QQ "
+        android:textColor="#ff494949"
+        android:textSize="25.0px" />
+
+    <TextView
+        android:id="@+id/software_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/software_item_name"
+        android:layout_below="@id/software_item_name"
+        android:layout_marginTop="5.0px"
+        android:singleLine="true"
+        android:text="@string/version"
+        android:textColor="#ff969696"
+        android:textSize="17.0px" />
+
+    <TextView
+        android:id="@+id/software_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/software_version_text"
+        android:layout_marginLeft="15.0px"
+        android:layout_toRightOf="@id/software_version_text"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="1.1.1"
+        android:textColor="#ff969696"
+        android:textSize="17.0px" />
+
+    <TextView
+        android:id="@+id/software_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/software_item_name"
+        android:layout_below="@id/software_version_text"
+        android:layout_marginTop="5.0px"
+        android:text=""
+        android:textColor="#ff969696"
+        android:textSize="17.0px" />
+
+    <Button
+        android:id="@+id/bt_uninstall"
+        android:layout_width="@dimen/download_button_w"
+        android:layout_height="@dimen/download_button_h"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3.0px"
+        android:layout_marginRight="0.0px"
+        android:background="@drawable/btn_xiazai"
+        android:gravity="center"
+        android:text="@string/uninstall"
+        android:textColor="@color/go_continue"
+        android:textSize="@dimen/download_bt_text_size" />
+
+</RelativeLayout>

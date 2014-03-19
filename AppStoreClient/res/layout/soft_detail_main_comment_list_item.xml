@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="80.0px"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="80.0px"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/user_header"
+            android:layout_width="60.0px"
+            android:layout_height="60.0px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/moren_touxiang" />
+
+        <ImageView
+            android:id="@+id/comment_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/pinglunzhixing2"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/soft_detail_comment_item_nickname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20.0px"
+                android:textColor="#ffaaaaaa"
+                android:textSize="17.0px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RatingBar
+                android:id="@+id/soft_detail_comment_item_rating"
+                style="@style/RatingBar_modi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:numStars="5"
+                android:rating="3.0" />
+
+            <TextView
+                android:id="@+id/soft_detail_comment_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0px"
+                android:singleLine="true"
+                android:textColor="#ffc6c6c6"
+                android:textSize="14.0px" />
+
+            <TextView
+                android:id="@+id/soft_detail_comment_item_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0px"
+                android:singleLine="true"
+                android:textColor="#ffc6c6c6"
+                android:textSize="14.0px" />
+
+            <TextView
+                android:id="@+id/soft_detail_comment_item_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0px"
+                android:singleLine="true"
+                android:textColor="#ffc6c6c6"
+                android:textSize="14.0px" />
+
+            <TextView
+                android:id="@+id/soft_detail_comment_item_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0px"
+                android:singleLine="true"
+                android:textColor="#ffc6c6c6"
+                android:textSize="14.0px"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/soft_detail_comment_item_text"
+            style="@style/sw_detail_normal_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false" />
+    </LinearLayout>
+
+</LinearLayout>

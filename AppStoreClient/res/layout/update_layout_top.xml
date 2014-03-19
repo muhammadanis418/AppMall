@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="54.0px"
+    android:background="@drawable/title_bg_lan" >
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50.0px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0px"
+        android:gravity="left|center"
+        android:textColor="#ff4f718d"
+        android:textSize="20.0px" />
+
+    <RelativeLayout
+        android:id="@+id/update_all_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="33.0px"
+        android:paddingRight="8.0px" >
+
+        <TextView
+            android:id="@+id/update_all"
+            android:layout_width="wrap_content"
+            android:layout_height="37.0px"
+            android:background="@drawable/btn_normal"
+            android:gravity="center"
+            android:paddingLeft="24.0px"
+            android:paddingRight="24.0px"
+            android:text="@string/update_all"
+            android:textColor="@drawable/btn_view_ignore_text_color"
+            android:textSize="17.0px" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_update_all"
+            style="@style/progressBar_activity_wait"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/update_all"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/view_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="37.0px"
+        android:layout_alignTop="@+id/update_all_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10.0px"
+        android:layout_toLeftOf="@+id/update_all_layout"
+        android:background="@drawable/btn_normal"
+        android:gravity="center"
+        android:paddingLeft="24.0px"
+        android:paddingRight="24.0px"
+        android:text="@string/view_ignore"
+        android:textColor="@drawable/btn_view_ignore_text_color"
+        android:textSize="17.0px" />
+
+</RelativeLayout>

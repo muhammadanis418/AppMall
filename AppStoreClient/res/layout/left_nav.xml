@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/left_nav_width_land"
+    android:layout_height="fill_parent"
+    android:padding="0.0px"
+    android:background="@color/left_background_color" >
+
+    <LinearLayout
+        android:layout_width="@dimen/left_nav_width_land"
+        android:layout_height="fill_parent"
+        android:gravity="top|center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/left_nav_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="top|center"
+                android:orientation="vertical" />
+
+            <!-- <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:src="@+drawable/lan_touying" /> -->
+
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/left_nav_layout"
+                android:layout_marginTop="22.0px"
+                android:src="@drawable/jiantou"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

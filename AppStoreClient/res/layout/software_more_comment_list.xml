@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0px" >
+
+        <TextView
+            style="@style/sw_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0px"
+            android:text="@string/comment" />
+
+        <TextView
+            android:id="@+id/close_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_normal"
+            android:gravity="center"
+            android:padding="10.0px"
+            android:text="@string/close"
+            android:textColor="#ff767676"
+            android:textSize="18.0px" />
+        
+    </RelativeLayout>
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="1.0px"
+		android:background="#ffc0c6d3" />
+    <cn.koolcloud.ipos.appstore.views.AppStoreListView
+        android:id="@+id/sw_detail_more_comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:dividerHeight="15.0px"
+        android:fastScrollEnabled="true"
+        android:footerDividersEnabled="true"
+        android:listSelector="@drawable/trans"
+        android:padding="20.0px" />
+
+</LinearLayout>

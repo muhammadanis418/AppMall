@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_nav_item_height">70.0px</dimen>
+    <dimen name="search_box_width">280.0px</dimen>
+    
+    <!-- app details comment summary size -->
+    <!-- <dimen name="comment_summary_root_width">430.0px</dimen>
+    <dimen name="comment_summary_avarage_root_width">135.0px</dimen>
+    <dimen name="comment_summary_avarage_root_padding_left">15.0px</dimen>
+    <dimen name="comment_summary_avarage_root_padding_right">5.0px</dimen> -->
+</resources>

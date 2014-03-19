@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tran_color">#00000000</color>
+    <color name="report_gray_color">#ff999999</color>
+    <color name="actionbar_background_light">#ccffffff</color>
+    <color name="actionbar_background_dark">#cc000000</color>
+    <color name="drag_active_color">#80cccccc</color>
+    <color name="left_nav_bg">#ff0c84d6</color>
+    <color name="top_tab_indicator_bg">#ff5fb7f0</color>
+    <color name="top_tab_indicator">#ffffffff</color>
+    <color name="top_tab_text_selected">#ffffffff</color>
+    <color name="top_tab_text">#ff83ceff</color>
+    <color name="go_continue">#ff487da2</color>
+    <color name="stop_pause">#ff767676</color>
+    <color name="main_gray_color">#ff494949</color>
+    <color name="sw_text_old_size">#ffadb6bc</color>
+    <color name="sw_text_new_size">#ff5ca300</color>
+    <color name="sw_text_icon_left">#ff4f6373</color>
+    <color name="sw_download_text">#ffbdbec0</color>
+    <color name="sw_download_count_text">#ff627787</color>
+    <color name="sw_detail_title">#ff025da1</color>
+    <color name="sw_detail_text">#ff4f4f4f</color>
+    <color name="actionbar_normal_font_color">#ff3a4449</color>
+    <color name="software_item_name">#ff262626</color>
+    <color name="software_item_info">#ffadb0b3</color>
+    <color name="left_nav_text">#ff4f718d</color>
+    <color name="left_nav_text_selected">#ff027dcd</color>
+    <color name="background_color">#fff5f8fa</color>
+    <color name="setting_disable_color">#ffa0a0a0</color>
+    <color name="patchsize_text_color">#ff5ca300</color>
+    <color name="strikeout_text_color">#ffadb6bc</color>
+    <color name="dlsize_text_color">#ff969696</color>
+    <color name="view_ignore_text_able_color">#ff4f7e8d</color>
+    <color name="view_ignore_text_unable_color">#ffaeaeae</color>
+    <color name="share_edit_text_color">#ff9f9f9f</color>
+    <color name="share_edit_text_red_color">#ffd51215</color>
+    <color name="share_text_color">#ff3273a0</color>
+    <color name="detail_mark_star_text">#ff9f9f9f</color>
+    <color name="detail_title_backgroud">#ff017ecd</color>
+    <color name="alertdialog_title_text_color">#ffffffff</color>
+    <color name="alertdialog_title_background_color">#ff017ecd</color>
+    <color name="alertdialog_normal_text_color">#ff3273a0</color>
+    <color name="alertdialog_error_tips_text_color">#ffd51113</color>
+    <color name="verifycode_tips_text_color">#ff9f9f9f</color>
+    <color name="alertdailog_background_color">#fff4f8f9</color>
+    <color name="left_background_color">#FFD4DDE5</color>
+    
+    <!-- action bar -->
+    <color name="android_green">#FFA4C639</color>
+    <color name="honeycombish_blue">#FF58BAED</color>
+    <color name="soft_grey">#FF777777</color>
+    <color name="background">#FFEFEFEF</color>
+    
+    <color name="red">#FFFF0000</color>
+    <color name="black">#FF000000</color>
+    <color name="about_gray_text">#FF999999</color>
+    
+    <!-- smooth progress bar -->
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_blue_dark</item>
+        <!-- <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item> -->
+    </integer-array>
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+</resources>

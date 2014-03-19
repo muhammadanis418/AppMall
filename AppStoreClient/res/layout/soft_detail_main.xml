@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30.0px"
+        android:paddingRight="30.0px" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0px" >
+
+            <TextView
+                android:id="@+id/sw_main_introduce_title"
+                style="@style/sw_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/introduce" />
+
+            <TextView
+                android:id="@+id/sw_main_introduce"
+                style="@style/sw_main_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/sw_main_introduce_title"
+                android:layout_below="@+id/sw_main_introduce_title"
+                android:layout_marginTop="10.0px"
+                android:lineSpacingMultiplier="1.3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sw_main_new_feature_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0px"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/sw_main_new_feature_title"
+                style="@style/sw_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/new_feature" />
+
+            <TextView
+                android:id="@+id/sw_main_new_feature"
+                style="@style/sw_main_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/sw_main_new_feature_title"
+                android:layout_below="@+id/sw_main_new_feature_title"
+                android:layout_marginTop="10.0px"
+                android:lineSpacingMultiplier="1.3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0px" >
+
+            <TextView
+                android:id="@+id/sw_main_screen_capture_title"
+                style="@style/sw_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/sw_snapshot" />
+
+            <RelativeLayout
+                android:id="@+id/sw_main_gallery_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sw_main_screen_capture_title"
+                android:layout_marginTop="10.0px"
+                android:background="@drawable/sw_main_jietu_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:padding="14.0px" >
+				
+                <include layout="@layout/ad_images"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0px"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sw_main_comment_title"
+                style="@style/sw_main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comment_marks" />
+
+            <include layout="@layout/soft_detail_main_comment" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/software_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:visibility="visible" >
+
+    <fragment
+        android:id="@+id/software_detail_left"
+        android:layout_width="@dimen/software_detail_left_width"
+        android:layout_height="fill_parent"
+        class="cn.koolcloud.ipos.appstore.fragment.SoftwareDetailLeftFragment" />
+
+    <FrameLayout
+        android:id="@+id/software_main_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <fragment
+            android:id="@+id/software_detail_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="cn.koolcloud.ipos.appstore.fragment.SoftwareDetailMainFragment" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color" >
+
+    <cn.koolcloud.ipos.appstore.views.AppStoreListView
+        android:id="@+id/normal_list_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2.0px"
+        android:cacheColorHint="@drawable/trans"
+        android:columnWidth="250.0px"
+        android:divider="@drawable/divider_line"
+        android:dividerHeight="0.0px"
+        android:fastScrollEnabled="true"
+        android:gravity="center"
+        android:horizontalSpacing="0.0px"
+        android:listSelector="@drawable/trans"
+        android:paddingBottom="0.0px"
+        android:paddingLeft="10.0px"
+        android:paddingRight="10.0px"
+        android:paddingTop="8.0px" />
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_view" />
+
+    <include layout="@layout/no_network_view" />
+
+</FrameLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/left_nav_item_selected"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingLeft="8.0px" >
+
+    <LinearLayout
+        android:id="@+id/left_nav_item_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/left_nav_item_height"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="13.0px" >
+
+            <ImageView
+                android:id="@+id/left_menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20.0px"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/left_menu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/left_nav_text"
+                android:textSize="25.0px" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="#ffc0c6d3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/left_menu_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10.0px"
+        android:layout_marginTop="12.0px"
+        android:background="@drawable/num_tips"
+        android:gravity="center"
+        android:paddingBottom="2.0px"
+        android:paddingLeft="0.0px"
+        android:paddingRight="0.0px"
+        android:paddingTop="0.0px"
+        android:text="12"
+        android:textColor="#ffffffff"
+        android:textSize="15.0px"
+        android:visibility="invisible" />
+
+</RelativeLayout>

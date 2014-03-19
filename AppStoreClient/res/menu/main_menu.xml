@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- custom -->
+	<item android:id="@+id/menu_search" android:showAsAction="ifRoom"
+		android:title="@string/action_label_search" android:actionViewClass="com.actionbarsherlock.widget.SearchView" />
+	<!-- icon -->
+	<item android:id="@+id/menu_setting" android:showAsAction="ifRoom"
+		android:title="@string/action_label_setting" android:icon="@drawable/caidan_icon" >
+	    <menu>
+	        <!--  
+			<item android:id="@+id/menu_setting_login" 
+			    android:title="@string/action_label_setting_login" />
+			-->
+			<item android:id="@+id/menu_setting_check_update" 
+			    android:title="@string/action_label_menu_setting_update" />
+			<item android:id="@+id/menu_setting_abount" 
+			    android:title="@string/action_label_menu_setting_abount" />
+			<!-- 
+			<item android:id="@+id/menu_setting_feedback" 
+			    android:title="@string/action_label_setting_feedback" />
+			-->
+			<item android:id="@+id/menu_setting_settings" 
+			    android:title="@string/action_label_setting_settings" />
+			    
+			<item android:id="@+id/menu_setting_exit" 
+			    android:title="@string/action_label_setting_exit" />
+		</menu>
+	</item>
+</menu>

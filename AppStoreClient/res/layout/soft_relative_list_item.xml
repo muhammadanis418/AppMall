@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/sw_relative_icon"
+            android:layout_width="@dimen/normal_list_item_icon_size"
+            android:layout_height="@dimen/normal_list_item_icon_size"
+            android:layout_marginLeft="23.0px"
+            android:layout_marginTop="13.0px"
+            android:src="@drawable/moren_icon" />
+
+        <TextView
+            android:id="@+id/sw_relative_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0px"
+            android:layout_marginTop="15.0px"
+            android:layout_toRightOf="@+id/sw_relative_icon"
+            android:ellipsize="marquee"
+            android:maxWidth="165.0px"
+            android:singleLine="true"
+            android:text="手机QQ "
+            android:textColor="#ff49515c"
+            android:textSize="18.0px" />
+
+        <RatingBar
+            android:id="@+id/sw_relative_rating"
+            style="@style/RatingBar_modi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sw_relative_name"
+            android:layout_below="@+id/sw_relative_name"
+            android:layout_marginBottom="5.0px"
+            android:layout_marginTop="3.0px"
+            android:background="@null"
+            android:numStars="5"
+            android:rating="3.0" />
+
+        <ImageView
+            android:id="@+id/hd_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_relative_name"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="5.0px"
+            android:layout_toRightOf="@+id/sw_relative_rating"
+            android:src="@drawable/hd_tag" />
+
+        <TextView
+            android:id="@+id/sw_relative_down_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/sw_relative_name"
+            android:layout_below="@+id/sw_relative_rating"
+            android:text=""
+            android:textColor="#ff969696"
+            android:textSize="14.0px" />
+    </RelativeLayout>
+
+</LinearLayout>

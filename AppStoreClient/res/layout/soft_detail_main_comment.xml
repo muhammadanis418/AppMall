@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20.0px"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sw_main_comment_add_bt"
+        android:layout_width="166.0px"
+        android:layout_height="42.0px"
+        android:background="@drawable/btn_detail"
+        android:text="@string/add_comment"
+        android:textColor="#ff487da2"
+        android:textSize="19.0px"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/sw_main_comment_detail"
+        android:layout_width="@dimen/comment_summary_root_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0px"
+        android:background="@drawable/comment_edge"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/comment_summary_avarage_root_width"
+            android:layout_height="fill_parent"
+            android:paddingLeft="@dimen/comment_summary_avarage_root_padding_left"
+            android:paddingRight="@dimen/comment_summary_avarage_root_padding_right" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7.0px"
+                    android:text="@string/average_marks" />
+
+                <TextView
+                    android:id="@+id/sw_main_comment_marks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7.0px"
+                    android:text="0"
+                    android:textColor="#ff56bdff"
+                    android:textSize="30.0px" />
+
+                <RatingBar
+                    android:id="@+id/sw_main_comment_rating"
+                    style="@style/RatingBar_modi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7.0px"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="0.0" />
+
+                <TextView
+                    android:id="@+id/sw_main_comment_rating_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/sw_main_comment_all_bt"
+                    android:layout_width="65.0px"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/all_comment"
+                    android:textColor="#ff487da2"
+                    android:textSize="20.0px"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="10.0px"
+                    android:layout_height="fill_parent"
+                    android:background="#ffaad9e0"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/sw_main_comment_current_bt"
+                    android:layout_width="65.0px"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/current_comment"
+                    android:textColor="#ff487da2"
+                    android:textSize="20.0px"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/sw_main_detail_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10.0px" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/software_detail_comment_detail_height"
+                android:layout_margin="5.0px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    style="@style/RatingBar_modi_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="5.0"
+                    android:rotationY="180.0" />
+
+                <ProgressBar
+                    android:id="@+id/sw_detail_processbar_five_star"
+                    style="@style/progressBar_star_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15.0px"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/sw_detail_processbar_five_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="45.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_marginRight="5.0px"
+                    android:gravity="right"
+                    android:text="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/software_detail_comment_detail_height"
+                android:layout_margin="5.0px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    style="@style/RatingBar_modi_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="4.0"
+                    android:rotationY="180.0" />
+
+                <ProgressBar
+                    android:id="@+id/sw_detail_processbar_four_star"
+                    style="@style/progressBar_star_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15.0px"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/sw_detail_processbar_four_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="45.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_marginRight="5.0px"
+                    android:gravity="right"
+                    android:text="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/software_detail_comment_detail_height"
+                android:layout_margin="5.0px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    style="@style/RatingBar_modi_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="3.0"
+                    android:rotationY="180.0" />
+
+                <ProgressBar
+                    android:id="@+id/sw_detail_processbar_three_star"
+                    style="@style/progressBar_star_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15.0px"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/sw_detail_processbar_three_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="45.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_marginRight="5.0px"
+                    android:gravity="right"
+                    android:text="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/software_detail_comment_detail_height"
+                android:layout_margin="5.0px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    style="@style/RatingBar_modi_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="2.0"
+                    android:rotationY="180.0" />
+
+                <ProgressBar
+                    android:id="@+id/sw_detail_processbar_two_star"
+                    style="@style/progressBar_star_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15.0px"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/sw_detail_processbar_two_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="45.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_marginRight="5.0px"
+                    android:gravity="right"
+                    android:text="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/software_detail_comment_detail_height"
+                android:layout_margin="5.0px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RatingBar
+                    style="@style/RatingBar_modi_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:numStars="5"
+                    android:rating="1.0"
+                    android:rotationY="180.0" />
+
+                <ProgressBar
+                    android:id="@+id/sw_detail_processbar_one_star"
+                    style="@style/progressBar_star_huibaise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15.0px"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/sw_detail_processbar_one_count"
+                    style="@style/sw_detail_normal_text"
+                    android:layout_width="45.0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="15.0px"
+                    android:layout_marginRight="5.0px"
+                    android:gravity="right"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sw_detail_comment_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0px"
+        android:layout_marginTop="20.0px"
+        android:orientation="vertical" >
+        <include layout="@layout/content_list"/>
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/more_comment"
+            android:layout_width="70.0px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_show_more"
+            android:gravity="left|center"
+            android:minWidth="70.0px"
+            android:padding="10.0px"
+            android:text="@string/more_comment"
+            android:textColor="#ff939393"
+            android:textSize="18.0px"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20.0px"
+    android:paddingRight="20.0px"
+    android:background="@color/background_color" >
+
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="50.0px"
+	    android:minHeight="50.0px" >
+	
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:gravity="bottom" >
+	
+	        <TextView
+	            android:id="@+id/group_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ff40a2ff"
+	            android:textSize="22.0px" />
+	
+	        <TextView
+	            android:id="@+id/settingTittleTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="20.0px"
+	            android:text="@string/msg_setting_app_setting_title"
+	            android:textColor="#FF40A2FF"
+	            android:textSize="20.0px" />
+	    </LinearLayout>
+	
+	    <ImageView
+	        android:id="@+id/divid"
+	        android:layout_width="fill_parent"
+	        android:layout_height="1.0px"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="#ff9ed0ff" />
+	
+	</RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:id="@+id/setting_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical" >
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px"
+			                android:text="@string/msg_setting_install_delete_apk" />
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px"
+			                android:visibility="gone" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/deleteApkButtonlayout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" >
+			            <ImageView 
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/deleteApkImageView"
+			                android:src="@drawable/checkbox_kai"/>
+			        </LinearLayout>
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical"
+			    android:visibility="invisible" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px"
+			                android:text="@string/msg_setting_install_push_switch" />
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px"
+			                android:visibility="gone" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/pushButtonlayout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" >
+			            <ImageView 
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/pushNotificationImageView"
+			                android:src="@drawable/checkbox_kai"/>
+			        </LinearLayout>
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical"
+			    android:visibility="gone" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:id="@+id/main_title"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px" />
+			
+			            <TextView
+			                android:id="@+id/sub_title"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/left_button_layout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" />
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20.0px"
+    android:paddingRight="20.0px"
+    android:background="@color/background_color" >
+
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="50.0px"
+	    android:minHeight="50.0px" >
+	
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:gravity="bottom" >
+	
+	        <TextView
+	            android:id="@+id/group_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="#ff40a2ff"
+	            android:textSize="22.0px" />
+	
+	        <TextView
+	            android:id="@+id/settingTittleTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="20.0px"
+	            android:text="@string/msg_setting_download_title"
+	            android:textColor="#FF40A2FF"
+	            android:textSize="20.0px" />
+	    </LinearLayout>
+	
+	    <ImageView
+	        android:id="@+id/divid"
+	        android:layout_width="fill_parent"
+	        android:layout_height="1.0px"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:background="#ff9ed0ff" />
+	
+	</RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <LinearLayout
+            android:id="@+id/setting_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical" >
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:id="@+id/clearSDLayout"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:background="@drawable/left_category_item_selected" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px"
+			                android:text="@string/msg_setting_download_clear_SDCard" />
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px"
+			                android:visibility="gone" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/left_button_layout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" >
+			            <ImageView 
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/clearSDCardImageView"
+			                android:src="@drawable/arrow_blue"/>
+			        </LinearLayout>
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:id="@+id/clearCachelayout"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal"
+			        android:background="@drawable/left_category_item_selected" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px"
+			                android:text="@string/msg_setting_download_clear_internal_cache" />
+			
+			            <TextView
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px"
+			                android:visibility="gone" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/left_button_layout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" >
+			            <ImageView 
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/clearSDCardImageView"
+			                android:src="@drawable/arrow_blue"/>
+			        </LinearLayout>
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	        <LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="100.0px"
+			    android:orientation="vertical"
+			    android:visibility="invisible" >
+			
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:layout_weight="1.0"
+			        android:gravity="center_vertical"
+			        android:orientation="horizontal" >
+			
+			        <LinearLayout
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1.0"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:id="@+id/main_title"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:textColor="#ff494949"
+			                android:textSize="24.0px"
+			                android:text="@string/msg_setting_download_in_wifi" />
+			
+			            <TextView
+			                android:id="@+id/sub_title"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_marginTop="10.0px"
+			                android:textColor="#ffafb0b1"
+			                android:textSize="18.0px"
+			                android:visibility="gone" />
+			        </LinearLayout>
+			
+			        <LinearLayout
+			            android:id="@+id/wifiSwitchLayout"
+			            android:layout_width="240.0px"
+			            android:layout_height="fill_parent"
+			            android:orientation="horizontal"
+			            android:gravity="center" >
+			            <ImageView 
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/wifiSwitchImageView"
+			                android:src="@drawable/checkbox_guan"/>
+			        </LinearLayout>
+			    </LinearLayout>
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffd3d3d3" />
+			
+			    <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="1.0px"
+			        android:background="#ffffffff" />
+			
+			</LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

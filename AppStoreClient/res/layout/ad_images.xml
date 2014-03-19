@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <cn.koolcloud.ipos.appstore.views.GuideGallery
+        android:id="@+id/image_wall_gallery"
+        android:layout_width="@dimen/ad_screen_shot_gallery_width"
+        android:layout_height="@dimen/ad_screen_shot_gallery_height"
+        android:unselectedAlpha="1"
+        android:fadingEdge="none"
+		android:spacing="0dp"
+		android:layout_gravity="center_horizontal">
+    </cn.koolcloud.ipos.appstore.views.GuideGallery>
+   
+	<LinearLayout android:orientation="horizontal"
+        android:id="@+id/gallery_point_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+         >
+    </LinearLayout>
+    
+
+</LinearLayout>

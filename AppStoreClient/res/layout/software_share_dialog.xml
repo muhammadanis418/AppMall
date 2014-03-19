@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remark_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@color/alertdailog_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/dialog_title" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15.0px"
+        android:layout_marginRight="15.0px"
+        android:layout_marginTop="14.0px" >
+
+        <EditText
+            android:id="@+id/sw_share_edit"
+            android:layout_width="530.0px"
+            android:layout_height="127.0px"
+            android:background="@drawable/comment_edit_bg"
+            android:gravity="top|left|center"
+            android:maxHeight="150.0px"
+            android:maxLength="255"
+            android:minHeight="36.0px"
+            android:paddingBottom="14.0px"
+            android:paddingLeft="12.0px"
+            android:paddingRight="12.0px"
+            android:paddingTop="8.0px"
+            android:textColor="@color/share_edit_text_color"
+            android:textColorHint="@color/share_edit_text_color"
+            android:textSize="20.0px" />
+
+        <TextView
+            android:id="@+id/tv_num_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/sw_share_edit"
+            android:layout_below="@+id/sw_share_edit"
+            android:layout_marginTop="7.0px"
+            android:text="测试一下"
+            android:textColor="@color/share_edit_text_color"
+            android:textSize="16.0px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/share_target_block"
+        android:layout_width="wrap_content"
+        android:layout_height="35.0px"
+        android:layout_marginLeft="15.0px"
+        android:layout_marginTop="25.0px"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/imply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_to"
+            android:textColor="@color/share_text_color"
+            android:textSize="20.0px" />
+
+        <CheckBox
+            android:id="@+id/check_box_tencent_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40.0px"
+            android:layout_marginRight="15.0px"
+            android:button="@drawable/qq_btn_check"
+            android:checked="true"
+            android:text="@string/tencent_weibo"
+            android:textColor="@color/share_text_color"
+            android:textSize="20.0px" />
+
+        <CheckBox
+            android:id="@+id/check_box_qqzone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/qq_btn_check"
+            android:checked="true"
+            android:text="@string/qqzone"
+            android:textColor="@color/share_text_color"
+            android:textSize="20.0px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_block"
+        android:layout_width="wrap_content"
+        android:layout_height="50.0px"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10.0px"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/icon_for_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15.0px"
+            android:src="@drawable/jingao" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_cancel"
+            android:textColor="#ff2790d4"
+            android:textSize="18.0px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15.0px"
+        android:layout_marginTop="34.0px"
+        android:weightSum="2.0" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingRight="8.0px" >
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_ok"
+                android:text="@string/str_ok"
+                android:textColor="@color/share_text_color"
+                android:textSize="20.0px" />
+
+            <ProgressBar
+                android:id="@+id/ProgressBar01"
+                style="@style/progressBar_activity_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/ok"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20.0dip"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0px"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_ok"
+            android:text="@string/str_cancel"
+            android:textColor="@color/share_text_color"
+            android:textSize="20.0px" />
+    </LinearLayout>
+
+</LinearLayout>
