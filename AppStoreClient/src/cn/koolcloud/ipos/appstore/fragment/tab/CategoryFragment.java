@@ -3,7 +3,6 @@ package cn.koolcloud.ipos.appstore.fragment.tab;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.json.JSONObject;
 
@@ -263,12 +262,12 @@ public class CategoryFragment extends BaseFragment implements OnItemClickListene
 	private CallBack getAdPromotionCallBack = new CallBack() {
 		@Override
 		public void onCancelled() {
-			dismissLoading();
+//			dismissLoading();
 		}
 		
 		@Override
 		public void onStart() {
-			showLoading();
+//			showLoading();
 		}
 		
 		@Override
@@ -285,18 +284,15 @@ public class CategoryFragment extends BaseFragment implements OnItemClickListene
 				id = JsonUtils.getIntValue(dataJson, Constants.JSON_KEY_ID);
 				AppStorePreference.savePromotinDataID(application, id);
 				
-				Map<String, List<App>> appsMap = JsonUtils.parseJSONAdPromotionApps(jsonObj);
-				if (appsMap != null) {
-					List<App> tmpPromotion = appsMap.get("promotion");
-					if (tmpPromotion != null && tmpPromotion.size() > 0) {
-						adPromotionDataSource = tmpPromotion;
-						if (adPromotionDataSource != null && adPromotionDataSource.size() > 0) {
-							initAdPromotion();
-							new CacheAdPromotionThread(appsMap.get("app")).start();
-						}
+				List<App> tmpPromotion = JsonUtils.parseJSONAdPromotionApps(jsonObj);
+				if (tmpPromotion != null && tmpPromotion.size() > 0) {
+					adPromotionDataSource = tmpPromotion;
+					if (adPromotionDataSource != null && adPromotionDataSource.size() > 0) {
+						initAdPromotion();
+						new CacheAdPromotionThread().start();
 					}
 				}
-				
+//				dismissLoading();
 			} catch (Exception e) {
 				e.printStackTrace();
 				onFailure("getAdPromotion response error!");
@@ -338,17 +334,12 @@ public class CategoryFragment extends BaseFragment implements OnItemClickListene
 	}
 	
 	class CacheAdPromotionThread extends Thread {
-		List<App> appList;
 		
-		public CacheAdPromotionThread(List<App> appsList) {
-			this.appList = appsList;
-		}
-
 		@Override
 		public void run() {
 			CacheDB cacheDB = CacheDB.getInstance(application);
 			cacheDB.insertAdPromotions(adPromotionDataSource);
-			cacheDB.insertApps(appList, null);
+			cacheDB.insertApps(adPromotionDataSource, null);
 		}
 	}
 	

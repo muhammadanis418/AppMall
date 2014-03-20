@@ -1,11 +1,7 @@
 package cn.koolcloud.ipos.appstore.utils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -220,22 +216,17 @@ public class JsonUtils {
 	 * @return
 	 * @return: List<App>
 	 */
-	public static Map<String, List<App>> parseJSONAdPromotionApps(JSONObject jsonObject) {
-		Map<String, List<App>> resultMap = null;
-		Set<String> packageSet = null;
+	public static List<App> parseJSONAdPromotionApps(JSONObject jsonObject) {
+		List<App> appsList = null;
 		try {
 			JSONObject dataJson = getJSONObject(jsonObject, Constants.REQUEST_DATA);
 			JSONArray promotionArray = getJSONArray(dataJson, Constants.JSON_KEY_PROMOTIONS);
 			
 			if (promotionArray != null && promotionArray.length() > 0) {
-				resultMap = new HashMap<String, List<App>>();
-				packageSet = new HashSet<String>();
-				List<App> promotionList = new ArrayList<App>();
-				List<App> appsList = new ArrayList<App>();
 				
+				appsList = new ArrayList<App>();
 				for (int i = 0; i < promotionArray.length(); i++) {
 					JSONObject appJson = promotionArray.getJSONObject(i);
-					
 					App app = new App(getStringValue(appJson,
 							Constants.JSON_KEY_ID), 
 							getStringValue(appJson, Constants.JSON_KEY_NAME), 
@@ -251,23 +242,14 @@ public class JsonUtils {
 					app.setType(getIntValue(appJson, Constants.JSON_KEY_TYPE));
 					app.setImg(getStringValue(appJson, Constants.JSON_KEY_IMG));
 					app.setUrl(getStringValue(appJson, Constants.JSON_KEY_URL));
-					promotionList.add(app);
-					
-					//add to app_table with app_id primary key
-					if (packageSet.contains(getStringValue(appJson, Constants.JSON_KEY_PACKAGE_NAME))) {
-						continue;
-					} else {
-						packageSet.add(getStringValue(appJson, Constants.JSON_KEY_PACKAGE_NAME));
-						appsList.add(app);
-					}
+					appsList.add(app);
 				}
-				resultMap.put("promotion", promotionList);
-				resultMap.put("app", appsList);
+				
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return resultMap;
+		return appsList;
 	}
 	
 	public static List<App> parsePushJSONApp(JSONObject jsonObject) {

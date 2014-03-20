@@ -4,17 +4,16 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import cn.koolcloud.ipos.appstore.cache.DataCleanManager;
-import cn.koolcloud.ipos.appstore.cache.DataManager;
 import cn.koolcloud.ipos.appstore.entity.App;
 import cn.koolcloud.ipos.appstore.entity.AppInfo;
 import cn.koolcloud.ipos.appstore.entity.Category;
@@ -276,6 +275,7 @@ public class CacheDB extends BaseSqlAdapter {
         
         ArrayList<SQLEntity> sqlList = new ArrayList<SQLEntity>();
         Cursor cursor = null;
+        Set<String> appSet = null;
 		try {
 			
 			String sql = "INSERT INTO "+ APP_TABLE_NAME +"(" +
@@ -293,6 +293,8 @@ public class CacheDB extends BaseSqlAdapter {
 					APP_DOWNLOAD_ID + ") VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			
 			if (appList != null && appList.size() > 0) {
+				appSet = new HashSet<String>();
+				
 				for (int i = 0; i < appList.size(); i++) {
 					App app = appList.get(i);
 					cursor = selectAppById(app.getId());
@@ -304,12 +306,17 @@ public class CacheDB extends BaseSqlAdapter {
 						continue;
 					}
 					cursor.close();
-					String[] params = new String[] { app.getId(), app.getName(),
-							app.getSize(), app.getIcon(), app.getVersion(), categoryId, app.getPackageName(),
-							String.valueOf(app.getVersionCode()), app.getRating(), app.getVendor(), String.valueOf(app.getDate()),
-							app.getDownloadId() };
-					sqlList.add(new SQLEntity(sql, params));
-					
+					if (appSet.contains(app.getPackageName())) {
+						continue;
+					} else {
+						
+						String[] params = new String[] { app.getId(), app.getName(),
+								app.getSize(), app.getIcon(), app.getVersion(), categoryId, app.getPackageName(),
+								String.valueOf(app.getVersionCode()), app.getRating(), app.getVendor(), String.valueOf(app.getDate()),
+								app.getDownloadId() };
+						sqlList.add(new SQLEntity(sql, params));
+						appSet.add(app.getPackageName());
+					}
 				}
 				excuteSql(sqlList);
 			}
