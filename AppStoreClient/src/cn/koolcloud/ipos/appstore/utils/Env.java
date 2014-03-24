@@ -227,7 +227,7 @@ public class Env {
 		for (int i = 0; i < appPackage.size(); i++) {
 			PackageInfo packageInfo = appPackage.get(i);
 			Matcher matcher = pattern.matcher(packageInfo.applicationInfo.packageName);
-			if ((packageInfo.applicationInfo.flags & android.content.pm.ApplicationInfo.FLAG_SYSTEM) == 0 ||
+			/*if ((packageInfo.applicationInfo.flags & android.content.pm.ApplicationInfo.FLAG_SYSTEM) == 0 ||
 					matcher.matches()) {
 				installedPackage.put(
 						packageInfo.applicationInfo.packageName, packageInfo);
@@ -236,7 +236,19 @@ public class Env {
 				Logger.d("packageName:" + packageInfo.packageName);
 				Logger.d("versionName:" + packageInfo.versionName);
 				Logger.d("versionCode:" + packageInfo.versionCode);
-			}
+			}*/
+			if ((packageInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
+	    		if (!matcher.matches()) {
+	    			continue;
+	    		}
+	    	}
+			installedPackage.put(
+					packageInfo.applicationInfo.packageName, packageInfo);
+			Logger.d("appName:" + packageInfo.applicationInfo.loadLabel(
+					ctx.getPackageManager()).toString());
+			Logger.d("packageName:" + packageInfo.packageName);
+			Logger.d("versionName:" + packageInfo.versionName);
+			Logger.d("versionCode:" + packageInfo.versionCode);
 		}
 		
 		return installedPackage;
