@@ -158,7 +158,7 @@
     <string name="nonetwork_prompt_server_error">服务器不可用，请稍后重试！</string>
     <string name="nonetwork_prompt_relink">点击屏幕尝试重新刷新</string>
     <string name="about_warn">申明：</string>
-    <string name="about_warninfo">此版本适用于Android 4.0以上操作系统系列Pos机，对于在其他操作系统平台上使用本软件，出现的任何问题，我公司不承担责任。本软件的下载、安装完全免费，使用过程中产生的GRPS数据流量费用，由运营商收取。本软件的安装使用受《“应用中心”软件许可及服务协议》的约束。</string>
+    <string name="about_warninfo">此版本适用于Android 4.0以上操作系统系列Pos机，对于在其他操作系统平台上使用本软件，出现的任何问题，我公司不承担责任。本软件的下载、安装完全免费，使用过程中产生的GRPS数据流量费用，由运营商收取。</string>
     <string name="about_link">《“应用中心”软件许可及服务协议》</string>
     <string name="about_link_http">https://aipstore.allinpay.com/asweb/agreement</string>
         
