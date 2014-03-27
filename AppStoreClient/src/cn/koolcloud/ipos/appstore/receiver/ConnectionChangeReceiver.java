@@ -13,7 +13,7 @@ public class ConnectionChangeReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		if (NetUtil.isMobileConnected(context)) {
+		if (NetUtil.isAvailable(context)) {
 			//TODO:start check appstore update service
 			ToastUtil.showToast(context, R.string.network_prompt_net);
 			Intent service = new Intent(context, MSCService.class);

@@ -32,13 +32,21 @@ public class RegisterService extends Service {
 	@Override
 	public void onCreate() {
 		Logger.d("onCreate()");
+		
+	}
+
+	@Override
+	public void onStart(Intent intent, int startId) {
+		Logger.d("onStart()");
+		super.onStart(intent, startId);
+		
 		String terminalId = AppStorePreference.getTerminalID(getApplicationContext());
 		String userId = AppStorePreference.getUserID(getApplicationContext());
 		String channelId = AppStorePreference.getChannelId(getApplicationContext());
 		
-		if (TextUtils.isEmpty(terminalId)) {
+//		if (TextUtils.isEmpty(terminalId)) {
 			registerClient(userId, channelId);
-		}
+//		}
 		
 		//login baidu cloud
 		boolean isOpenPush = AppStorePreference.getPushNotificationTag(getApplicationContext());
@@ -49,12 +57,6 @@ public class RegisterService extends Service {
 		} else {
 			PushManager.stopWork(getApplicationContext());
 		}
-	}
-
-	@Override
-	public void onStart(Intent intent, int startId) {
-		Logger.d("onStart()");
-		super.onStart(intent, startId);
 	}
 
     @Override
