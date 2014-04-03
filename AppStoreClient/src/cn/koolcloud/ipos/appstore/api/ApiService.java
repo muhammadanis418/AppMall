@@ -36,7 +36,7 @@ public class ApiService {
 //	private static final String HOST = "http://192.168.101.34:8080";//UAT
 //	private static final String HOST = "https://192.168.101.34";//UAT
 //	private static final String HOST = "https://116.236.252.102:30068";//static ip
-//	private static final String HOST = "http://192.168.1.112:8080";//TEST
+//	private static final String HOST = "http://10.0.5.124:8080";//TEST
 //	private static final String HOST = "http://192.168.1.100:8080";
 	private static final String HOST = "https://aipstore.allinpay.com";//production env
 	
@@ -514,6 +514,7 @@ public class ApiService {
 			modelJson.put(Constants.JSON_KEY_ANDROID_VERSION, android.os.Build.VERSION.RELEASE);
 			modelJson.put(Constants.JSON_KEY_NAME, android.os.Build.MODEL);
 			modelJson.put(Constants.JSON_KEY_CPU_INFO, android.os.Build.CPU_ABI);
+			modelJson.put(Constants.JSON_KEY_DISPLAY, android.os.Build.DISPLAY);
 			modelJson.put(Constants.JSON_KEY_MEM_INFO, "");
 			modelJson.put(Constants.JSON_KEY_PRINTER_INFO, "");
 			modelJson.put(Constants.JSON_KEY_RESOLUTION_INFO, "");

@@ -93,6 +93,7 @@ public class Constants {
 	public static final String JSON_KEY_DESCRIPTION						= "description";
 	public static final String JSON_KEY_NEW_FEATURE_DES					= "appVersionDesc";
 	public static final String JSON_KEY_CPU_INFO						= "cpuInfo";
+	public static final String JSON_KEY_DISPLAY							= "display";
 	public static final String JSON_KEY_MEM_INFO						= "memInfo";
 	public static final String JSON_KEY_SCREENSHOT1						= "screenshot1";
 	public static final String JSON_KEY_SCREENSHOT2						= "screenshot2";
