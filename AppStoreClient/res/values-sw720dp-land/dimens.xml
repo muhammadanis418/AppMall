@@ -15,4 +15,20 @@
     <dimen name="comment_summary_avarage_root_width">145.0px</dimen>
     <dimen name="comment_summary_avarage_root_padding_left">20.0px</dimen>
     <dimen name="comment_summary_avarage_root_padding_right">10.0px</dimen>
+    
+    <!-- dialog width and height -->
+    <dimen name="about_dialog_width">630.0dp</dimen>
+    <dimen name="about_dialog_height">360.0dp</dimen>
+    <dimen name="dialog_ok_button_width">150px</dimen>
+    <dimen name="dialog_cancel_button_width">150px</dimen>
+    <dimen name="dialog_title_text_height">63.0px</dimen>
+    <dimen name="dialog_title_text_size">24.0px</dimen>
+    <dimen name="dialog_title_other_text_height">75.0dp</dimen>
+    <dimen name="dialog_title_other_text_size">30.0px</dimen>
+    <dimen name="dialog_common_text_size">20.0px</dimen>
+    <dimen name="dialog_common_text_margin_top">40dp</dimen>
+    <dimen name="dialog_update_common_text">25px</dimen>
+    <dimen name="dialog_update_common_text_margin_top">55dp</dimen>
+    <dimen name="dialog_soft_update_ok_button_width">200dp</dimen>
+    <dimen name="dialog_soft_update_cancel_button_width">200dp</dimen>
 </resources>

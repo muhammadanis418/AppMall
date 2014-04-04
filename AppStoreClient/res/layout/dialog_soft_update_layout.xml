@@ -16,10 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="52.0px"
         android:layout_marginRight="60.0px"
-        android:textSize="25px"
+        android:textSize="@dimen/dialog_update_common_text"
         android:textColor="@color/about_gray_text"
         android:textStyle="normal"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="@dimen/dialog_update_common_text_margin_top"
         android:layout_below="@+id/titleLayout" />
 
     <RelativeLayout
