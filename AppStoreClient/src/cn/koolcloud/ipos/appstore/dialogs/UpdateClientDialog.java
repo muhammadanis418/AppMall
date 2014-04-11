@@ -17,6 +17,7 @@ import android.widget.TextView;
 import cn.koolcloud.ipos.appstore.AppStorePreference;
 import cn.koolcloud.ipos.appstore.R;
 import cn.koolcloud.ipos.appstore.api.ApiService;
+import cn.koolcloud.ipos.appstore.cache.DataCleanManager;
 import cn.koolcloud.ipos.appstore.constant.Constants;
 import cn.koolcloud.ipos.appstore.entity.Client;
 import cn.koolcloud.ipos.appstore.ui.BaseActivity;
@@ -61,7 +62,8 @@ public class UpdateClientDialog extends BaseActivity implements View.OnClickList
 			new DownloadThread().start();
 			progressLayout.setVisibility(View.VISIBLE);
 			buttonLayout.setVisibility(View.GONE);
-			
+			//clean appstore data
+			DataCleanManager.cleanApplicationData(application);
 		} else {
 			buttonLayout.setVisibility(View.VISIBLE);
 			cancelButton.setVisibility(View.VISIBLE);
@@ -165,7 +167,10 @@ public class UpdateClientDialog extends BaseActivity implements View.OnClickList
 					cancelButton.setVisibility(View.GONE);
 					okButton.setText(Utils.getResourceString(getApplicationContext(), R.string.str_apk_downloading));
 					okButton.setClickable(false);
+					
 				}
+				//clean appstore data
+				DataCleanManager.cleanApplicationData(application);
 			}
 			break;
 		case R.id.cancel:

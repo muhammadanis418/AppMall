@@ -416,11 +416,11 @@ public class CacheDB extends BaseSqlAdapter {
     } 
     
     public void cleanCacheDBTables() {
-    	String appTableSql = "delete from app_table";
+//    	String appTableSql = "delete from app_table";
     	String categorySql = "delete from category_table";
     	
     	try {
-    		excuteSql(appTableSql);
+//    		excuteSql(appTableSql);
     		excuteSql(categorySql);
     	} catch (Exception e) {
     		e.printStackTrace();

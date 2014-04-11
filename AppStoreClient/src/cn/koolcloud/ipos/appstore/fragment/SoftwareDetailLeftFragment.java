@@ -170,7 +170,9 @@ public class SoftwareDetailLeftFragment extends BaseFragment implements Download
 		downloadBean.downloadId = app.getDownloadId();
 		downloadBean.versionCode = app.getVersionCode();
 		downloadBean.packageName = app.getPackageName();
-		downloadBean.fileSize = Long.parseLong(app.getSize());
+		if (null != app.getSize()) {
+			downloadBean.fileSize = Long.parseLong(app.getSize());
+		}
 		
 		String fileName = app.getVersion() + "_" + app.getName() + ".apk";		
 		downloadBean.savePath = DownloadUtil.getAbsoluteFilePath(application, fileName);
@@ -201,7 +203,11 @@ public class SoftwareDetailLeftFragment extends BaseFragment implements Download
 
 	private void initComponents() {
 		softNameTextView.setText(app.getName());
-		softSizeTextView.setText(ConvertUtils.bytes2kb(Long.parseLong(app.getSize())));
+		if (null != app.getSize()) {
+			softSizeTextView.setText(ConvertUtils.bytes2kb(Long.parseLong(app.getSize())));
+		} else {
+			softSizeTextView.setText("0");
+		}
 		softVersionTextView.setText(app.getVersion());
 		Bitmap defaultBitmap = BitmapFactory.decodeResource(application.getResources(), R.drawable.moren_icon);
 		ImageDownloader.getInstance(application).download(app.getIconFileName(), defaultBitmap, softIconImageView);
@@ -209,7 +215,11 @@ public class SoftwareDetailLeftFragment extends BaseFragment implements Download
 		setDownloadButtonStatus();
 		downloadButton.setOnClickListener(new DownloadButtonOnClickListener());
 		
-		ratingBar.setRating(Float.parseFloat(app.getRating()));
+		if (null != app.getRating()) {
+			ratingBar.setRating(Float.parseFloat(app.getRating()));
+		} else {
+			ratingBar.setRating(0f);
+		}
 		releaseDateTextView.setText(ConvertUtils.longToString(app.getDate(), "yyyy-MM-dd"));
 		vendorTextView.setText(app.getVendor());
 	}
