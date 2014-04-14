@@ -371,7 +371,9 @@ public class GeneralAppsListAdapter extends BaseAdapter implements DownloadEngin
 	            
 //			} else if (file.exists() || downloadBean.installedStatus == Constants.APP_DOWNLOADED_INSTALL) {
 			} else if (downloadBean.installedStatus == Constants.APP_DOWNLOADED_INSTALL) {
-				Env.install(ctx, file, SOFTWARE_DETAIL_LEFT_REQUEST);
+				if (file.exists()) {
+					Env.install(ctx, file, SOFTWARE_DETAIL_LEFT_REQUEST);
+				}
 				/*Intent intent = new Intent(Intent.ACTION_VIEW);
 				try {
 					Runtime.getRuntime().exec("chmod 644 " + downloadBean.downloadedFile.toString());

@@ -34,6 +34,7 @@ import cn.koolcloud.ipos.appstore.entity.ResultSet;
 import cn.koolcloud.ipos.appstore.fragment.base.BaseFragment;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
 import cn.koolcloud.ipos.appstore.ui.SoftwareDetailActivity;
+import cn.koolcloud.ipos.appstore.utils.Env;
 import cn.koolcloud.ipos.appstore.utils.JsonUtils;
 import cn.koolcloud.ipos.appstore.utils.Logger;
 import cn.koolcloud.ipos.appstore.utils.ToastUtil;
@@ -118,9 +119,9 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 //				Env.install(getActivity(), file, GENERAL_APPS_INSTALL_REQUEST);
 				if (file.exists()) {
 					
-					Intent intent = new Intent(Intent.ACTION_VIEW);
+					/*Intent intent = new Intent(Intent.ACTION_VIEW);
 					try {
-						Runtime.getRuntime().exec("chmod 644 " + file.toString());
+						Runtime.getRuntime().exec("chmod 655 " + file.toString());
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
@@ -130,6 +131,10 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 					if (isAdded() && getActivity() != null) {
 						
 						getActivity().startActivityForResult(intent, GENERAL_APPS_INSTALL_REQUEST);
+					}*/
+					//use common installer
+					if (isAdded() && getActivity() != null) {
+						Env.install(getActivity(), file, GENERAL_APPS_INSTALL_REQUEST);
 					}
 				} else {
 					ToastUtil.showToast(application, R.string.str_apk_download_failure);

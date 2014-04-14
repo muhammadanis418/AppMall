@@ -70,6 +70,7 @@ public class SearchActivity extends BaseActivity implements SearchView.OnQueryTe
     public static SearchActivity getInstance() {
 		return instance;
 	}
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -144,16 +145,19 @@ public class SearchActivity extends BaseActivity implements SearchView.OnQueryTe
 				File file = (File) msg.obj;
 //				Env.install(getActivity(), file, GENERAL_APPS_INSTALL_REQUEST);
 				
-				Intent intent = new Intent(Intent.ACTION_VIEW);
+				/*Intent intent = new Intent(Intent.ACTION_VIEW);
 				try {
-					Runtime.getRuntime().exec("chmod 644 " + file.toString());
+					Runtime.getRuntime().exec("chmod 655 " + file.toString());
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				intent.setDataAndType(Uri.fromFile(file),
 						"application/vnd.android.package-archive");
-				startActivityForResult(intent, GENERAL_APPS_INSTALL_REQUEST);
+				startActivityForResult(intent, GENERAL_APPS_INSTALL_REQUEST);*/
+				if (file.exists()) {
+					Env.install(instance, file, GENERAL_APPS_INSTALL_REQUEST);
+				}
 				
 				break;
 

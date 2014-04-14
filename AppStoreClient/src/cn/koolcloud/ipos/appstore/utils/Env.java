@@ -359,7 +359,7 @@ public class Env {
 	public static void install(Activity ctx, File file, int requestCode) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		try {
-			Runtime.getRuntime().exec("chmod 644 " + file.toString());
+			Runtime.getRuntime().exec("chmod 655 " + file.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
