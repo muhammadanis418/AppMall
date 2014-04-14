@@ -174,7 +174,7 @@ public class SoftwareDetailLeftFragment extends BaseFragment implements Download
 			downloadBean.fileSize = Long.parseLong(app.getSize());
 		}
 		
-		String fileName = app.getVersion() + "_" + app.getName() + ".apk";		
+		String fileName = app.getVersion() + "_" + app.getPackageName() + ".apk";		
 		downloadBean.savePath = DownloadUtil.getAbsoluteFilePath(application, fileName);
 		
 		//init downloader

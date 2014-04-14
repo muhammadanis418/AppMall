@@ -89,7 +89,7 @@ public class UpdateClientDialog extends BaseActivity implements View.OnClickList
 		StringBuffer strBuffer = new StringBuffer();
 		
 		//network alarm
-		if (NetUtil.isWifiConnected(getApplicationContext())) {
+		/*if (NetUtil.isWifiConnected(getApplicationContext())) {
 			
 			strBuffer.append(Utils.getResourceString(getApplicationContext(), R.string.dialog_network_wifi_on));
 		} else if (NetUtil.isEthernetDataEnable(getApplicationContext())) {
@@ -98,7 +98,7 @@ public class UpdateClientDialog extends BaseActivity implements View.OnClickList
 		} else if (NetUtil.isMobileConnected(getApplicationContext())) {
 			
 			strBuffer.append(Utils.getResourceString(getApplicationContext(), R.string.dialog_network_3g_on));
-		}
+		}*/
 		
 		if (client == null) {
 			

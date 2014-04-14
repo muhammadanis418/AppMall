@@ -179,7 +179,7 @@ public class GeneralAppsListAdapter extends BaseAdapter implements DownloadEngin
 		int installedStatus = Env.isAppInstalled(ctx, app.getPackageName(), app.getVersionCode(), mApplication.getInstalledAppsInfo());
 		downloadBean.installedStatus = installedStatus;
 		
-		String fileName = app.getVersion() + "_" + app.getName() + ".apk";		
+		String fileName = app.getVersion() + "_" + app.getPackageName() + ".apk";		
 		downloadBean.savePath = DownloadUtil.getAbsoluteFilePath(mApplication, fileName);
 		return downloadBean;
 	}
