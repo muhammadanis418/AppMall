@@ -128,6 +128,16 @@ public class SoftwareDetailLeftFragment extends BaseFragment implements Download
 	}
 
 	@Override
+	public void onStop() {
+		try {
+			downloader.pauseDownloader();
+			super.onStop();
+		} catch (Exception e) {
+			Logger.e(e.getMessage());
+		}
+	}
+
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

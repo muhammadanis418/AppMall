@@ -56,6 +56,7 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 	private List<App> appListDataSource = new ArrayList<App>();				//apps data source
 	private static AppStoreApplication application;
 	private File file;														//to be installed apk file
+	private Downloader downloader;
 
 	public static NormalListFragment getInstance() {
 		NormalListFragment normalListFragment = new NormalListFragment();
@@ -77,6 +78,7 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 		super.onCreate(savedInstanceState);
 		category = (Category) getArguments().getSerializable(Constants.SER_KEY);
 		application = (AppStoreApplication) getActivity().getApplication();
+		downloader = new Downloader(null, application, null);
 	}
 
 	@Override
@@ -91,6 +93,16 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 		getAppsByCategory();
 	}
 	
+	@Override
+	public void onStop() {
+		try {
+			downloader.pauseDownloader();
+			super.onStop();
+		} catch (Exception e) {
+			Logger.e(e.getMessage());
+		}
+	}
+
 	private void initViews() {
 		generalListView = (AppStoreListView) getActivity().findViewById(R.id.contentListView);
 		generalListView.setOnItemClickListener(this);
@@ -190,7 +202,7 @@ public class NormalListFragment extends BaseFragment implements OnItemClickListe
 				}*/
 				
 				appListDataSource = JsonUtils.parseJSONApps(jsonObj);
-				Downloader downloader = new Downloader(null, application, null);
+				
 				DownloadDBOperator mDBOper = DownloadDBOperator.getInstance(application);
 				mAppListAdapter = new GeneralAppsListAdapter(getActivity(), appListDataSource, application, mHandler, downloader, mDBOper);
 				generalListView.setAdapter(mAppListAdapter);
