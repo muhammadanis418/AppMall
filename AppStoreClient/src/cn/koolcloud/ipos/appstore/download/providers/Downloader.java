@@ -541,7 +541,9 @@ public class Downloader {
     public void pauseDownloader() {
         try {
 			mState = DownloadConstants.DOWNLOAD_STATE_PAUSE;
-			mDBOper.addPauseFile(mBean.url, mBean.packageName, mBean.fileId, mBean.downloadId);
+			if (null != mBean) {
+				mDBOper.addPauseFile(mBean.url, mBean.packageName, mBean.fileId, mBean.downloadId);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
