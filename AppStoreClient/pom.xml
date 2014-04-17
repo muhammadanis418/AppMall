@@ -55,11 +55,17 @@
 		<key-password>cooltool</key-password>
 		<key-alias>aipstorekey</key-alias>
 		 -->
-		 <!-- development key -->
+		<!-- development key -->
 		<key-file-path>${basedir}/appstorekey.keystore</key-file-path>
 		<store-password>cooltool</store-password>
 		<key-password>cooltool</key-password>
 		<key-alias>appstore</key-alias>
+		
+		<!-- product key -->
+		<!-- <key-file-path>${basedir}/app.ks</key-file-path>
+		<store-password>cooltool</store-password>
+		<key-password>cooltool</key-password>
+		<key-alias>appstorekey</key-alias> -->
 	</properties>
 
 	<dependencies>
