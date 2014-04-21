@@ -359,14 +359,23 @@ public class Env {
 	public static void install(Activity ctx, File file, int requestCode) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		try {
-			Runtime.getRuntime().exec("chmod 655 " + file.toString());
+			Runtime run = Runtime.getRuntime();
+			Process proc = run.exec("chmod 655 " + file.toString());
+			int result = proc.waitFor();
+			
+			if (result == 0) {
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				intent.setDataAndType(Uri.fromFile(file),
+						"application/vnd.android.package-archive");
+				ctx.startActivityForResult(intent, requestCode);
+			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		intent.setDataAndType(Uri.fromFile(file),
-				"application/vnd.android.package-archive");
-		ctx.startActivityForResult(intent, requestCode);
+		
 	}
 	
 	public static Intent getLaunchIntent(Context ctx, String packageName, Map<String, PackageInfo> installedPackage) {
