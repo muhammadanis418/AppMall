@@ -465,11 +465,11 @@ public class CacheDB extends BaseSqlAdapter {
 	    	APP_ICON + " = '" + app.getIcon() + "', " +
 	    	APP_VERSION + " = '" + app.getVersion() + "', " +
 	    	APP_CATEGORY_ID + " = '" + categoryId + "', " +
-	    	APP_DOWNLOAD_ID + " = '" + app.getDownloadId() + "'" +
-	    	APP_PACKAGE_NAME + " = '" + app.getPackageName() + "'" +
-	    	APP_VENDOR + " = '" + app.getVendor() + "'" +
-	    	APP_RATING + " = " + app.getRating() + 
-	    	APP_DATE + " = " + app.getDate() + 
+	    	APP_DOWNLOAD_ID + " = '" + app.getDownloadId() + "'," +
+	    	APP_PACKAGE_NAME + " = '" + app.getPackageName() + "'," +
+	    	APP_VENDOR + " = '" + app.getVendor() + "'," +
+	    	APP_RATING + " = " + app.getRating() + "," +
+	    	APP_DATE + " = " + app.getDate() + "," +
 	    	APP_VERSION_CODE + " = " + app.getVersionCode() + 
 	    	" where " + APP_ID + " = " + id;
     	excuteSql(updateSql);
