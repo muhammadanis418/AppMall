@@ -119,6 +119,11 @@
 			<version>2013.10.00-SNAPSHOT</version>
 			<type>apklib</type>
 	    </dependency>
+	    <dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-android</artifactId>
+			<version>4.3.3</version>
+		</dependency>
 	</dependencies>
 
 	<repositories>
