@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -23,6 +24,7 @@ import android.util.Log;
 
 import cn.koolcloud.ipos.appstore.AppStorePreference;
 import cn.koolcloud.ipos.appstore.api.ApiService;
+import cn.koolcloud.ipos.appstore.api.HttpService;
 import cn.koolcloud.ipos.appstore.common.AsyncHttpClient;
 import cn.koolcloud.ipos.appstore.download.common.DownloadConstants;
 import cn.koolcloud.ipos.appstore.download.common.DownloadUtil;
@@ -260,57 +262,33 @@ public class Downloader {
         	JSONObject downloadJson = ApiService.getDownloadFileJson(terminalId, bean.downloadId);
         	//get file size from network if file size is not initialized
             if (fileSize <= 0) {
-//            	HttpClient client = new DefaultHttpClient();
-            	HttpClient client = AsyncHttpClient.getDefaultHttpClient();//https request
-    			HttpPost request = new HttpPost(bean.url);
-    			request.setHeader("Content-Type", "application/json;charset=UTF8");
-    			request.setEntity(new StringEntity(downloadJson.toString()));
-    			HttpResponse response = client.execute(request);
+    			HttpService httpService = new HttpService();
+    			int statusCode = -1;
+    			HttpResponse response = httpService.getResponseResult(bean.url, downloadJson, "post");
     			
+    			if (response != null) {
+    				statusCode = response.getStatusLine().getStatusCode();
+    				Logger.d("==statusCode==" + statusCode);
+    				if (statusCode == 200) {
+    					return checkFileSize(response.getEntity().getContentLength());
+    				} else if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY) ||
+    			            (statusCode == HttpStatus.SC_MOVED_TEMPORARILY) ||
+    			            (statusCode == HttpStatus.SC_SEE_OTHER) ||
+    			            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {
+    					String newUrl = response.getLastHeader("Location").getValue();
+    					HttpResponse newResponse = httpService.getResponseResult(newUrl, downloadJson, "post");
+    					statusCode = newResponse.getStatusLine().getStatusCode();
+                    	if (newResponse != null) {
+                    		if (statusCode == 200) {
+                    			return checkFileSize(newResponse.getEntity().getContentLength());
+                    		}
+                    	}
+                    }
+    			} 
 
-                int resopnseCode = response.getStatusLine().getStatusCode();
-                if (resopnseCode != 200 && resopnseCode != 206) {
-                    callBackError("http return code error:" + resopnseCode);
-                    return false;
-                }
+                callBackError("http return code error:" + statusCode);
+                return false;
                 
-                // get file size
-                fileSize = response.getEntity().getContentLength();
-                mBean.fileSize = fileSize;
-
-                if (fileSize <= 0) {
-                    callBackError("Can't get file size from server:" + fileSize);
-                    return false;
-                }
-
-                //there is no free space both in sdcard and internal
-                if (!hasSpaceInSDCard()) {
-                    return false;
-                }
-
-                long range = fileSize / mThreadCount;
-                // update listBean
-                for (int i = 0; i < mThreadCount - 1; i++) {
-                    DownloadBean subBean = mBeans.get(i);
-                    subBean.fileSize = fileSize;
-                    subBean.startPosition = i * range;
-                    subBean.endPosition = (i + 1) * range - 1;
-                }
-
-                DownloadBean subBean = mBeans.get(mThreadCount - 1);
-                subBean.fileSize = fileSize;
-                subBean.startPosition = (mThreadCount - 1) * range;
-                subBean.endPosition = fileSize - 1;
-
-                // update database
-                if (mDBOper != null) {
-                    mDBOper.updateTaskCompleteSize(mBeans, mBean.url);
-                } else {
-                    callBackError("getFileSizeByNetwork error£¬Maybe EngineDBOperator is Null.");
-                    throw new DownloaderErrorException(
-                            "getFileSizeByNetwork error£¬Maybe EngineDBOperator is Null.");
-                }
-                return true;
             } else {// exit directly when file size > 0
                 return true;
             }
@@ -319,6 +297,46 @@ public class Downloader {
             e.printStackTrace();
         }
         return false;
+    }
+    
+    private boolean checkFileSize(long fileSize) throws DownloaderErrorException {
+    	// get file size
+//        fileSize = response.getEntity().getContentLength();
+        mBean.fileSize = fileSize;
+
+        if (fileSize <= 0) {
+            callBackError("Can't get file size from server:" + fileSize);
+            return false;
+        }
+
+        //there is no free space both in sdcard and internal
+        if (!hasSpaceInSDCard()) {
+            return false;
+        }
+
+        long range = fileSize / mThreadCount;
+        // update listBean
+        for (int i = 0; i < mThreadCount - 1; i++) {
+            DownloadBean subBean = mBeans.get(i);
+            subBean.fileSize = fileSize;
+            subBean.startPosition = i * range;
+            subBean.endPosition = (i + 1) * range - 1;
+        }
+
+        DownloadBean subBean = mBeans.get(mThreadCount - 1);
+        subBean.fileSize = fileSize;
+        subBean.startPosition = (mThreadCount - 1) * range;
+        subBean.endPosition = fileSize - 1;
+
+        // update database
+        if (mDBOper != null) {
+            mDBOper.updateTaskCompleteSize(mBeans, mBean.url);
+        } else {
+            callBackError("getFileSizeByNetwork error£¬Maybe EngineDBOperator is Null.");
+            throw new DownloaderErrorException(
+                    "getFileSizeByNetwork error£¬Maybe EngineDBOperator is Null.");
+        }
+        return true;
     }
 
     /**
@@ -417,7 +435,7 @@ public class Downloader {
         private long startPos;
         private long endPos;
         private long compeleteSize;
-        private String urlstr;
+        private String urlStr;
         private String downloadId;
         private JSONObject downloadJson;
 
@@ -426,7 +444,7 @@ public class Downloader {
             this.startPos = bean.startPosition;
             this.endPos = bean.endPosition;
             this.compeleteSize = bean.currentPosition;
-            this.urlstr = bean.url;
+            this.urlStr = bean.url;
             this.downloadId = bean.downloadId;
             
             String terminalId = AppStorePreference.getTerminalID(mContext);
@@ -440,8 +458,8 @@ public class Downloader {
             try {
             	
 //            	HttpClient client = new DefaultHttpClient();
-            	HttpClient client = AsyncHttpClient.getDefaultHttpClient();//https request
-    			HttpPost request = new HttpPost(urlstr);
+            	HttpClient client = AsyncHttpClient.getDefaultHttpClient(urlStr);//https request
+    			HttpPost request = new HttpPost(urlStr);
     			request.setHeader("Content-Type", "application/json;charset=UTF8");
     			request.setEntity(new StringEntity(downloadJson.toString()));
             	
@@ -489,7 +507,7 @@ public class Downloader {
                     }
                     // update download information to database
                     mDBOper.updateTaskCompleteSize(threadId, compeleteSize,
-                            urlstr, downloadId);
+                            urlStr, downloadId);
                     // stop
                     if (mState == DownloadConstants.DOWNLOAD_STATE_PAUSE
                             || mState == DownloadConstants.DOWNLOAD_STATE_INTERRUPT

@@ -230,7 +230,7 @@ public class ImageDownloader {
 		
 		JSONObject request = ApiService.getDownloadPicJson(strArray[0], mContext);
 //		HttpClient client = new DefaultHttpClient();
-		HttpClient client = AsyncHttpClient.getDefaultHttpClient();	//https request
+		HttpClient client = AsyncHttpClient.getDefaultHttpClient(urlString);	//https request
 		HttpPost req = new HttpPost(urlString);
 		
 		while (times < IMAGE_RETRY_TIMES) {

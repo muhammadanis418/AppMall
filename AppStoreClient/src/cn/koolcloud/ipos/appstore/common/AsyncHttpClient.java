@@ -1,5 +1,8 @@
 package cn.koolcloud.ipos.appstore.common;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.http.client.params.HttpClientParams;
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.conn.scheme.Scheme;
@@ -16,6 +19,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import cn.koolcloud.ipos.appstore.BuildingConfig;
 import cn.koolcloud.ipos.appstore.api.ssl.AppStoreSSLSocketFactory;
+import cn.koolcloud.ipos.appstore.constant.Constants;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
 import cn.koolcloud.ipos.appstore.interfaces.Task;
 
@@ -38,18 +42,17 @@ public class AsyncHttpClient {
 		HTTP_PARAMS = params;
 	}
 	
-	public static DefaultHttpClient getDefaultHttpClient() {
+	public static DefaultHttpClient getDefaultHttpClient(String url) {
 		//add ssl param start
-		if (!BuildingConfig.isHttpsRequst) {
+		Pattern pattern = Pattern.compile(Constants.REG_PACKAGE_MATCH);
+		Matcher matcher = pattern.matcher(url);
+		if (!matcher.matches()) {
 			return new DefaultHttpClient();
 		}
 		SchemeRegistry schemeRegistry = new SchemeRegistry();  
 		schemeRegistry.register(new Scheme("https",  
 		                    new AppStoreSSLSocketFactory(), 443));  
-		/*schemeRegistry.register(new Scheme("https",  
-		                    new EasySSLSocketFactory(), 8443));  */
 		ClientConnectionManager connManager = new ThreadSafeClientConnManager(HTTP_PARAMS, schemeRegistry);  
-//		HttpClient httpClient = new DefaultHttpClient(connManager, HTTP_PARAMS);  
 		//add ssl param end
 		return new DefaultHttpClient(connManager, HTTP_PARAMS);
 	}

@@ -16,9 +16,11 @@
 
 package cn.koolcloud.ipos.appstore.utils;
 
+import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -218,5 +220,45 @@ public class FileUtils
         } finally {
             input.close();
         }
+    }
+    
+    public static File saveInputStreamFile(String sdPath, InputStream inputStream) {
+    	File file = new File(sdPath);
+    	InputStream in = null;
+    	FileOutputStream fos = null;
+		try {
+			in = new BufferedInputStream(inputStream);
+			fos = new FileOutputStream(file);
+			byte[] buf = new byte[1024];
+			while (true) {
+				if (in != null) {
+					int numRead = in.read(buf);
+					if (numRead <= 0) {
+						break;
+					} else {
+						fos.write(buf, 0, numRead);
+					}
+
+				} else {
+					break;
+				}
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (fos != null) {
+					fos.close();
+				}
+				if (in != null) {
+					in.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return file;
     }
 }

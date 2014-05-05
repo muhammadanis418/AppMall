@@ -27,6 +27,7 @@ import cn.koolcloud.ipos.appstore.constant.Constants;
 import cn.koolcloud.ipos.appstore.entity.ResultSet;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
 import cn.koolcloud.ipos.appstore.interfaces.Task;
+import cn.koolcloud.ipos.appstore.utils.FileUtils;
 import cn.koolcloud.ipos.appstore.utils.Logger;
 
 public class ApiService {
@@ -38,7 +39,8 @@ public class ApiService {
 //	private static final String HOST = "https://116.236.252.102:30068";//static ip
 //	private static final String HOST = "http://10.0.5.124:8080";//TEST
 //	private static final String HOST = "http://192.168.1.100:8080";
-	private static final String HOST = "https://aipstore.allinpay.com";//production env
+//	private static final String HOST = "https://aipstore.allinpay.com";//production env
+	private static final String HOST = "http://aipstore.allinpay.com";//production env
 	
 	private static final String VERSION_VAL = "1.0";
 	private static final String REGISTER_TERMINAL_ACTION = "register";
@@ -136,9 +138,9 @@ public class ApiService {
 	* @throws
 	*/
 	public static Task getUpdateVersion(Context context, String terminalID, String versionName, CallBack callBack) {
-		if (TextUtils.isEmpty(terminalID)) {
+		/*if (TextUtils.isEmpty(terminalID)) {
 			return null;
-		}
+		}*/
 		
 		String url = HOST + REQUEST_CONTEXT + SELF_UPDATE_PATH;
 		
@@ -564,25 +566,8 @@ public class ApiService {
 	
 	
 	public static File downloadFile(Context context, String terminalId, String id, String fileName) {
-		InputStream in = null;
-		FileOutputStream fos = null;
-		String sdPath = "";
+		String sdPath = context.getFileStreamPath(fileName).getAbsolutePath();
 		File file = null;
-
-		//don't download apk file to sd from 2014-01-28
-		/*if (FileManager.canWriteSD()) {
-			
-			sdPath = Environment.getExternalStorageDirectory() + "/";
-			File tmpFile = new File(sdPath + "download");
-			if (!tmpFile.exists()) {
-				tmpFile.mkdir();
-			}
-			file = new File(sdPath + "download/" + fileName);
-		} else {*/
-			sdPath =  context.getFileStreamPath(fileName).getAbsolutePath();
-			file = new File(sdPath);
-		//}
-		
 		try {
 			JSONObject jsonObj = generateReq(DOWNLOAD_APP_ACTION);
 			
@@ -590,30 +575,31 @@ public class ApiService {
 			jsonObj.getJSONObject(Constants.REQUEST_DATA).put(Constants.JSON_KEY_ID, id);
 			String httpUrl = HOST + REQUEST_CONTEXT + DOWNLOAD_APP_PATH;
 			
-//			HttpClient client = new DefaultHttpClient();
-			HttpClient client = AsyncHttpClient.getDefaultHttpClient();
-			HttpPost request = new HttpPost(httpUrl);
-			request.setHeader("Content-Type", "application/json;charset=UTF8");
-			request.setEntity(new StringEntity(jsonObj.toString()));
-			HttpResponse response = client.execute(request);
+			HttpService httpService = new HttpService();
+			HttpResponse response = httpService.getResponseResult(httpUrl, jsonObj, "post");
 			
-			if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-				in = new BufferedInputStream(response.getEntity().getContent());
-				fos = new FileOutputStream(file);
-				byte[] buf = new byte[1024];
-				while (true) {
-					if (in != null) {
-						int numRead = in.read(buf);
-						if (numRead <= 0) {
-							break;
-						} else {
-							fos.write(buf, 0, numRead);
-						}
-
-					} else {
-						break;
-					}
+			int statusCode = response.getStatusLine().getStatusCode();
+			
+			if (statusCode == HttpStatus.SC_OK) {
+				file = FileUtils.saveInputStreamFile(sdPath, response.getEntity().getContent());
+			} else if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY) ||
+		            (statusCode == HttpStatus.SC_MOVED_TEMPORARILY) ||
+		            (statusCode == HttpStatus.SC_SEE_OTHER) ||
+		            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {	//Manually deal with new request
+				String url = response.getLastHeader("Location").getValue();
+				
+				HttpResponse newResponse = httpService.getResponseResult(url, jsonObj, "post");
+				statusCode = newResponse.getStatusLine().getStatusCode();
+				Logger.d("==statusCode==" + statusCode);
+				
+				if (statusCode == 200) {
+					file = FileUtils.saveInputStreamFile(sdPath, newResponse.getEntity().getContent());
+				} else {
+					
+					Logger.d(TAG + "_" + "error: "
+							+ newResponse.getStatusLine().getStatusCode());
 				}
+				
 			} else {
 				Logger.d(TAG + "_" + "error: "
 						+ response.getStatusLine().getStatusCode());
@@ -624,18 +610,7 @@ public class ApiService {
 			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if (fos != null) {
-					fos.close();
-				}
-				if (in != null) {
-					in.close();
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		} 
 		return file;
 	}
 	

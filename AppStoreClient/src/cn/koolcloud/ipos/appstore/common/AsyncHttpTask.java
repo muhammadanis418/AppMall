@@ -3,36 +3,30 @@ package cn.koolcloud.ipos.appstore.common;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.ConnectException;
+import java.net.URI;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
+import org.apache.http.HttpStatus;
+import org.apache.http.ProtocolException;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.RedirectHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.client.params.HttpClientParams;
-import org.apache.http.entity.AbstractHttpEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
+import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.content.Context;
 import android.os.AsyncTask;
-
+import cn.koolcloud.ipos.appstore.api.HttpService;
 import cn.koolcloud.ipos.appstore.entity.ResultSet;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
 import cn.koolcloud.ipos.appstore.utils.Logger;
@@ -106,34 +100,8 @@ public class AsyncHttpTask extends AsyncTask<Object, Object, Object> {
 				return results;
 			}
 
-			HttpRequestBase request = null;
-			if ("get".equals(this.requestMethod)) {
-
-				request = new HttpGet(url);
-				request.setHeader("Accept", "*/*");
-			} else {
-
-				request = new HttpPost(url);
-				request.setHeader("Content-Type", "application/json;charset=UTF8");
-			}
-
-			if ("post".equals(this.requestMethod)) {
-				StringEntity ent = new StringEntity(parameters.toString(), HTTP.UTF_8);
-				// AbstractHttpEntity ent = new UrlEncodedFormEntity(parameters,
-				// HTTP.UTF_8);
-				// ent.setContentType("application/x-www-form-urlencoded; charset=UTF-8");
-
-				ent.setContentEncoding("UTF-8");
-				((HttpPost) request).setEntity(ent);
-			}
-
-			Logger.d("==url==" + url);
-
-			Logger.d("==parameters==" + parameters.toString());
-
-//			HttpClient httpClient = new DefaultHttpClient(HTTP_PARAMS);
-			HttpClient httpClient = AsyncHttpClient.getDefaultHttpClient();//https request
-			HttpResponse response = httpClient.execute(request);
+			HttpService httpService = new HttpService();
+			HttpResponse response = httpService.getResponseResult(url, parameters, requestMethod);
 
 			if (response != null) {
 				int statusCode = response.getStatusLine().getStatusCode();
@@ -143,6 +111,26 @@ public class AsyncHttpTask extends AsyncTask<Object, Object, Object> {
 
 					onResponse(results, entity);
 
+				} else if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY) ||
+			            (statusCode == HttpStatus.SC_MOVED_TEMPORARILY) ||
+			            (statusCode == HttpStatus.SC_SEE_OTHER) ||
+			            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {	//Manually deal with new request
+					url = response.getLastHeader("Location").getValue();
+					
+					HttpResponse newResponse = httpService.getResponseResult(url, parameters, requestMethod);
+					statusCode = newResponse.getStatusLine().getStatusCode();
+					Logger.d("==statusCode==" + statusCode);
+					entity = newResponse.getEntity();
+					if (statusCode == 200) {
+						onResponse(results, entity);
+					} else {
+						Logger.d("==response.getEntity()=="
+								+ EntityUtils.toString(entity, HTTP.UTF_8));
+						results.put(ResultSet.Response.RETCODE,
+								ResultSet.FAIL.retcode);
+						results.put(ResultSet.Response.DESCRIBE,
+								ResultSet.SERVER_ERROR.describe + statusCode);
+					}
 				} else {
 					Logger.d("==response.getEntity()=="
 							+ EntityUtils.toString(entity, HTTP.UTF_8));
