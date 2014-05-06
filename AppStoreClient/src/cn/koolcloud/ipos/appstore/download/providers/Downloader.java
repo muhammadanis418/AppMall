@@ -624,11 +624,20 @@ public class Downloader {
      * pause download
      */
     public void pauseDownloader() {
+    	
         try {
-			mState = DownloadConstants.DOWNLOAD_STATE_PAUSE;
-			if (null != mBean) {
-				mDBOper.addPauseFile(mBean.url, mBean.packageName, mBean.fileId, mBean.downloadId);
-			}
+        	new Thread() {
+
+				@Override
+				public void run() {
+					mState = DownloadConstants.DOWNLOAD_STATE_PAUSE;
+					if (null != mBean) {
+						mDBOper.addPauseFile(mBean.url, mBean.packageName, mBean.fileId, mBean.downloadId);
+					}
+				}
+        		
+        	}.start();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

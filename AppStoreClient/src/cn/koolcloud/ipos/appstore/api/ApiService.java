@@ -33,14 +33,10 @@ import cn.koolcloud.ipos.appstore.utils.Logger;
 public class ApiService {
 	private static final String TAG = "ApiService";
 
-//	private static final String HOST = "http://192.168.101.35:8080";
-//	private static final String HOST = "http://192.168.101.34:8080";//UAT
-//	private static final String HOST = "https://192.168.101.34";//UAT
 //	private static final String HOST = "https://116.236.252.102:30068";//static ip
-//	private static final String HOST = "http://10.0.5.124:8080";//TEST
-//	private static final String HOST = "http://192.168.1.100:8080";
+	private static final String HOST = "http://appstore.koolcloud.cn";//CTC
 //	private static final String HOST = "https://aipstore.allinpay.com";//production env
-	private static final String HOST = "http://aipstore.allinpay.com";//production env
+//	private static final String HOST = "http://aipstore.allinpay.com";//production env
 	
 	private static final String VERSION_VAL = "1.0";
 	private static final String REGISTER_TERMINAL_ACTION = "register";
@@ -509,14 +505,14 @@ public class ApiService {
 		try {
 			reqestJson = generateReq(REGISTER_TERMINAL_ACTION);
 			JSONObject dataJson = reqestJson.getJSONObject(Constants.REQUEST_DATA);
-			dataJson.put(Constants.JSON_KEY_SN, android.os.Build.SERIAL);
-			dataJson.put(Constants.JSON_KEY_MANUFACTURER, android.os.Build.MANUFACTURER);
+			dataJson.put(Constants.JSON_KEY_SN, android.os.Build.SERIAL);//00239E032A14
+			dataJson.put(Constants.JSON_KEY_MANUFACTURER, android.os.Build.MANUFACTURER);//koolpos
 			JSONObject modelJson = new JSONObject();
 			dataJson.put(Constants.JSON_KEY_TERMINAL_MODEL, modelJson);
-			modelJson.put(Constants.JSON_KEY_ANDROID_VERSION, android.os.Build.VERSION.RELEASE);
-			modelJson.put(Constants.JSON_KEY_NAME, android.os.Build.MODEL);
-			modelJson.put(Constants.JSON_KEY_CPU_INFO, android.os.Build.CPU_ABI);
-			modelJson.put(Constants.JSON_KEY_DISPLAY, android.os.Build.DISPLAY);
+			modelJson.put(Constants.JSON_KEY_ANDROID_VERSION, android.os.Build.VERSION.RELEASE);//4.2.2
+			modelJson.put(Constants.JSON_KEY_NAME, android.os.Build.MODEL);		//koolpos-par10
+			modelJson.put(Constants.JSON_KEY_CPU_INFO, android.os.Build.CPU_ABI);//armeabi-v7a
+			modelJson.put(Constants.JSON_KEY_DISPLAY, android.os.Build.DISPLAY);//20140430-H5
 			modelJson.put(Constants.JSON_KEY_MEM_INFO, "");
 			modelJson.put(Constants.JSON_KEY_PRINTER_INFO, "");
 			modelJson.put(Constants.JSON_KEY_RESOLUTION_INFO, "");
