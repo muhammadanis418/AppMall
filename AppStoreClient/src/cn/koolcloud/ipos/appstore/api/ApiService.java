@@ -138,9 +138,9 @@ public class ApiService {
 	* @throws
 	*/
 	public static Task getUpdateVersion(Context context, String terminalID, String versionName, CallBack callBack) {
-		/*if (TextUtils.isEmpty(terminalID)) {
+		if (TextUtils.isEmpty(terminalID)) {
 			return null;
-		}*/
+		}
 		
 		String url = HOST + REQUEST_CONTEXT + SELF_UPDATE_PATH;
 		
@@ -576,7 +576,7 @@ public class ApiService {
 			String httpUrl = HOST + REQUEST_CONTEXT + DOWNLOAD_APP_PATH;
 			
 			HttpService httpService = new HttpService();
-			HttpResponse response = httpService.getResponseResult(httpUrl, jsonObj, "post");
+			HttpResponse response = httpService.getResponseResult(httpUrl, jsonObj, "post", null);
 			
 			int statusCode = response.getStatusLine().getStatusCode();
 			
@@ -588,7 +588,7 @@ public class ApiService {
 		            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {	//Manually deal with new request
 				String url = response.getLastHeader("Location").getValue();
 				
-				HttpResponse newResponse = httpService.getResponseResult(url, jsonObj, "post");
+				HttpResponse newResponse = httpService.getResponseResult(url, jsonObj, "post", null);
 				statusCode = newResponse.getStatusLine().getStatusCode();
 				Logger.d("==statusCode==" + statusCode);
 				

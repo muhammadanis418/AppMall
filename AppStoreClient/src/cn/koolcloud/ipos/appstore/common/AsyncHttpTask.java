@@ -101,7 +101,7 @@ public class AsyncHttpTask extends AsyncTask<Object, Object, Object> {
 			}
 
 			HttpService httpService = new HttpService();
-			HttpResponse response = httpService.getResponseResult(url, parameters, requestMethod);
+			HttpResponse response = httpService.getResponseResult(url, parameters, requestMethod, null);
 
 			if (response != null) {
 				int statusCode = response.getStatusLine().getStatusCode();
@@ -117,7 +117,7 @@ public class AsyncHttpTask extends AsyncTask<Object, Object, Object> {
 			            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {	//Manually deal with new request
 					url = response.getLastHeader("Location").getValue();
 					
-					HttpResponse newResponse = httpService.getResponseResult(url, parameters, requestMethod);
+					HttpResponse newResponse = httpService.getResponseResult(url, parameters, requestMethod, null);
 					statusCode = newResponse.getStatusLine().getStatusCode();
 					Logger.d("==statusCode==" + statusCode);
 					entity = newResponse.getEntity();

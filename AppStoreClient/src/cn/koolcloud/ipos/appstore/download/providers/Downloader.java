@@ -264,7 +264,7 @@ public class Downloader {
             if (fileSize <= 0) {
     			HttpService httpService = new HttpService();
     			int statusCode = -1;
-    			HttpResponse response = httpService.getResponseResult(bean.url, downloadJson, "post");
+    			HttpResponse response = httpService.getResponseResult(bean.url, downloadJson, "post", null);
     			
     			if (response != null) {
     				statusCode = response.getStatusLine().getStatusCode();
@@ -276,7 +276,7 @@ public class Downloader {
     			            (statusCode == HttpStatus.SC_SEE_OTHER) ||
     			            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {
     					String newUrl = response.getLastHeader("Location").getValue();
-    					HttpResponse newResponse = httpService.getResponseResult(newUrl, downloadJson, "post");
+    					HttpResponse newResponse = httpService.getResponseResult(newUrl, downloadJson, "post", null);
     					statusCode = newResponse.getStatusLine().getStatusCode();
                     	if (newResponse != null) {
                     		if (statusCode == 200) {
@@ -412,7 +412,7 @@ public class Downloader {
 
         mState = DownloadConstants.DOWNLOAD_STATE_DOWNLOADING;
         mDBOper.removePauseFileByUrl(mBean.url, mBean.downloadId);// remove from pause table
-        mDoneThreadCount = 0;// 初始化完成线程数
+        mDoneThreadCount = 0;// init thread number
 
         for (DownloadBean bean : mBeans) {
         	//the thread belongs to unfinished task
@@ -456,69 +456,136 @@ public class Downloader {
             RandomAccessFile randomAccessFile = null;
             InputStream is = null;
             try {
-            	
-//            	HttpClient client = new DefaultHttpClient();
-            	HttpClient client = AsyncHttpClient.getDefaultHttpClient(urlStr);//https request
-    			HttpPost request = new HttpPost(urlStr);
-    			request.setHeader("Content-Type", "application/json;charset=UTF8");
-    			request.setEntity(new StringEntity(downloadJson.toString()));
+            	HttpService httpService = new HttpService();
             	
     			//multi threads download
+    			Header headerSize = null;
                 if (mThreadCount > 1) {
                     // set range (Range：bytes x-y)
-                	Header headersize = new BasicHeader("Range", "bytes=" + (startPos + compeleteSize) + "-" + endPos);
-                	request.addHeader(headersize);
-                	Logger.d(headersize.getValue());
+                	headerSize = new BasicHeader("Range", "bytes=" + (startPos + compeleteSize) + "-" + endPos);
+                	Logger.d(headerSize.getValue());
                 }
-                HttpResponse response = client.execute(request);
+                HttpResponse response = httpService.getResponseResult(urlStr, downloadJson, "post", headerSize);
 
                 randomAccessFile = new RandomAccessFile(mBean.savePath, "rwd");
                 randomAccessFile.seek(startPos + compeleteSize);
+                
+                if (response != null) {
+                	int statusCode = response.getStatusLine().getStatusCode();
+    				Logger.d("==statusCode==" + statusCode);
+    				
+    				if (statusCode == 200 || statusCode ==206) {
+    					 // write downloaded file to the folder
+    	                is = new BufferedInputStream(response.getEntity().getContent());
+    	                Logger.d("sub thread get block size:" + response.getEntity().getContentLength());
+    	                byte[] buffer = new byte[bufferSize];
+    	                int length = -1;
+    	                DownloadUtil eUtil = DownloadUtil.getInstance();
 
-                // write downloaded file to the folder
-                is = new BufferedInputStream(response.getEntity().getContent());
-                Logger.d("sub thread get block size:" + response.getEntity().getContentLength());
-                byte[] buffer = new byte[bufferSize];
-                int length = -1;
-                DownloadUtil eUtil = DownloadUtil.getInstance();
+    	                //network is 3G
+    	                if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
+    	                	//network type is not WIFI
+    	                    if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
+    	                        interruptDownloader();
+    	                        return;
+    	                    }
+    	                }
 
-                //network is 3G
-                if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-                	//network type is not WIFI
-                    if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-                        interruptDownloader();
-                        return;
-                    }
+    	                while ((length = is.read(buffer)) != -1) {
+    	                    // Network checking
+    	                    if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
+    	                        if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
+    	                            interruptDownloader();
+    	                            return;
+    	                        }
+    	                    }
+
+    	                    randomAccessFile.write(buffer, 0, length);
+    	                    compeleteSize += length;
+    	                    synchronized (lock_refresh_progress) {
+    	                        mBean.currentPosition += length;
+    	                    }
+    	                    // update download information to database
+    	                    mDBOper.updateTaskCompleteSize(threadId, compeleteSize,
+    	                            urlStr, downloadId);
+    	                    // stop
+    	                    if (mState == DownloadConstants.DOWNLOAD_STATE_PAUSE
+    	                            || mState == DownloadConstants.DOWNLOAD_STATE_INTERRUPT
+    	                            || mState == DownloadConstants.DOWNLOAD_STATE_STOP
+    	                            || mState == DownloadConstants.DOWNLOAD_STATE_ERROR) {
+    	                        return;
+    	                    }
+    	                }
+
+    	                // sub thread downloading finished
+    	                mDoneThreadCount++;
+    				} else if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY) ||
+    			            (statusCode == HttpStatus.SC_MOVED_TEMPORARILY) ||
+    			            (statusCode == HttpStatus.SC_SEE_OTHER) ||
+    			            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {
+    					urlStr = response.getLastHeader("Location").getValue();
+    					Logger.d("==redirect download url==" + urlStr);
+    					HttpResponse newResponse = httpService.getResponseResult(urlStr, downloadJson, "post", headerSize);
+    					
+    					if (newResponse != null) {
+    						statusCode = newResponse.getStatusLine().getStatusCode();
+    						Logger.d("==statusCode==" + statusCode);
+    						if (statusCode == 200 || statusCode ==206) {
+    							 // write downloaded file to the folder
+    	    	                is = new BufferedInputStream(newResponse.getEntity().getContent());
+    	    	                Logger.d("sub thread get block size:" + newResponse.getEntity().getContentLength());
+    	    	                byte[] buffer = new byte[bufferSize];
+    	    	                int length = -1;
+    	    	                DownloadUtil eUtil = DownloadUtil.getInstance();
+
+    	    	                //network is 3G
+    	    	                if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
+    	    	                	//network type is not WIFI
+    	    	                    if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
+    	    	                        interruptDownloader();
+    	    	                        return;
+    	    	                    }
+    	    	                }
+
+    	    	                while ((length = is.read(buffer)) != -1) {
+    	    	                    // Network checking
+    	    	                    if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
+    	    	                        if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
+    	    	                            interruptDownloader();
+    	    	                            return;
+    	    	                        }
+    	    	                    }
+
+    	    	                    randomAccessFile.write(buffer, 0, length);
+    	    	                    compeleteSize += length;
+    	    	                    synchronized (lock_refresh_progress) {
+    	    	                        mBean.currentPosition += length;
+    	    	                    }
+    	    	                    // update download information to database
+    	    	                    mDBOper.updateTaskCompleteSize(threadId, compeleteSize,
+    	    	                            urlStr, downloadId);
+    	    	                    // stop
+    	    	                    if (mState == DownloadConstants.DOWNLOAD_STATE_PAUSE
+    	    	                            || mState == DownloadConstants.DOWNLOAD_STATE_INTERRUPT
+    	    	                            || mState == DownloadConstants.DOWNLOAD_STATE_STOP
+    	    	                            || mState == DownloadConstants.DOWNLOAD_STATE_ERROR) {
+    	    	                        return;
+    	    	                    }
+    	    	                }
+
+    	    	                // sub thread downloading finished
+    	    	                mDoneThreadCount++;
+    						} else {
+    							Log.e(TAG, "Connection is interrupted while downloading...");
+    			                interruptDownloader();
+    						}
+    					} else {
+    						Log.e(TAG, "Connection is interrupted while downloading...");
+    		                interruptDownloader();
+    					}
+    				}
                 }
-
-                while ((length = is.read(buffer)) != -1) {
-                    // Network checking
-                    if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-                        if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-                            interruptDownloader();
-                            return;
-                        }
-                    }
-
-                    randomAccessFile.write(buffer, 0, length);
-                    compeleteSize += length;
-                    synchronized (lock_refresh_progress) {
-                        mBean.currentPosition += length;
-                    }
-                    // update download information to database
-                    mDBOper.updateTaskCompleteSize(threadId, compeleteSize,
-                            urlStr, downloadId);
-                    // stop
-                    if (mState == DownloadConstants.DOWNLOAD_STATE_PAUSE
-                            || mState == DownloadConstants.DOWNLOAD_STATE_INTERRUPT
-                            || mState == DownloadConstants.DOWNLOAD_STATE_STOP
-                            || mState == DownloadConstants.DOWNLOAD_STATE_ERROR) {
-                        return;
-                    }
-                }
-
-                // sub thread downloading finished
-                mDoneThreadCount++;
+               
             } catch (Exception e) {
                 Log.e(TAG, "Connection is interrupted while downloading...");
                 interruptDownloader();

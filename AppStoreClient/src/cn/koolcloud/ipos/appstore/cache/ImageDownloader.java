@@ -21,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import cn.koolcloud.ipos.appstore.api.ApiService;
+import cn.koolcloud.ipos.appstore.api.HttpService;
 import cn.koolcloud.ipos.appstore.cache.BindDataIf.BindHolder;
 import cn.koolcloud.ipos.appstore.cache.BindDataIf.Callback;
 import cn.koolcloud.ipos.appstore.cache.base.AsyncTask;
@@ -228,31 +229,56 @@ public class ImageDownloader {
 		
 		String[] strArray = fileName.split("_");
 		
-		JSONObject request = ApiService.getDownloadPicJson(strArray[0], mContext);
-//		HttpClient client = new DefaultHttpClient();
-		HttpClient client = AsyncHttpClient.getDefaultHttpClient(urlString);	//https request
-		HttpPost req = new HttpPost(urlString);
+		JSONObject params = ApiService.getDownloadPicJson(strArray[0], mContext);
+		
+		HttpService httpService = new HttpService();
 		
 		while (times < IMAGE_RETRY_TIMES) {
 			try {
 				
-				req.setHeader("Content-Type", "application/json;charset=UTF8");
-				req.setEntity(new StringEntity(request.toString()));
-				HttpResponse response = client.execute(req);
-				if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-					in = new BufferedInputStream(response.getEntity().getContent());
-					BitmapFactory.Options opt = new BitmapFactory.Options();
-					opt.inPreferredConfig = Bitmap.Config.RGB_565;   
-				    opt.inPurgeable = true;  
-				    opt.inInputShareable = true;
-				    
-				    InputStream is = new FlushedInputStream(in);
-			        bitmap = BitmapFactory.decodeStream(is, null, opt);
-			        is.close();
-			        in.close();
-				} else {
-					Logger.d(LOG_TAG + "_" + "error: "
-							+ response.getStatusLine().getStatusCode());
+				HttpResponse response = httpService.getResponseResult(urlString, params, "post", null);
+				if (response != null) {
+					int statusCode = response.getStatusLine().getStatusCode();
+					if (statusCode == HttpStatus.SC_OK) {
+						in = new BufferedInputStream(response.getEntity().getContent());
+						BitmapFactory.Options opt = new BitmapFactory.Options();
+						opt.inPreferredConfig = Bitmap.Config.RGB_565;   
+						opt.inPurgeable = true;  
+						opt.inInputShareable = true;
+						
+						InputStream is = new FlushedInputStream(in);
+						bitmap = BitmapFactory.decodeStream(is, null, opt);
+						is.close();
+						in.close();
+					} else if ((statusCode == HttpStatus.SC_MOVED_PERMANENTLY) ||
+				            (statusCode == HttpStatus.SC_MOVED_TEMPORARILY) ||
+				            (statusCode == HttpStatus.SC_SEE_OTHER) ||
+				            (statusCode == HttpStatus.SC_TEMPORARY_REDIRECT)) {// response redirect
+						String newUrl = response.getLastHeader("Location").getValue();
+						HttpResponse newResponse = httpService.getResponseResult(newUrl, params, "post", null);
+						
+						if (newResponse != null) {
+							statusCode = newResponse.getStatusLine().getStatusCode();
+							if (statusCode == HttpStatus.SC_OK) {
+								in = new BufferedInputStream(newResponse.getEntity().getContent());
+								BitmapFactory.Options opt = new BitmapFactory.Options();
+								opt.inPreferredConfig = Bitmap.Config.RGB_565;   
+								opt.inPurgeable = true;  
+								opt.inInputShareable = true;
+								
+								InputStream is = new FlushedInputStream(in);
+								bitmap = BitmapFactory.decodeStream(is, null, opt);
+								is.close();
+								in.close();
+							}
+						} else {
+							
+							Logger.d(LOG_TAG + "_" + "error: " + statusCode);
+						}
+					} else {
+						Logger.d(LOG_TAG + "_" + "error: "
+								+ response.getStatusLine().getStatusCode());
+					}
 				}
 		       
 		        return bitmap;
