@@ -474,31 +474,14 @@ public class Downloader {
                 	int statusCode = response.getStatusLine().getStatusCode();
     				Logger.d("==statusCode==" + statusCode);
     				
-    				if (statusCode == 200 || statusCode ==206) {
+    				if (statusCode == 200 || statusCode == 206) {
     					 // write downloaded file to the folder
     	                is = new BufferedInputStream(response.getEntity().getContent());
     	                Logger.d("sub thread get block size:" + response.getEntity().getContentLength());
     	                byte[] buffer = new byte[bufferSize];
     	                int length = -1;
-    	                DownloadUtil eUtil = DownloadUtil.getInstance();
-
-    	                //network is 3G
-    	                if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-    	                	//network type is not WIFI
-    	                    if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-    	                        interruptDownloader();
-    	                        return;
-    	                    }
-    	                }
 
     	                while ((length = is.read(buffer)) != -1) {
-    	                    // Network checking
-    	                    if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-    	                        if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-    	                            interruptDownloader();
-    	                            return;
-    	                        }
-    	                    }
 
     	                    randomAccessFile.write(buffer, 0, length);
     	                    compeleteSize += length;
@@ -536,25 +519,8 @@ public class Downloader {
     	    	                Logger.d("sub thread get block size:" + newResponse.getEntity().getContentLength());
     	    	                byte[] buffer = new byte[bufferSize];
     	    	                int length = -1;
-    	    	                DownloadUtil eUtil = DownloadUtil.getInstance();
-
-    	    	                //network is 3G
-    	    	                if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-    	    	                	//network type is not WIFI
-    	    	                    if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-    	    	                        interruptDownloader();
-    	    	                        return;
-    	    	                    }
-    	    	                }
 
     	    	                while ((length = is.read(buffer)) != -1) {
-    	    	                    // Network checking
-    	    	                    if (DownloadVariable.SUPPORT_NETWORK_TYPE == DownloadConstants.DOWNLOAD_NETWORK_ONLYWIFI) {
-    	    	                        if (eUtil.getNetworkType() != DownloadConstants.NETWORK_STATE_WIFI) {
-    	    	                            interruptDownloader();
-    	    	                            return;
-    	    	                        }
-    	    	                    }
 
     	    	                    randomAccessFile.write(buffer, 0, length);
     	    	                    compeleteSize += length;

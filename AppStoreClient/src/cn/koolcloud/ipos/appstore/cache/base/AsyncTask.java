@@ -20,9 +20,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 拷贝 https://android.googlesource.com/platform/frameworks/base/+/jb-release/
+ * Copy https://android.googlesource.com/platform/frameworks/base/+/jb-release/
  * core/java/android/os/AsyncTask.java
- * 修改了线程池属性，让并发线程按顺序执行
+ * Modify attribute of thread, and execute multi threads in order.
  * @author Teddy
  *
  * @param <Params>
