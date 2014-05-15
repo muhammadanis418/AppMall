@@ -1,42 +1,31 @@
 package cn.koolcloud.ipos.appstore.api;
 
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
-import android.os.Environment;
 import android.text.TextUtils;
 
 import cn.koolcloud.ipos.appstore.AppStorePreference;
-import cn.koolcloud.ipos.appstore.cache.FileManager;
 import cn.koolcloud.ipos.appstore.common.AsyncHttpClient;
 import cn.koolcloud.ipos.appstore.constant.Constants;
 import cn.koolcloud.ipos.appstore.entity.ResultSet;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
 import cn.koolcloud.ipos.appstore.interfaces.Task;
+import cn.koolcloud.ipos.appstore.utils.Env;
 import cn.koolcloud.ipos.appstore.utils.FileUtils;
 import cn.koolcloud.ipos.appstore.utils.Logger;
 
 public class ApiService {
 	private static final String TAG = "ApiService";
 
-//	private static final String HOST = "https://116.236.252.102:30068";//static ip
 	private static final String HOST = "http://appstore.koolcloud.cn";//CTC
-//	private static final String HOST = "https://aipstore.allinpay.com";//production env
-//	private static final String HOST = "http://aipstore.allinpay.com";//production env
 	
 	private static final String VERSION_VAL = "1.0";
 	private static final String REGISTER_TERMINAL_ACTION = "register";
@@ -507,6 +496,7 @@ public class ApiService {
 			JSONObject dataJson = reqestJson.getJSONObject(Constants.REQUEST_DATA);
 			dataJson.put(Constants.JSON_KEY_SN, android.os.Build.SERIAL);//00239E032A14
 			dataJson.put(Constants.JSON_KEY_MANUFACTURER, android.os.Build.MANUFACTURER);//koolpos
+			dataJson.put(Constants.JSON_KEY_CLIENT_VERSION, Env.getVersionName(context));
 			JSONObject modelJson = new JSONObject();
 			dataJson.put(Constants.JSON_KEY_TERMINAL_MODEL, modelJson);
 			modelJson.put(Constants.JSON_KEY_ANDROID_VERSION, android.os.Build.VERSION.RELEASE);//4.2.2

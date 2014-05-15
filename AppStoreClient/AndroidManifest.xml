@@ -92,6 +92,13 @@
             android:configChanges="orientation|keyboardHidden" 
             android:windowSoftInputMode="adjustNothing|stateHidden" />
         <activity
+			android:name=".ui.NotificationPromotionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" 
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden" 
+            android:windowSoftInputMode="adjustNothing|stateHidden" />
+        <activity
 			android:name=".dialogs.AboutDialog" android:theme="@style/dialog"/>
         <activity
 			android:name=".dialogs.NetWorkAlarmDialog" android:theme="@style/activity_dialog"/>

@@ -45,6 +45,8 @@
 			2.1_r1, 2.2.1, 2.3.1, 2.3.3, 4.0_r3, 4.0.3_r3, 4.0.1.2,
 			 4.1_r2, 4.1.1.4, 4.2.2_r2, 4.3_r2, 4.4, 4.4_r1 -->
 			 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+					 
 		<!-- timestamp -->
 		<timestamp>${maven.build.timestamp}</timestamp>
    		<maven.build.timestamp.format>yyyy-MM-dd-HH_mm</maven.build.timestamp.format>
@@ -237,7 +239,7 @@
                             <phase>install</phase>
                         </execution>
                     </executions>
-                    <configuration>
+                    <!-- <configuration>
                         <proguardConfig>proguard-project.txt</proguardConfig>
                         <proguardSkip>false</proguardSkip>
                         <manifestDebuggable>false</manifestDebuggable>
@@ -250,7 +252,7 @@
                         <sign>
                             <debug>false</debug>
                         </sign>
-                    </configuration>
+                    </configuration> -->
                 </plugin>
                 <plugin>
 		            <groupId>org.apache.maven.plugins</groupId>
@@ -281,7 +283,8 @@
 	                <plugin>
 					    <groupId>org.apache.maven.plugins</groupId>
 					    <artifactId>maven-jarsigner-plugin</artifactId>
-					    <version>1.2</version>
+					    <version>1.3.2</version>
+						<!--available versions 1.2, 1.3.2 -->
 					    <executions>
 					        <execution>
 					            <id>signing</id>
@@ -291,6 +294,7 @@
 					            <phase>package</phase>
 					            <inherited>true</inherited>
 					            <configuration>
+					                <removeExistingSignatures>false</removeExistingSignatures>
 					                <archiveDirectory></archiveDirectory>
 					                <includes>
 					                    <include>target/*.apk</include>
@@ -312,9 +316,18 @@
 		                <artifactId>android-maven-plugin</artifactId>
 		                <inherited>true</inherited>
 		                <configuration>
-		                    <sign>
-		                        <debug>false</debug>
-		                    </sign>
+		                    <proguardConfig>proguard-project.txt</proguardConfig>
+							<proguardSkip>true</proguardSkip>
+							<manifestDebuggable>false</manifestDebuggable>
+							<androidManifestFile>AndroidManifest.xml</androidManifestFile>
+							<release>false</release>
+							<run>
+								<debug>false</debug>
+							</run>
+							<runDebug>false</runDebug>
+							<sign>
+								<debug>false</debug>
+							</sign>
 		                </configuration>
 		            </plugin>
 	            </plugins>

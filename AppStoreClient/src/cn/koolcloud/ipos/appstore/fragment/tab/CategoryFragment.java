@@ -410,14 +410,26 @@ public class CategoryFragment extends BaseFragment implements OnItemClickListene
 			position = 0;
 			break;
 		case R.id.adTwoImageView:
+			if (adPromotionDataSource == null || adPromotionDataSource.size() < 2) {
+				ToastUtil.showToast(application, R.string.promotions_resources_not_exist);
+				return;
+			}
 			app = adPromotionDataSource.get(1);
 			position = 1;
 			break;
 		case R.id.adThreeImageView:
+			if (adPromotionDataSource == null || adPromotionDataSource.size() < 3) {
+				ToastUtil.showToast(application, R.string.promotions_resources_not_exist);
+				return;
+			}
 			app = adPromotionDataSource.get(2);
 			position = 2;
 			break;
 		case R.id.adFourImageView:
+			if (adPromotionDataSource == null || adPromotionDataSource.size() < 4) {
+				ToastUtil.showToast(application, R.string.promotions_resources_not_exist);
+				return;
+			}
 			app = adPromotionDataSource.get(3);
 			position = 3;
 			break;

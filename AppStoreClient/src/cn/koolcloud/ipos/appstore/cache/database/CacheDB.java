@@ -17,6 +17,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import cn.koolcloud.ipos.appstore.entity.App;
 import cn.koolcloud.ipos.appstore.entity.AppInfo;
 import cn.koolcloud.ipos.appstore.entity.Category;
+import cn.koolcloud.ipos.appstore.entity.NotificationPromotionInfo;
 
 /**
  * <p>Title: CacheDB.java</p>
@@ -37,6 +38,14 @@ public class CacheDB extends BaseSqlAdapter {
     private final static String CATEGORY_HASH = "category_hash";
     private final static String CATEGORY_ICON = "category_icon";
     private final static String CATEGORY_PRIORITY = "category_priority";
+    
+    private final static String NOTIFICATION_PROMOTION_TABLE_NAME = "notification_promotion_table";
+    private final static String NOTIFY_PROMOTION_ID = "id";
+    private final static String NOTIFY_PROMOTION_TYPE = "type";
+    private final static String NOTIFY_PROMOTION_TITLE = "title";
+    private final static String NOTIFY_PROMOTION_DATE = "date";
+    private final static String NOTIFY_PROMOTION_IMAGE = "image";
+    private final static String NOTIFY_PROMOTION_DESCRIPTION = "description";
     
     private final static String AD_PROMOTION_TABLE_NAME = "ad_promotion_table";
     private final static String APP_TABLE_NAME = "app_table";
@@ -152,6 +161,36 @@ public class CacheDB extends BaseSqlAdapter {
     	return appList;
     }
     
+    /**
+     * @Title: selectAllNotifyPromotions
+     * @Description: TODO get all notify promotions
+     * @return
+     * @return: List<NotificationPromotionInfo>
+     */
+    public List<NotificationPromotionInfo> selectAllNotifyPromotions() {
+    	String sql = "select * from " + NOTIFICATION_PROMOTION_TABLE_NAME;
+    	Cursor cursor = getCursor(sql, null);
+    	List<NotificationPromotionInfo> notifyPromotionList = new ArrayList<NotificationPromotionInfo>();
+    	while (cursor.moveToNext()) {
+    		String id = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_ID));
+    		String type = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_TYPE));
+    		String date = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_DATE));
+    		String imageId = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_IMAGE));
+    		String title = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_TITLE));
+    		String description = cursor.getString(cursor.getColumnIndex(NOTIFY_PROMOTION_DESCRIPTION));
+    		
+    		NotificationPromotionInfo notifyPromotion = new NotificationPromotionInfo();
+    		notifyPromotion.setId(Integer.parseInt(id));
+    		notifyPromotion.setType(Integer.parseInt(type));
+    		notifyPromotion.setDate(date);
+    		notifyPromotion.setImageId(imageId);
+    		notifyPromotion.setDescription(description);
+    		notifyPromotion.setTitle(title);
+    		notifyPromotionList.add(notifyPromotion);
+    	}
+    	return notifyPromotionList;
+    }
+    
     public List<App> selectAllAdPromotion() {
     	List<App> appList = null;
     	Cursor cursor = null;
@@ -210,6 +249,12 @@ public class CacheDB extends BaseSqlAdapter {
     
     public Cursor selectAppById(String appId) { 
     	String sql = "select * from " + APP_TABLE_NAME + " where " + APP_ID + " = " + appId;
+    	Cursor cursor = getCursor(sql, null);
+    	return cursor; 
+    }
+    
+    public Cursor selectNotifyPromotionById(int promotionId) { 
+    	String sql = "select * from " + NOTIFICATION_PROMOTION_TABLE_NAME + " where " + NOTIFY_PROMOTION_ID + " = " + promotionId;
     	Cursor cursor = getCursor(sql, null);
     	return cursor; 
     }
@@ -330,6 +375,63 @@ public class CacheDB extends BaseSqlAdapter {
 			}
 			closeDB();
 		}
+    }
+    
+    /**
+     * @Title: insertNotificatinoPromotion
+     * @Description: TODO inser promotion data
+     * @param promotionList
+     * @return: void
+     */
+    public void insertNotificatinoPromotion(List<NotificationPromotionInfo> promotionList) {
+    	
+    	ArrayList<SQLEntity> sqlList = new ArrayList<SQLEntity>();
+    	Cursor cursor = null;
+    	Set<Integer> appSet = null;
+    	try {
+    		
+    		String sql = "INSERT INTO "+ NOTIFICATION_PROMOTION_TABLE_NAME +"(" +
+    				NOTIFY_PROMOTION_ID + ", " +
+    				NOTIFY_PROMOTION_TYPE + ", " +
+    				NOTIFY_PROMOTION_TITLE + ", " +
+    				NOTIFY_PROMOTION_DATE + ", " +
+    				NOTIFY_PROMOTION_IMAGE + ", " +
+    				NOTIFY_PROMOTION_DESCRIPTION  + ") VALUES(?, ?, ?, ?, ?, ?)";
+    		
+    		if (promotionList != null && promotionList.size() > 0) {
+    			appSet = new HashSet<Integer>();
+    			
+    			for (int i = 0; i < promotionList.size(); i++) {
+    				NotificationPromotionInfo promotionInfo = promotionList.get(i);
+    				cursor = selectNotifyPromotionById(promotionInfo.getId());
+    				if (cursor.getCount() > 0) {
+    					continue;
+    				}
+    				cursor.close();
+    				if (appSet.contains(promotionInfo.getId())) {
+    					continue;
+    				} else {
+    					
+    					String[] params = new String[] { String.valueOf(promotionInfo.getId()), 
+    							String.valueOf(promotionInfo.getType()),
+    							promotionInfo.getTitle(), promotionInfo.getDate(), 
+    							promotionInfo.getImageId(), promotionInfo.getDescription() };
+    					sqlList.add(new SQLEntity(sql, params));
+    					appSet.add(promotionInfo.getId());
+    				}
+    			}
+    			excuteSql(sqlList);
+    		}
+    		
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    	} finally {
+    		if (cursor != null) {
+    			
+    			cursor.close();
+    		}
+    		closeDB();
+    	}
     }
     
     /**
@@ -519,6 +621,7 @@ public class CacheDB extends BaseSqlAdapter {
 		}
 
 		@Override
+		
 		public void onCreate(SQLiteDatabase db) {
 			createTables(db);
 		}
@@ -530,6 +633,7 @@ public class CacheDB extends BaseSqlAdapter {
 		        db.execSQL("DROP TABLE IF EXISTS " + CATEGORY_TABLE_NAME);
 		        db.execSQL("DROP TABLE IF EXISTS " + APP_TABLE_NAME);
 		        db.execSQL("DROP TABLE IF EXISTS " + AD_PROMOTION_TABLE_NAME);
+		        db.execSQL("DROP TABLE IF EXISTS " + NOTIFICATION_PROMOTION_TABLE_NAME);
 		        // Create tables  
 		        onCreate(db); 
 			}
@@ -557,7 +661,7 @@ public class CacheDB extends BaseSqlAdapter {
 		        + APP_DATE + " double, " 
 		        + APP_DOWNLOAD_ID + " varchar);";
 	        
-	        String createAdPromotinoSql = "CREATE TABLE IF NOT EXISTS " + AD_PROMOTION_TABLE_NAME + " (" + AD_APP_ID 
+	        String createAdPromotionSql = "CREATE TABLE IF NOT EXISTS " + AD_PROMOTION_TABLE_NAME + " (" + AD_APP_ID 
 	        		+ " INTEGER, " 
 	        		/*+ APP_NAME + " varchar, " 
 	        		+ APP_VERSION + " varchar, " 
@@ -574,9 +678,19 @@ public class CacheDB extends BaseSqlAdapter {
 /*	        + AD_URL + " varchar, "
 	        + APP_DOWNLOAD_ID + " varchar);";
 */	        
+	        String createNotificatinoPromotionSql = "CREATE TABLE IF NOT EXISTS " + NOTIFICATION_PROMOTION_TABLE_NAME + " ("
+	        		+ NOTIFY_PROMOTION_ID + " INTEGER, "
+	        		+ NOTIFY_PROMOTION_TYPE + " INTEGER, "
+	        		+ NOTIFY_PROMOTION_TITLE + " VARCHAR, "
+	        		+ NOTIFY_PROMOTION_DATE + " VARCHAR, "
+	        		+ NOTIFY_PROMOTION_IMAGE + " VARCHAR, "
+	        		+ NOTIFY_PROMOTION_DESCRIPTION + " VARCHAR"
+	        		+ ");";
+	        
 	        db.execSQL(createCategorySql);
 			db.execSQL(createAppSql);
-			db.execSQL(createAdPromotinoSql);
+			db.execSQL(createAdPromotionSql);
+			db.execSQL(createNotificatinoPromotionSql);
 			setmDb(db);
 		}
 	}

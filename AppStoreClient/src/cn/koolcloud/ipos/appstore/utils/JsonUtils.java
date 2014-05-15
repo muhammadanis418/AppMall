@@ -12,6 +12,7 @@ import cn.koolcloud.ipos.appstore.entity.App;
 import cn.koolcloud.ipos.appstore.entity.Category;
 import cn.koolcloud.ipos.appstore.entity.Client;
 import cn.koolcloud.ipos.appstore.entity.Comment;
+import cn.koolcloud.ipos.appstore.entity.NotificationPromotionInfo;
 import cn.koolcloud.ipos.appstore.service.aidl.ParcelableApp;
 
 
@@ -273,6 +274,31 @@ public class JsonUtils {
 			e.printStackTrace();
 		}
 		return appsList;
+	}
+	
+	/**
+	 * @Title: parsePushPromotion
+	 * @Description: TODO parse notification promotions
+	 * @param jsonObject
+	 * @return
+	 * @return: List<NotificationPromotionInfo>
+	 */
+	public static List<NotificationPromotionInfo> parsePushPromotion(JSONObject jsonObject) {
+		List<NotificationPromotionInfo> promotionList = null;
+		try {
+			promotionList = new ArrayList<NotificationPromotionInfo>();
+			NotificationPromotionInfo promotionInfo = new NotificationPromotionInfo();
+			promotionInfo.setType(getIntValue(jsonObject, Constants.JSON_KEY_TYPE));
+			promotionInfo.setId(getIntValue(jsonObject, Constants.JSON_KEY_ID));
+			promotionInfo.setTitle(getStringValue(jsonObject, Constants.JSON_KEY_TITLE));
+			promotionInfo.setDate(getStringValue(jsonObject, Constants.JSON_KEY_DATE));
+			promotionInfo.setImageId(getStringValue(jsonObject, Constants.JSON_KEY_IMAGE));
+			promotionInfo.setDescription(getStringValue(jsonObject, Constants.JSON_KEY_DESCRIPTION));
+			promotionList.add(promotionInfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return promotionList;
 	}
 	
 	/**

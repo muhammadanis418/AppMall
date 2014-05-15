@@ -20,6 +20,7 @@ import cn.koolcloud.ipos.appstore.constant.Constants;
 import cn.koolcloud.ipos.appstore.entity.App;
 import cn.koolcloud.ipos.appstore.entity.ResultSet;
 import cn.koolcloud.ipos.appstore.interfaces.CallBack;
+import cn.koolcloud.ipos.appstore.ui.NotificationPromotionActivity;
 import cn.koolcloud.ipos.appstore.ui.SoftwareDetailActivity;
 import cn.koolcloud.ipos.appstore.utils.JsonUtils;
 import cn.koolcloud.ipos.appstore.utils.Logger;
@@ -160,6 +161,13 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 						Bundle mBundle = new Bundle();
 						mBundle.putSerializable(Constants.SER_KEY, (Serializable) appListDataSource);
 						mBundle.putInt(Constants.APP_LIST_POSITION, 0);
+						mIntent.putExtras(mBundle);
+						context.startActivity(mIntent);
+					} else if (type == Constants.TYPE_NOTIFICATION_PROMOTION) {
+						Intent mIntent = new Intent(context, NotificationPromotionActivity.class);
+						mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						Bundle mBundle = new Bundle();
+						mBundle.putSerializable(Constants.SER_KEY, (Serializable) customJson);
 						mIntent.putExtras(mBundle);
 						context.startActivity(mIntent);
 					}

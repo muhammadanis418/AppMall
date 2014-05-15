@@ -187,4 +187,7 @@
     <string name="msg_setting_download_clear_internal_cache">清除内部缓存</string>
     <string name="msg_setting_clear_internal_cache_success">清除内部缓存成功</string>
     
+    <!-- notification promotion -->
+    <string name="notification_trans_param_format_error">推送消息格式错误</string>
+    
 </resources>

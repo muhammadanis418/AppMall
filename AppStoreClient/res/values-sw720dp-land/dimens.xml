@@ -31,4 +31,15 @@
     <dimen name="dialog_update_common_text_margin_top">55dp</dimen>
     <dimen name="dialog_soft_update_ok_button_width">200dp</dimen>
     <dimen name="dialog_soft_update_cancel_button_width">200dp</dimen>
+    
+    <!-- notification promotion item size -->
+    <dimen name="notification_promotion_item_width">850dp</dimen>
+    <dimen name="notification_promotion_item_height">420dp</dimen>
+    
+    <dimen name="notification_image_item_width">700dp</dimen>
+    <dimen name="notification_image_item_height">220dp</dimen>
+    
+    <dimen name="notify_promotion_title_text_size">25px</dimen>
+    <dimen name="notify_promotion_date_text_size">15px</dimen>
+    <dimen name="notify_promotion_content_text_size">18px</dimen>
 </resources>

@@ -14,20 +14,21 @@ import cn.koolcloud.ipos.appstore.R;
  * @version 	
  */
 public class Constants {
-	public  final static String SER_KEY = "com.allinpay.ipos.appstore.ser";
+	public  final static String SER_KEY = "com.koolcloud.ipos.appstore.ser";
 	public  final static int HANDLER_REMOVE_ACTION_BAR_TABS = 1;
-	public  final static int HANDLER_ACTION_BAR_ADDING = 2;
+	public  final static int HANDLER_ACTION_BAR_ADDING 		= 2;
 	
-	public  final static int HANDLE_CHANGE_TIME_FLAG_FALSE = 0;
-	public  final static int HANDLE_CHANGE_TIME_FLAG_TRUE = 1;
+	public  final static int HANDLE_CHANGE_TIME_FLAG_FALSE 	= 0;
+	public  final static int HANDLE_CHANGE_TIME_FLAG_TRUE 	= 1;
 	
-	public final static int APP_NEW_VERSION_UPDATE 		= -1;
-	public final static int APP_NO_INSTALLED_DOWNLOAD 	= -2;
-	public final static int APP_INSTALLED_OPEN 	= 0;
-	public final static int APP_DOWNLOADED_INSTALL 	= -4;
-	public final static int TYPE_APP_UPDATE 	= 0;
-	public final static int TYPE_AD_TYPE_WEBVIEW 	= 1;
-	public final static int TYPE_AD_TYPE_APP 	= 0;
+	public final static int APP_NEW_VERSION_UPDATE 			= -1;
+	public final static int APP_NO_INSTALLED_DOWNLOAD 		= -2;
+	public final static int APP_INSTALLED_OPEN 				= 0;
+	public final static int APP_DOWNLOADED_INSTALL 			= -4;
+	public final static int TYPE_APP_UPDATE 				= 0;
+	public final static int TYPE_NOTIFICATION_PROMOTION 	= 1;
+	public final static int TYPE_AD_TYPE_WEBVIEW 			= 1;
+	public final static int TYPE_AD_TYPE_APP 				= 0;
 	public final static String REG_PACKAGE_MATCH 	= "^(com.allinpay|cn.koolcloud).*$";
 	public final static String REG_HTTPS_MATCH 	= "^(https://)*$";
 	
@@ -103,6 +104,7 @@ public class Constants {
 	public static final String JSON_KEY_RESOLUTION_INFO					= "resolutionInfo";
 	public static final String JSON_KEY_CARD_READER_INFO				= "cardReaderInfo";
 	public static final String JSON_KEY_MANUFACTURER					= "manufacturer";
+	public static final String JSON_KEY_CLIENT_VERSION					= "clientVersion";
 	public static final String JSON_KEY_TERMINAL_ID						= "terminalId";
 	public static final String JSON_KEY_TERMINAL_MODEL					= "terminalModel";
 	public static final String JSON_KEY_DOWNLOAD_APK_URL				= "apk_url";
@@ -115,6 +117,8 @@ public class Constants {
 	public static final String JSON_KEY_PROMOTIONS						= "promotions";
 	public static final String JSON_KEY_IMG								= "img";
 	public static final String JSON_KEY_URL								= "url";
+	public static final String JSON_KEY_TITLE							= "title";
+	public static final String JSON_KEY_IMAGE							= "image";
 	
 	public static final String STRATEGY_UPDATE_FORCE					= "2";
 	public static final String STRATEGY_UPDATE_OPTION					= "1";
