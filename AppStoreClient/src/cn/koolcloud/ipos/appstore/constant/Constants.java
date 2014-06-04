@@ -30,7 +30,8 @@ public class Constants {
 	public final static int TYPE_AD_TYPE_WEBVIEW 			= 1;
 	public final static int TYPE_AD_TYPE_APP 				= 0;
 	public final static String REG_PACKAGE_MATCH 	= "^(com.allinpay|cn.koolcloud).*$";
-	public final static String REG_HTTPS_MATCH 	= "^(https://)*$";
+//	public final static String REG_HTTPS_MATCH 	= "^(https://)*$";
+	public final static String REG_HTTPS_MATCH 	= "(?=https|/)[^']*";
 	
 	//use for search view suggestion adapter in action bar
 	public static final String[] COLUMNS = {

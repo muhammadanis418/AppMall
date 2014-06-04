@@ -44,7 +44,7 @@ public class AsyncHttpClient {
 	
 	public static DefaultHttpClient getDefaultHttpClient(String url) {
 		//add ssl param start
-		Pattern pattern = Pattern.compile(Constants.REG_PACKAGE_MATCH);
+		Pattern pattern = Pattern.compile(Constants.REG_HTTPS_MATCH);
 		Matcher matcher = pattern.matcher(url);
 		if (!matcher.matches()) {
 			return new DefaultHttpClient();
