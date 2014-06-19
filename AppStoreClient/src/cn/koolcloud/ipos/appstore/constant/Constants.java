@@ -14,26 +14,48 @@ import cn.koolcloud.ipos.appstore.R;
  * @version 	
  */
 public class Constants {
+	/**
+	 * Passing serializable or parcelable params' key between activities or fragments 
+	 */
 	public  final static String SER_KEY = "com.koolcloud.ipos.appstore.ser";
-	public  final static int HANDLER_REMOVE_ACTION_BAR_TABS = 1;
-	public  final static int HANDLER_ACTION_BAR_ADDING 		= 2;
-	
-	public  final static int HANDLE_CHANGE_TIME_FLAG_FALSE 	= 0;
-	public  final static int HANDLE_CHANGE_TIME_FLAG_TRUE 	= 1;
-	
+	/**
+	 * indicate app need update
+	 */
 	public final static int APP_NEW_VERSION_UPDATE 			= -1;
+	/**
+	 * indicate app is not installed need download and install 
+	 */
 	public final static int APP_NO_INSTALLED_DOWNLOAD 		= -2;
+	/**
+	 * indicate app is installed show open button
+	 */
 	public final static int APP_INSTALLED_OPEN 				= 0;
+	/**
+	 * indicate app is downloaded show install
+	 */
 	public final static int APP_DOWNLOADED_INSTALL 			= -4;
+	/**
+	 * show app update page while receiving notification
+	 */
 	public final static int TYPE_APP_UPDATE 				= 0;
+	/**
+	 * show app promotion page while receiving notification
+	 */
 	public final static int TYPE_NOTIFICATION_PROMOTION 	= 1;
+	/**
+	 * jump to app webview page while clicking promotion image
+	 */
 	public final static int TYPE_AD_TYPE_WEBVIEW 			= 1;
+	/**
+	 * jump to app details page while clicking promotion image
+	 */
 	public final static int TYPE_AD_TYPE_APP 				= 0;
 	public final static String REG_PACKAGE_MATCH 	= "^(com.allinpay|cn.koolcloud).*$";
 //	public final static String REG_HTTPS_MATCH 	= "^(https://)*$";
 	public final static String REG_HTTPS_MATCH 	= "(?=https|/)[^']*";
 	
 	//use for search view suggestion adapter in action bar
+	//just for test
 	public static final String[] COLUMNS = {
         BaseColumns._ID,
         SearchManager.SUGGEST_COLUMN_TEXT_1,
@@ -48,6 +70,7 @@ public class Constants {
 	public static final Integer NAV_ITEM_APP_SETTING 			= 5;					//app setting item number in navigation bar
 	public static final Integer NAV_ITEM_DOWNLOAD_SETTING 		= 6;					//app install item number in navigation bar
 	
+	@Deprecated
 	public static final Integer[][] NAV_ITEM_ARRAY = {
 		{R.drawable.home_off, R.drawable.home_on, R.string.home},
 		{R.drawable.paihang_off, R.drawable.paihang_on, R.string.ranking},
@@ -56,12 +79,28 @@ public class Constants {
 		{R.drawable.guanli_off, R.drawable.guanli_on, R.string.management}
 	};
 	
+	/**
+	 * use same method(initLeftNavItem()) to initialize left navigation bar, this variable indicate now navigation bar is setting. 
+	 */
 	public static final String IS_SETTING_KEY							= "is_setting";
+	/**
+	 * searching key when pass the data to search page
+	 */
 	public static final String SEARCH_WORD_KEY							= "search_word_key";
+	/**
+	 * the default hash data when request getAppcategories interface
+	 */
 	public static final String CATEGORY_DEFAULT_HASH					= "0";
+	/**
+	 * key for passing selected category ListView position
+	 */
 	public static final String CATEGORY_LIST_POSITION					= "category_list_position";
+	/**
+	 * key for passing selected app ListView position
+	 */
 	public static final String APP_LIST_POSITION						= "app_list_position";
 	
+	//the following JSON keys are all keys from network interface (details on doc)
 	public static final String JSON_KEY_ONE								= "1";
 	public static final String JSON_KEY_TWO								= "2";
 	public static final String JSON_KEY_THREE							= "3";
@@ -128,6 +167,8 @@ public class Constants {
 	public static final String REQUEST_DATA 							= "data";
 	public static final String REQUEST_HASH 							= "hash";
 	public static final String REQUEST_STATUS 							= "status";
+	
+	//response codes
 	public static final String REQUEST_STATUS_OK 						= "200";
 	public static final String REQUEST_STATUS_FORBIDDEN 				= "403";
 }
