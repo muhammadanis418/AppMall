@@ -1,0 +1,34 @@
+package cn.koolcloud.ipos.appstore.download.multithread;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+/**
+ * 数据库操作类
+ * @author Administrator
+ *
+ */
+public class DownloadOpenHelper extends SQLiteOpenHelper {
+	private static final String Download = "down.db";
+	private static final int VERSION = 1;
+	
+	/**
+	 * 构造器
+	 * @param context
+	 */
+	public DownloadOpenHelper(Context context) {
+		super(context, Download, null, VERSION);
+	}
+	
+	@Override
+	public void onCreate(SQLiteDatabase db) {
+		db.execSQL("CREATE TABLE IF NOT EXISTS filedownlog (id integer primary key autoincrement, downpath varchar(100), threadid INTEGER, downlength INTEGER)");
+	}
+
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+		db.execSQL("DROP TABLE IF EXISTS filedownlog");
+		onCreate(db);
+	}
+}

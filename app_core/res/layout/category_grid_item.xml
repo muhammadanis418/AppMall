@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="180dp"
+    android:minHeight="180dp"
+    android:background="@drawable/gridview_bg_selector"
+    >
+
+    <ImageView
+        android:id="@+id/category_icon"
+        android:layout_width="@dimen/normal_list_item_icon_size"
+        android:layout_height="@dimen/normal_list_item_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/category_icon"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textColor="#ff494949"
+        android:textSize="25.0px" />
+
+    <TextView
+        android:id="@+id/category_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/category_title"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20.0px"
+        android:layout_marginTop="88dp"
+        android:singleLine="true"
+        android:textColor="#ff969696"
+        android:textSize="17.0px" />
+
+</RelativeLayout>

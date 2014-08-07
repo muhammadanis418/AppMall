@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color" >
+
+    <GridView
+	    android:id="@+id/searchResultGridView"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:cacheColorHint="@drawable/trans"
+	    android:layout_margin="10dp"
+	    android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:paddingBottom="0.0px"
+        android:verticalSpacing="10dp"
+        ></GridView>
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_view" />
+
+    <include layout="@layout/no_network_view" />
+
+</FrameLayout>

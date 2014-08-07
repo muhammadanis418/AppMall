@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="left_nav_width_land">200.0px</dimen>
+    <dimen name="normal_list_item_icon_size">103dp</dimen>
+    <dimen name="normal_list_item_height">142.0px</dimen>
+    <dimen name="normal_list_item_width">390.0px</dimen>
+    <dimen name="software_detail_left_width">240.0px</dimen>
+    <dimen name="software_detail_icon_size">60.0px</dimen>
+    <dimen name="software_detail_comment_detail_height">20.0px</dimen>
+    <dimen name="download_button_h">82.0px</dimen>
+    <dimen name="download_button_w">132.0px</dimen>
+    <dimen name="download_bt_text_size">19.0px</dimen>
+    <dimen name="software_name_item_width">250.0px</dimen>
+    <dimen name="left_nav_item_height">82.0px</dimen>
+    
+    <!-- app screen shot gallery size -->
+    <dimen name="ad_screen_shot_gallery_width">400px</dimen>
+    <dimen name="ad_screen_shot_gallery_height">240px</dimen>
+    
+    <!-- ad promotion image view size -->
+    <dimen name="ad_promotion_image_view_height">180px</dimen>
+    <dimen name="ad_promotion_image_view_width">350px</dimen>
+    
+    <!-- app details comment summary size -->
+    <dimen name="comment_summary_root_width">500.0px</dimen>
+    <dimen name="comment_summary_avarage_root_width">135.0px</dimen>
+    <dimen name="comment_summary_avarage_root_padding_left">15.0px</dimen>
+    <dimen name="comment_summary_avarage_root_padding_right">5.0px</dimen>
+    
+    <!-- dialog width and height -->
+    <dimen name="about_dialog_width">630.0dp</dimen>
+    <dimen name="about_dialog_height">360.0dp</dimen>
+    <dimen name="dialog_ok_button_width">150px</dimen>
+    <dimen name="dialog_cancel_button_width">150px</dimen>
+    <dimen name="dialog_title_text_height">63.0px</dimen>
+    <dimen name="dialog_title_text_size">24.0px</dimen>
+    <dimen name="dialog_title_other_text_height">75.0dp</dimen>
+    <dimen name="dialog_title_other_text_size">30.0px</dimen>
+    <dimen name="dialog_common_text_size">18.0px</dimen>
+    <dimen name="dialog_common_text_margin_top">40dp</dimen>
+    <dimen name="dialog_update_common_text">25px</dimen>
+    <dimen name="dialog_update_common_text_margin_top">55dp</dimen>
+    <dimen name="dialog_soft_update_ok_button_width">200dp</dimen>
+    <dimen name="dialog_soft_update_cancel_button_width">200dp</dimen>
+    
+    <!-- action bar size -->
+    <dimen name="action_bar_height">70dp</dimen>
+    <dimen name="action_bar_tab_text_size">20px</dimen>
+    <dimen name="action_bar_tab_text_appearance_size">30px</dimen>
+    <dimen name="action_bar_icon_margin">10.0px</dimen>
+    <dimen name="action_bar_normal_font_size">20.0px</dimen>
+    
+    <!-- notification promotion item size -->
+    <dimen name="notification_promotion_item_width">850dp</dimen>
+    <dimen name="notification_promotion_item_height">420dp</dimen>
+    
+    <dimen name="notification_image_item_width">700dp</dimen>
+    <dimen name="notification_image_item_height">220dp</dimen>
+    
+    <dimen name="notify_promotion_title_text_size">25px</dimen>
+    <dimen name="notify_promotion_date_text_size">15px</dimen>
+    <dimen name="notify_promotion_content_text_size">18px</dimen>
+    
+    
+</resources>

@@ -1,0 +1,2024 @@
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoVersionImpl
+android.support.v4.accessibilityservice.AccessibilityServiceInfoCompatIcs
+android.support.v4.content.AsyncTaskLoader
+android.support.v4.content.AsyncTaskLoader$LoadTask
+android.support.v4.content.ContextCompatHoneycomb:
+    25:25:ContextCompatHoneycomb()
+android.support.v4.content.ContextCompatJellybean:
+    23:23:ContextCompatJellybean()
+android.support.v4.content.CursorLoader
+android.support.v4.content.FileProvider:
+    private static final java.lang.String META_DATA_FILE_PROVIDER_PATHS
+    private static final java.lang.String TAG_ROOT_PATH
+    private static final java.lang.String TAG_FILES_PATH
+    private static final java.lang.String TAG_CACHE_PATH
+    private static final java.lang.String TAG_EXTERNAL
+    private static final java.lang.String ATTR_NAME
+    private static final java.lang.String ATTR_PATH
+    130:131:public static android.net.Uri getUriForFile(android.content.Context,java.lang.String,java.io.File)
+android.support.v4.content.FileProvider$PathStrategy:
+    public abstract android.net.Uri getUriForFile(java.io.File)
+android.support.v4.content.FileProvider$SimplePathStrategy:
+    345:375:public android.net.Uri getUriForFile(java.io.File)
+android.support.v4.content.IntentCompat:
+    public static final java.lang.String ACTION_EXTERNAL_APPLICATIONS_AVAILABLE
+    public static final java.lang.String ACTION_EXTERNAL_APPLICATIONS_UNAVAILABLE
+    public static final java.lang.String EXTRA_CHANGED_PACKAGE_LIST
+    public static final java.lang.String EXTRA_CHANGED_UID_LIST
+    public static final java.lang.String EXTRA_HTML_TEXT
+    public static final int FLAG_ACTIVITY_TASK_ON_HOME
+    public static final int FLAG_ACTIVITY_CLEAR_TASK
+    95:97:private IntentCompat()
+    249:249:public static android.content.Intent makeMainSelectorActivity(java.lang.String,java.lang.String)
+    266:266:public static android.content.Intent makeRestartActivityTask(android.content.ComponentName)
+android.support.v4.content.IntentCompat$IntentCompatImpl:
+    public abstract android.content.Intent makeMainSelectorActivity(java.lang.String,java.lang.String)
+    public abstract android.content.Intent makeRestartActivityTask(android.content.ComponentName)
+android.support.v4.content.IntentCompat$IntentCompatImplBase:
+    51:53:public android.content.Intent makeMainSelectorActivity(java.lang.String,java.lang.String)
+    58:61:public android.content.Intent makeRestartActivityTask(android.content.ComponentName)
+android.support.v4.content.IntentCompat$IntentCompatImplHC:
+    72:72:public android.content.Intent makeRestartActivityTask(android.content.ComponentName)
+android.support.v4.content.IntentCompat$IntentCompatImplIcsMr1:
+    79:79:public android.content.Intent makeMainSelectorActivity(java.lang.String,java.lang.String)
+android.support.v4.content.IntentCompatHoneycomb:
+    22:22:IntentCompatHoneycomb()
+    28:28:public static android.content.Intent makeRestartActivityTask(android.content.ComponentName)
+android.support.v4.content.IntentCompatIcsMr1
+android.support.v4.content.Loader:
+    android.content.Context mContext
+    90:92:public Loader(android.content.Context)
+    102:105:public void deliverResult(java.lang.Object)
+    111:111:public android.content.Context getContext()
+    118:118:public int getId()
+    157:157:public boolean isStarted()
+    166:166:public boolean isAbandoned()
+    175:175:public boolean isReset()
+    217:218:public void forceLoad()
+    225:225:protected void onForceLoad()
+    312:314:public boolean takeContentChanged()
+    326:334:public void onContentChanged()
+android.support.v4.content.Loader$ForceLoadContentObserver
+android.support.v4.content.Loader$OnLoadCompleteListener:
+    public abstract void onLoadComplete(android.support.v4.content.Loader,java.lang.Object)
+android.support.v4.content.LocalBroadcastManager
+android.support.v4.content.LocalBroadcastManager$1
+android.support.v4.content.LocalBroadcastManager$BroadcastRecord
+android.support.v4.content.LocalBroadcastManager$ReceiverRecord
+android.support.v4.content.ModernAsyncTask
+android.support.v4.content.ModernAsyncTask$1
+android.support.v4.content.ModernAsyncTask$2
+android.support.v4.content.ModernAsyncTask$3
+android.support.v4.content.ModernAsyncTask$4
+android.support.v4.content.ModernAsyncTask$AsyncTaskResult
+android.support.v4.content.ModernAsyncTask$InternalHandler
+android.support.v4.content.ModernAsyncTask$Status
+android.support.v4.content.ModernAsyncTask$WorkerRunnable
+android.support.v4.content.pm.ActivityInfoCompat
+android.support.v4.database.DatabaseUtilsCompat
+android.support.v4.net.ConnectivityManagerCompat
+android.support.v4.net.ConnectivityManagerCompat$BaseConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$GingerbreadConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$HoneycombMR2ConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompat$JellyBeanConnectivityManagerCompatImpl
+android.support.v4.net.ConnectivityManagerCompatGingerbread
+android.support.v4.net.ConnectivityManagerCompatHoneycombMR2
+android.support.v4.net.ConnectivityManagerCompatJellyBean
+android.support.v4.net.TrafficStatsCompat
+android.support.v4.net.TrafficStatsCompat$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$1
+android.support.v4.net.TrafficStatsCompat$BaseTrafficStatsCompatImpl$SocketTags
+android.support.v4.net.TrafficStatsCompat$IcsTrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompat$TrafficStatsCompatImpl
+android.support.v4.net.TrafficStatsCompatIcs
+android.support.v4.os.ParcelableCompat:
+    26:42:public ParcelableCompat()
+android.support.v4.os.ParcelableCompatCreatorHoneycombMR2Stub:
+    22:22:ParcelableCompatCreatorHoneycombMR2Stub()
+android.support.v4.util.AtomicFile
+android.support.v4.util.DebugUtils:
+    25:25:public DebugUtils()
+android.support.v4.util.LongSparseArray
+android.support.v4.util.LruCache
+android.support.v4.util.SparseArrayCompat:
+    107:111:public void removeAtRange(int,int)
+    236:241:public void setValueAt(int,java.lang.Object)
+    265:273:public int indexOfValue(java.lang.Object)
+    296:323:public void append(int,java.lang.Object)
+android.support.v4.util.TimeUtils
+android.support.v4.view.AccessibilityDelegateCompat
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateIcsImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateJellyBeanImpl$1
+android.support.v4.view.AccessibilityDelegateCompat$AccessibilityDelegateStubImpl
+android.support.v4.view.AccessibilityDelegateCompatIcs
+android.support.v4.view.AccessibilityDelegateCompatIcs$1
+android.support.v4.view.AccessibilityDelegateCompatIcs$AccessibilityDelegateBridge
+android.support.v4.view.AccessibilityDelegateCompatJellyBean
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$1
+android.support.v4.view.AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean
+android.support.v4.view.GestureDetectorCompat
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImpl
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplBase$GestureHandler
+android.support.v4.view.GestureDetectorCompat$GestureDetectorCompatImplJellybeanMr2
+android.support.v4.view.GravityCompat:
+    public static final int RELATIVE_LAYOUT_DIRECTION
+    public static final int START
+    public static final int END
+    public static final int RELATIVE_HORIZONTAL_GRAVITY_MASK
+    27:62:public GravityCompat()
+    132:133:public static void apply(int,int,int,android.graphics.Rect,android.graphics.Rect,int)
+    162:163:public static void apply(int,int,int,android.graphics.Rect,int,int,android.graphics.Rect,int)
+    186:187:public static void applyDisplay(int,android.graphics.Rect,android.graphics.Rect,int)
+android.support.v4.view.GravityCompat$GravityCompatImpl:
+    public abstract void apply(int,int,int,android.graphics.Rect,android.graphics.Rect,int)
+    public abstract void apply(int,int,int,android.graphics.Rect,int,int,android.graphics.Rect,int)
+    public abstract void applyDisplay(int,android.graphics.Rect,android.graphics.Rect,int)
+android.support.v4.view.GravityCompat$GravityCompatImplBase:
+    46:47:public void apply(int,int,int,android.graphics.Rect,android.graphics.Rect,int)
+    52:53:public void apply(int,int,int,android.graphics.Rect,int,int,android.graphics.Rect,int)
+    58:59:public void applyDisplay(int,android.graphics.Rect,android.graphics.Rect,int)
+android.support.v4.view.GravityCompat$GravityCompatImplJellybeanMr1:
+    71:72:public void apply(int,int,int,android.graphics.Rect,android.graphics.Rect,int)
+    77:79:public void apply(int,int,int,android.graphics.Rect,int,int,android.graphics.Rect,int)
+    83:84:public void applyDisplay(int,android.graphics.Rect,android.graphics.Rect,int)
+android.support.v4.view.GravityCompatJellybeanMr1:
+    23:23:GravityCompatJellybeanMr1()
+    31:32:public static void apply(int,int,int,android.graphics.Rect,android.graphics.Rect,int)
+    36:37:public static void apply(int,int,int,android.graphics.Rect,int,int,android.graphics.Rect,int)
+    40:41:public static void applyDisplay(int,android.graphics.Rect,android.graphics.Rect,int)
+android.support.v4.view.KeyEventCompat:
+    25:118:public KeyEventCompat()
+    150:150:public static int normalizeMetaState(int)
+    154:154:public static boolean metaStateHasModifiers(int,int)
+    158:158:public static boolean metaStateHasNoModifiers(int)
+    174:174:public static boolean isTracking(android.view.KeyEvent)
+android.support.v4.view.KeyEventCompat$BaseKeyEventVersionImpl:
+    private static final int META_MODIFIER_MASK
+    private static final int META_ALL_MASK
+    99:99:public boolean isTracking(android.view.KeyEvent)
+android.support.v4.view.KeyEventCompat$EclairKeyEventVersionImpl:
+    111:111:public boolean isTracking(android.view.KeyEvent)
+android.support.v4.view.KeyEventCompat$KeyEventVersionImpl:
+    public abstract int normalizeMetaState(int)
+    public abstract boolean isTracking(android.view.KeyEvent)
+android.support.v4.view.KeyEventCompatEclair:
+    22:22:KeyEventCompatEclair()
+    28:28:public static boolean isTracking(android.view.KeyEvent)
+android.support.v4.view.KeyEventCompatHoneycomb:
+    24:24:KeyEventCompatHoneycomb()
+android.support.v4.view.MenuCompat
+android.support.v4.view.MenuCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompat
+android.support.v4.view.MenuItemCompat$BaseMenuVersionImpl
+android.support.v4.view.MenuItemCompat$HoneycombMenuVersionImpl
+android.support.v4.view.MenuItemCompat$MenuVersionImpl
+android.support.v4.view.MenuItemCompatHoneycomb
+android.support.v4.view.MotionEventCompat:
+    public static final int ACTION_MASK
+    public static final int ACTION_POINTER_DOWN
+    public static final int ACTION_POINTER_UP
+    public static final int ACTION_HOVER_MOVE
+    public static final int ACTION_SCROLL
+    public static final int ACTION_POINTER_INDEX_MASK
+    public static final int ACTION_POINTER_INDEX_SHIFT
+    public static final int ACTION_HOVER_ENTER
+    public static final int ACTION_HOVER_EXIT
+    25:80:public MotionEventCompat()
+android.support.v4.view.MotionEventCompatEclair:
+    24:24:MotionEventCompatEclair()
+android.support.v4.view.PagerTabStrip:
+    private static final java.lang.String TAG
+    private static final int INDICATOR_HEIGHT
+    private static final int MIN_PADDING_BOTTOM
+    private static final int TAB_PADDING
+    private static final int TAB_SPACING
+    private static final int MIN_TEXT_SPACING
+    private static final int FULL_UNDERLINE_HEIGHT
+    private static final int MIN_STRIP_HEIGHT
+    76:77:public PagerTabStrip(android.content.Context)
+    80:121:public PagerTabStrip(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.PagerTabStrip$1
+android.support.v4.view.PagerTabStrip$2
+android.support.v4.view.PagerTitleStrip:
+    private static final java.lang.String TAG
+    private static final float SIDE_ALPHA
+    private static final int TEXT_SPACING
+    112:113:public PagerTitleStrip(android.content.Context)
+    116:168:public PagerTitleStrip(android.content.Context,android.util.AttributeSet)
+    224:227:public void setTextSize(int,float)
+android.support.v4.view.PagerTitleStrip$1
+android.support.v4.view.PagerTitleStrip$PageListener:
+    470:470:private PagerTitleStrip$PageListener(android.support.v4.view.PagerTitleStrip)
+    470:470:synthetic PagerTitleStrip$PageListener(android.support.v4.view.PagerTitleStrip,android.support.v4.view.PagerTitleStrip$1)
+android.support.v4.view.PagerTitleStripIcs:
+    26:31:PagerTitleStripIcs()
+android.support.v4.view.PagerTitleStripIcs$SingleLineAllCapsTransform:
+    private static final java.lang.String TAG
+android.support.v4.view.VelocityTrackerCompat:
+    25:51:public VelocityTrackerCompat()
+android.support.v4.view.VelocityTrackerCompatHoneycomb:
+    24:24:VelocityTrackerCompatHoneycomb()
+android.support.v4.view.ViewCompat:
+    public static final int OVER_SCROLL_ALWAYS
+    public static final int OVER_SCROLL_IF_CONTENT_SCROLLS
+    public static final int OVER_SCROLL_NEVER
+    private static final long FAKE_FRAME_TIME
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_AUTO
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_YES
+    public static final int IMPORTANT_FOR_ACCESSIBILITY_NO
+    public static final int LAYER_TYPE_NONE
+    public static final int LAYER_TYPE_SOFTWARE
+    public static final int LAYER_TYPE_HARDWARE
+    public static final int LAYOUT_DIRECTION_LTR
+    public static final int LAYOUT_DIRECTION_RTL
+    public static final int LAYOUT_DIRECTION_INHERIT
+    public static final int LAYOUT_DIRECTION_LOCALE
+    32:367:public ViewCompat()
+    432:432:public static boolean canScrollVertically(android.view.View,int)
+    461:462:public static void setOverScrollMode(android.view.View,int)
+    498:499:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    531:532:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    567:568:public static void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    582:583:public static void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    594:594:public static boolean hasTransientState(android.view.View)
+    605:606:public static void setHasTransientState(android.view.View,boolean)
+    667:668:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    683:683:public static int getImportantForAccessibility(android.view.View)
+    699:700:public static void setImportantForAccessibility(android.view.View,int)
+    717:717:public static boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    744:744:public static android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    818:818:public static int getLabelFor(android.view.View)
+    829:830:public static void setLabelFor(android.view.View,int)
+    897:898:public static void setLayoutDirection(android.view.View,int)
+    909:909:public static android.view.ViewParent getParentForAccessibility(android.view.View)
+android.support.v4.view.ViewCompat$BaseViewCompatImpl:
+    171:171:public boolean canScrollVertically(android.view.View,int)
+    178:178:public void setOverScrollMode(android.view.View,int)
+    181:181:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    184:184:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    187:187:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    190:190:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    193:193:public boolean hasTransientState(android.view.View)
+    197:197:public void setHasTransientState(android.view.View,boolean)
+    208:209:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    214:214:public int getImportantForAccessibility(android.view.View)
+    218:218:public void setImportantForAccessibility(android.view.View,int)
+    220:220:public boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    223:223:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    232:232:public int getLabelFor(android.view.View)
+    236:236:public void setLabelFor(android.view.View,int)
+    249:249:public void setLayoutDirection(android.view.View,int)
+    253:253:public android.view.ViewParent getParentForAccessibility(android.view.View)
+android.support.v4.view.ViewCompat$GBViewCompatImpl:
+    264:265:public void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompat$ICSViewCompatImpl:
+    295:295:public boolean canScrollVertically(android.view.View,int)
+    299:300:public void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    303:304:public void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    307:308:public void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    311:312:public void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+android.support.v4.view.ViewCompat$JBViewCompatImpl:
+    318:318:public boolean hasTransientState(android.view.View)
+    322:323:public void setHasTransientState(android.view.View,boolean)
+    338:339:public void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    342:342:public int getImportantForAccessibility(android.view.View)
+    346:347:public void setImportantForAccessibility(android.view.View,int)
+    350:350:public boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    354:358:public android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    363:363:public android.view.ViewParent getParentForAccessibility(android.view.View)
+android.support.v4.view.ViewCompat$JbMr1ViewCompatImpl:
+    371:371:public int getLabelFor(android.view.View)
+    376:377:public void setLabelFor(android.view.View,int)
+    391:392:public void setLayoutDirection(android.view.View,int)
+android.support.v4.view.ViewCompat$ViewCompatImpl:
+    public abstract boolean canScrollVertically(android.view.View,int)
+    public abstract void setOverScrollMode(android.view.View,int)
+    public abstract void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    public abstract void onInitializeAccessibilityNodeInfo(android.view.View,android.support.v4.view.accessibility.AccessibilityNodeInfoCompat)
+    public abstract void setAccessibilityDelegate(android.view.View,android.support.v4.view.AccessibilityDelegateCompat)
+    public abstract boolean hasTransientState(android.view.View)
+    public abstract void setHasTransientState(android.view.View,boolean)
+    public abstract void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    public abstract int getImportantForAccessibility(android.view.View)
+    public abstract void setImportantForAccessibility(android.view.View,int)
+    public abstract boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    public abstract android.support.v4.view.accessibility.AccessibilityNodeProviderCompat getAccessibilityNodeProvider(android.view.View)
+    public abstract int getLabelFor(android.view.View)
+    public abstract void setLabelFor(android.view.View,int)
+    public abstract void setLayoutDirection(android.view.View,int)
+    public abstract android.view.ViewParent getParentForAccessibility(android.view.View)
+android.support.v4.view.ViewCompatGingerbread:
+    21:21:ViewCompatGingerbread()
+    27:28:public static void setOverScrollMode(android.view.View,int)
+android.support.v4.view.ViewCompatHC:
+    23:23:ViewCompatHC()
+android.support.v4.view.ViewCompatICS:
+    27:27:ViewCompatICS()
+    34:34:public static boolean canScrollVertically(android.view.View,int)
+    38:39:public static void setAccessibilityDelegate(android.view.View,java.lang.Object)
+    42:43:public static void onPopulateAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    46:47:public static void onInitializeAccessibilityEvent(android.view.View,android.view.accessibility.AccessibilityEvent)
+    50:51:public static void onInitializeAccessibilityNodeInfo(android.view.View,java.lang.Object)
+android.support.v4.view.ViewCompatJB:
+    26:26:public ViewCompatJB()
+    29:29:public static boolean hasTransientState(android.view.View)
+    33:34:public static void setHasTransientState(android.view.View,boolean)
+    50:51:public static void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)
+    54:54:public static int getImportantForAccessibility(android.view.View)
+    58:59:public static void setImportantForAccessibility(android.view.View,int)
+    62:62:public static boolean performAccessibilityAction(android.view.View,int,android.os.Bundle)
+    66:66:public static java.lang.Object getAccessibilityNodeProvider(android.view.View)
+    70:70:public static android.view.ViewParent getParentForAccessibility(android.view.View)
+android.support.v4.view.ViewCompatJellybeanMr1:
+    25:25:ViewCompatJellybeanMr1()
+    28:28:public static int getLabelFor(android.view.View)
+    32:33:public static void setLabelFor(android.view.View,int)
+    44:45:public static void setLayoutDirection(android.view.View,int)
+android.support.v4.view.ViewConfigurationCompat
+android.support.v4.view.ViewConfigurationCompat$BaseViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$FroyoViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompat$ViewConfigurationVersionImpl
+android.support.v4.view.ViewConfigurationCompatFroyo
+android.support.v4.view.ViewGroupCompat
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatHCImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatIcsImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatImpl
+android.support.v4.view.ViewGroupCompat$ViewGroupCompatStubImpl
+android.support.v4.view.ViewGroupCompatHC
+android.support.v4.view.ViewGroupCompatIcs
+android.support.v4.view.ViewPager:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final boolean USE_CACHE
+    private static final int DEFAULT_OFFSCREEN_PAGES
+    private static final int MAX_SETTLE_DURATION
+    private static final int MIN_DISTANCE_FOR_FLING
+    private static final int DEFAULT_GUTTER_SIZE
+    private static final int MIN_FLING_VELOCITY
+    private boolean mIgnoreGutter
+    private static final int INVALID_POINTER
+    private static final int CLOSE_ENOUGH
+    private long mFakeDragBeginTime
+    private static final int DRAW_ORDER_DEFAULT
+    private static final int DRAW_ORDER_FORWARD
+    private static final int DRAW_ORDER_REVERSE
+    public static final int SCROLL_STATE_IDLE
+    public static final int SCROLL_STATE_DRAGGING
+    public static final int SCROLL_STATE_SETTLING
+    342:344:public ViewPager(android.content.Context)
+    347:349:public ViewPager(android.content.Context,android.util.AttributeSet)
+    352:377:void initViewPager()
+    605:617:public void setPageTransformer(boolean,android.support.v4.view.ViewPager$PageTransformer)
+    775:776:void smoothScrollTo(int,int)
+    2255:2271:public boolean beginFakeDrag()
+    2281:2302:public void endFakeDrag()
+    2312:2350:public void fakeDragBy(float)
+    2362:2362:public boolean isFakeDragging()
+    82:82:static synthetic void access$000(android.support.v4.view.ViewPager,int)
+    82:82:static synthetic android.support.v4.view.PagerAdapter access$200(android.support.v4.view.ViewPager)
+    82:82:static synthetic int access$300(android.support.v4.view.ViewPager)
+android.support.v4.view.ViewPager$3
+android.support.v4.view.ViewPager$MyAccessibilityDelegate
+android.support.v4.view.ViewPager$SimpleOnPageChangeListener
+android.support.v4.view.accessibility.AccessibilityEventCompat
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventIcsImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventStubImpl
+android.support.v4.view.accessibility.AccessibilityEventCompat$AccessibilityEventVersionImpl
+android.support.v4.view.accessibility.AccessibilityEventCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerIcsImpl$1
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerStubImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityManagerVersionImpl
+android.support.v4.view.accessibility.AccessibilityManagerCompat$AccessibilityStateChangeListenerCompat
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$1
+android.support.v4.view.accessibility.AccessibilityManagerCompatIcs$AccessibilityStateChangeListenerBridge
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoIcsImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityNodeInfoStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatIcs
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderJellyBeanImpl$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompat$AccessibilityNodeProviderStubImpl
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$1
+android.support.v4.view.accessibility.AccessibilityNodeProviderCompatJellyBean$AccessibilityNodeInfoBridge
+android.support.v4.view.accessibility.AccessibilityRecordCompat
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordIcsMr1Impl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordJellyBeanImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompat$AccessibilityRecordStubImpl
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcs
+android.support.v4.view.accessibility.AccessibilityRecordCompatIcsMr1
+android.support.v4.view.accessibility.AccessibilityRecordCompatJellyBean
+android.support.v4.widget.DrawerLayout:
+    private static final java.lang.String TAG
+    public static final int STATE_IDLE
+    public static final int STATE_DRAGGING
+    public static final int STATE_SETTLING
+    public static final int LOCK_MODE_UNLOCKED
+    public static final int LOCK_MODE_LOCKED_CLOSED
+    public static final int LOCK_MODE_LOCKED_OPEN
+    private static final int MIN_DRAWER_MARGIN
+    private static final int DEFAULT_SCRIM_COLOR
+    private static final int PEEK_DELAY
+    private static final int MIN_FLING_VELOCITY
+    private static final boolean ALLOW_EDGE_LOCK
+    213:214:public DrawerLayout(android.content.Context)
+    217:218:public DrawerLayout(android.content.Context,android.util.AttributeSet)
+    221:245:public DrawerLayout(android.content.Context,android.util.AttributeSet,int)
+    261:271:public void setDrawerShadow(android.graphics.drawable.Drawable,int)
+    281:282:public void setDrawerShadow(int,int)
+    390:395:public void setDrawerLockMode(int,android.view.View)
+    405:412:public int getDrawerLockMode(int)
+    532:540:void moveDrawerToOffset(android.view.View,float)
+    1166:1177:void cancelChildViewTouch()
+android.support.v4.widget.DrawerLayout$AccessibilityDelegate
+android.support.v4.widget.DrawerLayout$LayoutParams:
+    1466:1468:public DrawerLayout$LayoutParams(int,int,int)
+android.support.v4.widget.DrawerLayout$SimpleDrawerListener
+android.support.v4.widget.DrawerLayout$ViewDragCallback:
+    1290:1292:public DrawerLayout$ViewDragCallback(android.support.v4.widget.DrawerLayout,int)
+    1295:1296:public void setDragger(android.support.v4.widget.ViewDragHelper)
+    1375:1397:private void peekDrawer()
+    1280:1280:static synthetic void access$000(android.support.v4.widget.DrawerLayout$ViewDragCallback)
+android.support.v4.widget.DrawerLayout$ViewDragCallback$1
+android.support.v4.widget.EdgeEffectCompat:
+    132:134:public EdgeEffectCompat(android.content.Context)
+    204:204:public boolean onAbsorb(int)
+android.support.v4.widget.EdgeEffectCompat$BaseEdgeEffectImpl:
+    60:60:public java.lang.Object newEdgeEffect(android.content.Context)
+    82:82:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectIcsImpl:
+    92:92:public java.lang.Object newEdgeEffect(android.content.Context)
+    116:116:public boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompat$EdgeEffectImpl:
+    public abstract java.lang.Object newEdgeEffect(android.content.Context)
+    public abstract boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.EdgeEffectCompatIcs:
+    28:28:EdgeEffectCompatIcs()
+    30:30:public static java.lang.Object newEdgeEffect(android.content.Context)
+    57:58:public static boolean onAbsorb(java.lang.Object,int)
+android.support.v4.widget.ScrollerCompat:
+    251:251:public static android.support.v4.widget.ScrollerCompat create(android.content.Context)
+    255:255:public static android.support.v4.widget.ScrollerCompat create(android.content.Context,android.view.animation.Interpolator)
+    258:260:ScrollerCompat(android.content.Context,android.view.animation.Interpolator)
+    314:314:public float getCurrVelocity()
+    341:342:public void startScroll(int,int,int,int)
+    382:383:public void fling(int,int,int,int,int,int,int,int)
+    410:412:public void fling(int,int,int,int,int,int,int,int,int,int)
+    437:438:public void notifyHorizontalEdgeReached(int,int,int)
+    454:455:public void notifyVerticalEdgeReached(int,int,int)
+    471:471:public boolean isOverScrolled()
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImpl:
+    public abstract java.lang.Object createScroller(android.content.Context,android.view.animation.Interpolator)
+    public abstract float getCurrVelocity(java.lang.Object)
+    public abstract void startScroll(java.lang.Object,int,int,int,int)
+    public abstract void fling(java.lang.Object,int,int,int,int,int,int,int,int)
+    public abstract void fling(java.lang.Object,int,int,int,int,int,int,int,int,int,int)
+    public abstract void notifyHorizontalEdgeReached(java.lang.Object,int,int,int)
+    public abstract void notifyVerticalEdgeReached(java.lang.Object,int,int,int)
+    public abstract boolean isOverScrolled(java.lang.Object)
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplBase:
+    58:58:public java.lang.Object createScroller(android.content.Context,android.view.animation.Interpolator)
+    79:79:public float getCurrVelocity(java.lang.Object)
+    89:90:public void startScroll(java.lang.Object,int,int,int,int)
+    101:102:public void fling(java.lang.Object,int,int,int,int,int,int,int,int)
+    107:108:public void fling(java.lang.Object,int,int,int,int,int,int,int,int,int,int)
+    119:119:public void notifyHorizontalEdgeReached(java.lang.Object,int,int,int)
+    124:124:public void notifyVerticalEdgeReached(java.lang.Object,int,int,int)
+    129:129:public boolean isOverScrolled(java.lang.Object)
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplGingerbread:
+    146:146:public java.lang.Object createScroller(android.content.Context,android.view.animation.Interpolator)
+    166:166:public float getCurrVelocity(java.lang.Object)
+    176:177:public void startScroll(java.lang.Object,int,int,int,int)
+    188:190:public void fling(java.lang.Object,int,int,int,int,int,int,int,int)
+    195:197:public void fling(java.lang.Object,int,int,int,int,int,int,int,int,int,int)
+    207:208:public void notifyHorizontalEdgeReached(java.lang.Object,int,int,int)
+    212:213:public void notifyVerticalEdgeReached(java.lang.Object,int,int,int)
+    217:217:public boolean isOverScrolled(java.lang.Object)
+android.support.v4.widget.ScrollerCompat$ScrollerCompatImplIcs:
+    234:234:public float getCurrVelocity(java.lang.Object)
+android.support.v4.widget.ScrollerCompatGingerbread:
+    24:24:ScrollerCompatGingerbread()
+    26:26:public static java.lang.Object createScroller(android.content.Context,android.view.animation.Interpolator)
+    47:48:public static void startScroll(java.lang.Object,int,int,int,int)
+    57:58:public static void fling(java.lang.Object,int,int,int,int,int,int,int,int)
+    62:64:public static void fling(java.lang.Object,int,int,int,int,int,int,int,int,int,int)
+    72:73:public static void notifyHorizontalEdgeReached(java.lang.Object,int,int,int)
+    76:77:public static void notifyVerticalEdgeReached(java.lang.Object,int,int,int)
+    80:80:public static boolean isOverScrolled(java.lang.Object)
+android.support.v4.widget.ScrollerCompatIcs
+android.support.v4.widget.SearchViewCompat
+android.support.v4.widget.SearchViewCompat$OnCloseListenerCompat
+android.support.v4.widget.SearchViewCompat$OnQueryTextListenerCompat
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl$1
+android.support.v4.widget.SearchViewCompat$SearchViewCompatHoneycombImpl$2
+android.support.v4.widget.SearchViewCompat$SearchViewCompatIcsImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatImpl
+android.support.v4.widget.SearchViewCompat$SearchViewCompatStubImpl
+android.support.v4.widget.SearchViewCompatHoneycomb
+android.support.v4.widget.SearchViewCompatHoneycomb$1
+android.support.v4.widget.SearchViewCompatHoneycomb$2
+android.support.v4.widget.SearchViewCompatHoneycomb$OnCloseListenerCompatBridge
+android.support.v4.widget.SearchViewCompatHoneycomb$OnQueryTextListenerCompatBridge
+android.support.v4.widget.SearchViewCompatIcs:
+    26:28:SearchViewCompatIcs()
+    43:43:public static android.view.View newSearchView(android.content.Context)
+    47:48:public static void setImeOptions(android.view.View,int)
+    51:52:public static void setInputType(android.view.View,int)
+android.support.v4.widget.SearchViewCompatIcs$MySearchView:
+    30:31:public SearchViewCompatIcs$MySearchView(android.content.Context)
+android.support.v4.widget.SimpleCursorAdapter
+android.support.v4.widget.SimpleCursorAdapter$CursorToStringConverter
+android.support.v4.widget.SimpleCursorAdapter$ViewBinder
+android.support.v4.widget.SlidingPaneLayout:
+    private static final java.lang.String TAG
+    private static final int DEFAULT_OVERHANG_SIZE
+    private static final int DEFAULT_FADE_COLOR
+    private static final int MIN_FLING_VELOCITY
+    246:247:public SlidingPaneLayout(android.content.Context)
+    250:251:public SlidingPaneLayout(android.content.Context,android.util.AttributeSet)
+    254:269:public SlidingPaneLayout(android.content.Context,android.util.AttributeSet,int)
+    330:333:void dispatchOnPanelSlide(android.view.View)
+    336:340:void dispatchOnPanelOpened(android.view.View)
+    343:347:void dispatchOnPanelClosed(android.view.View)
+    815:816:public void smoothSlideOpen()
+    833:834:public void smoothSlideClosed()
+    862:862:public boolean canSlide()
+    876:889:private void onPanelDragged(int)
+    1070:1089:protected boolean canScroll(android.view.View,boolean,int,int,int)
+    90:90:static synthetic boolean access$100(android.support.v4.widget.SlidingPaneLayout)
+    90:90:static synthetic android.support.v4.widget.ViewDragHelper access$200(android.support.v4.widget.SlidingPaneLayout)
+    90:90:static synthetic float access$300(android.support.v4.widget.SlidingPaneLayout)
+    90:90:static synthetic android.view.View access$400(android.support.v4.widget.SlidingPaneLayout)
+    90:90:static synthetic boolean access$502(android.support.v4.widget.SlidingPaneLayout,boolean)
+    90:90:static synthetic void access$600(android.support.v4.widget.SlidingPaneLayout,int)
+    90:90:static synthetic int access$700(android.support.v4.widget.SlidingPaneLayout)
+android.support.v4.widget.SlidingPaneLayout$AccessibilityDelegate
+android.support.v4.widget.SlidingPaneLayout$DragHelperCallback
+android.support.v4.widget.SlidingPaneLayout$LayoutParams:
+    1244:1245:public SlidingPaneLayout$LayoutParams(int,int)
+    1256:1258:public SlidingPaneLayout$LayoutParams(android.support.v4.widget.SlidingPaneLayout$LayoutParams)
+android.support.v4.widget.SlidingPaneLayout$PanelSlideListener:
+    public abstract void onPanelSlide(android.view.View,float)
+    public abstract void onPanelOpened(android.view.View)
+    public abstract void onPanelClosed(android.view.View)
+android.support.v4.widget.SlidingPaneLayout$SimplePanelSlideListener
+android.support.v4.widget.ViewDragHelper:
+    private static final java.lang.String TAG
+    public static final int INVALID_POINTER
+    public static final int STATE_IDLE
+    public static final int STATE_DRAGGING
+    public static final int STATE_SETTLING
+    public static final int EDGE_LEFT
+    public static final int EDGE_RIGHT
+    public static final int EDGE_TOP
+    public static final int EDGE_BOTTOM
+    public static final int EDGE_ALL
+    public static final int DIRECTION_HORIZONTAL
+    public static final int DIRECTION_VERTICAL
+    public static final int DIRECTION_ALL
+    private static final int EDGE_SIZE
+    private static final int BASE_SETTLE_DURATION
+    private static final int MAX_SETTLE_DURATION
+    347:347:public static android.support.v4.widget.ViewDragHelper create(android.view.ViewGroup,android.support.v4.widget.ViewDragHelper$Callback)
+    360:362:public static android.support.v4.widget.ViewDragHelper create(android.view.ViewGroup,float,android.support.v4.widget.ViewDragHelper$Callback)
+    373:392:private ViewDragHelper(android.content.Context,android.view.ViewGroup,android.support.v4.widget.ViewDragHelper$Callback)
+    401:402:public void setMinVelocity(float)
+    412:412:public float getMinVelocity()
+    437:438:public void setEdgeTrackingEnabled(int)
+    483:483:public int getActivePointerId()
+    690:701:public void flingCapturedView(int,int,int,int)
+    908:927:protected boolean canScroll(android.view.View,boolean,int,int,int,int)
+android.support.v4.widget.ViewDragHelper$2
+android.support.v4.widget.ViewDragHelper$Callback:
+    148:148:public ViewDragHelper$Callback()
+cn.koolcloud.ipos.appstore.AppCommentDialogActivity:
+    public static final int SOFTWARE_COMMNET_DIALOG_REQUEST
+cn.koolcloud.ipos.appstore.BaseActivity:
+    public static final int SHOW_LOADING
+    public static final int DISMISS_LOADING
+    87:87:public android.os.Handler getHandler()
+cn.koolcloud.ipos.appstore.BuildConfig
+cn.koolcloud.ipos.appstore.MainActivity:
+    private static final int EXIT_LAST_TIME
+cn.koolcloud.ipos.appstore.MyApp:
+    private static final int INIT_APP_INFOS
+    40:40:public android.view.LayoutInflater getInflater()
+    53:57:public void addAppInfoCache(android.content.pm.PackageInfo)
+cn.koolcloud.ipos.appstore.NotificationPromotionActivity:
+    private static final int HANDLE_NOTIFY_PROMOTION
+cn.koolcloud.ipos.appstore.NotificationPromotionActivity$LoadNotifyPromotions
+cn.koolcloud.ipos.appstore.R:
+    10:10:public R()
+cn.koolcloud.ipos.appstore.SearchActivity:
+    public static final int SEARCH_ACTIVITY_REQUEST
+    public static final int GENERAL_APPS_INSTALL_REQUEST
+    private static final int HANDLE_UPDATE_APP
+cn.koolcloud.ipos.appstore.SearchActivity$MyDownloadReceiver:
+    307:311:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.SplashActivity:
+    public static final java.lang.String NETWORK_AVAILABLE_KEY
+    private static final int SHOW_TOAST
+    private static final int GO_TO_MAIN_PAGE
+cn.koolcloud.ipos.appstore.UpdateClientDialogActivity:
+    public static final int UPDATE_CLIENT_DIALOG_REQUEST
+    private static final java.lang.String APK_NAME
+cn.koolcloud.ipos.appstore.WebViewActivity$JavaScriptInterface:
+    98:102:public void print(java.lang.String)
+    105:109:public void printQueueNumber(java.lang.String)
+cn.koolcloud.ipos.appstore.WebViewActivity$JavaScriptInterface$1
+cn.koolcloud.ipos.appstore.WebViewActivity$JavaScriptInterface$2
+cn.koolcloud.ipos.appstore.adapter.ActionBarSuggestionsAdapter
+cn.koolcloud.ipos.appstore.adapter.UpdateAppsListAdapter:
+    public static final int GENERAL_APPS_INSTALL_REQUEST
+    private static final int HANDLE_DOWNLOAD_PROCESS
+    private static final int HANDLE_DOWNLOAD_PROCESS_DONE
+    private static final int HANDLE_START_NEW_PROCESS
+cn.koolcloud.ipos.appstore.api.ApiService:
+    private static final java.lang.String TAG
+    private static final java.lang.String HOST
+    private static final java.lang.String VERSION_VAL
+    private static final java.lang.String REGISTER_TERMINAL_ACTION
+    private static final java.lang.String GET_CATEGORIES_ACTION
+    private static final java.lang.String GET_APPS_ACTION
+    private static final java.lang.String SEARCH_APP_ACTION
+    private static final java.lang.String GET_APP_DETAILS_ACTION
+    private static final java.lang.String DOWNLOAD_APP_ACTION
+    private static final java.lang.String DOWNLOAD_PIC_ACTION
+    private static final java.lang.String SELF_UPDATE_ACTION
+    private static final java.lang.String POST_COMMENT_ACTION
+    private static final java.lang.String GET_COMMENTS_ACTION
+    private static final java.lang.String GET_COMMENT_SUMMARY_ACTION
+    private static final java.lang.String CHECK_APP_UPDATE_ACTION
+    private static final java.lang.String GET_PROMOTION_ACTION
+    private static final java.lang.String REQUEST_CONTEXT
+    private static final java.lang.String REGISTER_TERMINAL_PATH
+    private static final java.lang.String GET_CATEGORIES_PATH
+    private static final java.lang.String SEARCH_APPS_PATH
+    private static final java.lang.String GET_APPS_PATH
+    private static final java.lang.String GET_APP_DETAILS_PATH
+    private static final java.lang.String SELF_UPDATE_PATH
+    private static final java.lang.String POST_COMMENT_PATH
+    private static final java.lang.String GET_COMMENTS_PATH
+    private static final java.lang.String GET_COMMENT_SUMMARY_PATH
+    private static final java.lang.String CHECK_APP_UPDATE_PATH
+    private static final java.lang.String DOWNLOAD_APP_PATH
+    private static final java.lang.String DOWNLOAD_PICTURE_PATH
+    private static final java.lang.String CONTRACT_LINK_PATH
+    private static final java.lang.String GET_PROMOTION_PATH
+    26:26:public ApiService()
+    423:446:public static cn.koolcloud.ipos.appstore.interfaces.Task checkSoftUpdate(android.content.Context,java.lang.String,java.lang.String,cn.koolcloud.ipos.appstore.interfaces.CallBack)
+    568:579:public static cn.koolcloud.ipos.appstore.interfaces.Task downloadApp(android.content.Context,java.lang.String,java.lang.String,cn.koolcloud.ipos.appstore.interfaces.CallBack)
+cn.koolcloud.ipos.appstore.api.ssl.AppStoreSSLSocketFactory
+cn.koolcloud.ipos.appstore.api.ssl.SSLX509TrustManager
+cn.koolcloud.ipos.appstore.cache.BindDataIf
+cn.koolcloud.ipos.appstore.cache.BindDataIf$BindHolder
+cn.koolcloud.ipos.appstore.cache.BindDataIf$Callback
+cn.koolcloud.ipos.appstore.cache.DataCleanManager:
+    11:11:public DataCleanManager()
+    55:56:public static void cleanDatabaseByName(android.content.Context,java.lang.String)
+cn.koolcloud.ipos.appstore.cache.DataManager
+cn.koolcloud.ipos.appstore.cache.DataManagerFactory
+cn.koolcloud.ipos.appstore.cache.FileManager:
+    public static final java.lang.String TAG_STRING
+    public static final int DATA_SIZE_IN_MB
+    public static final int SD_SIZE_IN_MB
+    private static final long XML_JSON_TIME_DIFF
+    public static final long IMAGE_TIME_DIFF
+    public static final float REMOVE_FACTOR
+    public static final int MB
+    public static final int BUFFER_SIZE
+    public static final java.lang.String multipart_form_data
+    public static final java.lang.String twoHyphens
+    public static final java.lang.String boundary
+    52:52:public FileManager()
+    87:99:public static java.lang.String getStringFromFileOrUrl(android.content.Context,java.lang.String,java.lang.String,java.lang.String,boolean)
+    112:125:public static java.io.InputStream getInputStreamFromFileOrUrl(android.content.Context,java.lang.String,java.lang.String,java.lang.String,boolean)
+    132:184:public static java.io.InputStream getInputStreamFromFileOrUrlByPost(android.content.Context,java.lang.String,java.lang.String,java.lang.String,boolean,java.util.List,boolean)
+    191:247:public static java.io.InputStream getInputStreamFromFileOrUrlByPost(android.content.Context,java.lang.String,java.lang.String,java.lang.String,boolean,java.util.List,boolean,boolean)
+    267:320:public static java.lang.String getInputStreamByPostMultipart2(java.lang.String,java.util.Set)
+    375:387:private static void addFormField(java.util.Set,java.io.DataOutputStream)
+    391:396:private static java.io.InputStream getInputStreamFromLocal(android.content.Context,java.lang.String,java.lang.String)
+    401:407:private static java.lang.String getStringFromLocal(android.content.Context,java.lang.String,java.lang.String)
+    412:417:public static java.io.InputStream getFileFromUrl(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
+    422:462:private static java.io.InputStream getInputStream(android.content.Context,java.lang.String,java.lang.String,java.io.InputStream)
+    468:472:private static java.lang.String getStringFromUrlFile(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
+    476:486:public static java.io.InputStream download(java.lang.String)
+    490:491:public static boolean canWriteData()
+    495:501:public static boolean canWriteSD()
+    507:514:private static void writeFile(java.io.InputStream,java.io.OutputStream)
+    517:529:public static java.lang.String convertStreamToString(java.io.InputStream)
+    568:577:public static long getFileSize(java.io.File)
+    618:629:public static void deleteAll(java.io.File)
+    659:664:public static java.io.InputStream getStringStream(java.lang.String)
+    668:671:public static java.io.File createSDDir(java.lang.String)
+    675:678:public static java.io.File createSDFile(java.lang.String)
+    682:702:public static java.io.File write2SDFromInput(java.lang.String,java.lang.String,java.io.InputStream)
+    716:722:public static boolean isFileExists(android.content.Context,java.lang.String,long)
+    730:738:public static void installApk(android.content.Context,java.io.File)
+cn.koolcloud.ipos.appstore.cache.ImageDownloader:
+    private static final int DEFAULT_MEM_CACHE_SIZE
+    private static final int IMAGE_RETRY_TIMES
+    98:99:public void release()
+    105:106:public void deleteImagesOfSd()
+    118:132:public void download(cn.koolcloud.ipos.appstore.cache.BindDataIf$BindHolder,cn.koolcloud.ipos.appstore.cache.BindDataIf$Callback)
+    314:315:public void deleteAllImages()
+cn.koolcloud.ipos.appstore.cache.ImageDownloader$ImageTask
+cn.koolcloud.ipos.appstore.cache.ImageDownloader$ImageTaskHandler
+cn.koolcloud.ipos.appstore.cache.ImageFileCache:
+    public static final java.lang.String IMG_SUFFIX
+    186:195:public void deleteAll()
+cn.koolcloud.ipos.appstore.cache.LruMemoryCache:
+    151:167:public final java.lang.Object remove(java.lang.Object)
+    229:230:public final void clearCache()
+    238:238:public final synchronized int size()
+    247:247:public final synchronized int maxSize()
+    254:254:public final synchronized int hitCount()
+    262:262:public final synchronized int missCount()
+    269:269:public final synchronized int createCount()
+    276:276:public final synchronized int putCount()
+    283:283:public final synchronized int evictionCount()
+    291:291:public final synchronized java.util.Map snapshot()
+cn.koolcloud.ipos.appstore.cache.base.ArrayDeque:
+    private static final int MIN_INITIAL_CAPACITY
+    private static final long serialVersionUID
+    101:117:private void allocateElements(int)
+    173:175:public ArrayDeque(int)
+    187:190:public ArrayDeque(java.util.Collection)
+    203:208:public void addFirst(java.lang.Object)
+    234:235:public boolean offerFirst(java.lang.Object)
+    254:257:public java.lang.Object removeFirst()
+    264:267:public java.lang.Object removeLast()
+    281:287:public java.lang.Object pollLast()
+    294:297:public java.lang.Object getFirst()
+    304:307:public java.lang.Object getLast()
+    311:311:public java.lang.Object peekFirst()
+    315:315:public java.lang.Object peekLast()
+    359:371:public boolean removeLastOccurrence(java.lang.Object)
+    415:415:public java.lang.Object remove()
+    443:443:public java.lang.Object element()
+    456:456:public java.lang.Object peek()
+    471:472:public void push(java.lang.Object)
+    485:485:public java.lang.Object pop()
+    578:578:public java.util.Iterator descendingIterator()
+    818:827:private void writeObject(java.io.ObjectOutputStream)
+    835:846:private void readObject(java.io.ObjectInputStream)
+cn.koolcloud.ipos.appstore.cache.base.ArrayDeque$DescendingIterator
+cn.koolcloud.ipos.appstore.cache.base.Arrays:
+    159:159:public static varargs java.util.List asList(java.lang.Object[])
+    173:173:public static int binarySearch(byte[],byte)
+    193:209:public static int binarySearch(byte[],int,int,byte)
+    223:223:public static int binarySearch(char[],char)
+    243:259:public static int binarySearch(char[],int,int,char)
+    273:273:public static int binarySearch(double[],double)
+    293:320:public static int binarySearch(double[],int,int,double)
+    334:334:public static int binarySearch(float[],float)
+    354:381:public static int binarySearch(float[],int,int,float)
+    395:395:public static int binarySearch(int[],int)
+    415:431:public static int binarySearch(int[],int,int,int)
+    445:445:public static int binarySearch(long[],long)
+    465:481:public static int binarySearch(long[],int,int,long)
+    498:498:public static int binarySearch(java.lang.Object[],java.lang.Object)
+    522:539:public static int binarySearch(java.lang.Object[],int,int,java.lang.Object)
+    558:558:public static int binarySearch(java.lang.Object[],java.lang.Object,java.util.Comparator)
+    584:604:public static int binarySearch(java.lang.Object[],int,int,java.lang.Object,java.util.Comparator)
+    618:618:public static int binarySearch(short[],short)
+    638:654:public static int binarySearch(short[],int,int,short)
+    658:664:private static void checkBinarySearchBounds(int,int,int)
+    675:678:public static void fill(byte[],byte)
+    691:694:public static void fill(int[],int)
+    707:710:public static void fill(boolean[],boolean)
+    723:726:public static void fill(java.lang.Object[],java.lang.Object)
+    747:755:public static int hashCode(boolean[])
+    775:783:public static int hashCode(int[])
+    803:811:public static int hashCode(short[])
+    831:839:public static int hashCode(char[])
+    859:867:public static int hashCode(byte[])
+    887:899:public static int hashCode(long[])
+    919:930:public static int hashCode(float[])
+    950:963:public static int hashCode(double[])
+    987:1001:public static int hashCode(java.lang.Object[])
+    1032:1040:public static int deepHashCode(java.lang.Object[])
+    1045:1082:private static int deepHashCodeElement(java.lang.Object)
+    1097:1108:public static boolean equals(byte[],byte[])
+    1123:1134:public static boolean equals(short[],short[])
+    1149:1160:public static boolean equals(char[],char[])
+    1175:1186:public static boolean equals(int[],int[])
+    1201:1212:public static boolean equals(long[],long[])
+    1229:1241:public static boolean equals(float[],float[])
+    1258:1270:public static boolean equals(double[],double[])
+    1285:1296:public static boolean equals(boolean[],boolean[])
+    1311:1323:public static boolean equals(java.lang.Object[],java.lang.Object[])
+    1363:1376:public static boolean deepEquals(java.lang.Object[],java.lang.Object[])
+    1382:1429:private static boolean deepEqualsElements(java.lang.Object,java.lang.Object)
+    1463:1477:public static java.lang.String toString(boolean[])
+    1493:1507:public static java.lang.String toString(byte[])
+    1523:1537:public static java.lang.String toString(char[])
+    1553:1567:public static java.lang.String toString(double[])
+    1583:1597:public static java.lang.String toString(float[])
+    1613:1627:public static java.lang.String toString(int[])
+    1643:1657:public static java.lang.String toString(long[])
+    1673:1687:public static java.lang.String toString(short[])
+    1703:1717:public static java.lang.String toString(java.lang.Object[])
+    1739:1745:public static java.lang.String deepToString(java.lang.Object[])
+    1764:1831:private static void deepToStringImpl(java.lang.Object[],java.lang.Object[],java.lang.StringBuilder)
+    1846:1854:private static boolean deepToStringImplContains(java.lang.Object[],java.lang.Object)
+    1870:1873:public static boolean[] copyOf(boolean[],int)
+    1889:1892:public static byte[] copyOf(byte[],int)
+    1908:1911:public static char[] copyOf(char[],int)
+    1927:1930:public static double[] copyOf(double[],int)
+    1946:1949:public static float[] copyOf(float[],int)
+    1965:1968:public static int[] copyOf(int[],int)
+    1984:1987:public static long[] copyOf(long[],int)
+    2003:2006:public static short[] copyOf(short[],int)
+    2047:2050:public static java.lang.Object[] copyOf(java.lang.Object[],int,java.lang.Class)
+    2069:2080:public static boolean[] copyOfRange(boolean[],int,int)
+    2099:2110:public static byte[] copyOfRange(byte[],int,int)
+    2129:2140:public static char[] copyOfRange(char[],int,int)
+    2159:2170:public static double[] copyOfRange(double[],int,int)
+    2189:2200:public static float[] copyOfRange(float[],int,int)
+    2219:2230:public static int[] copyOfRange(int[],int,int)
+    2249:2260:public static long[] copyOfRange(long[],int,int)
+    2279:2290:public static short[] copyOfRange(short[],int,int)
+    2342:2353:public static java.lang.Object[] copyOfRange(java.lang.Object[],int,int,java.lang.Class)
+cn.koolcloud.ipos.appstore.cache.base.Arrays$ArrayList
+cn.koolcloud.ipos.appstore.cache.base.AsyncTask:
+    private static final java.lang.String LOG_TAG
+    private static final int CORE_POOL_SIZE
+    private static final int MAXIMUM_POOL_SIZE
+    private static final int KEEP_ALIVE
+    private static final int MESSAGE_POST_RESULT
+    private static final int MESSAGE_POST_PROGRESS
+    127:128:public static void init()
+    132:133:public static void setDefaultExecutor(java.util.concurrent.Executor)
+    187:187:public final cn.koolcloud.ipos.appstore.cache.base.AsyncTask$Status getStatus()
+    337:337:public final java.lang.Object get()
+    357:357:public final java.lang.Object get(long,java.util.concurrent.TimeUnit)
+    389:389:public final varargs cn.koolcloud.ipos.appstore.cache.base.AsyncTask execute(java.lang.Object[])
+    459:460:public static void execute(java.lang.Runnable)
+    477:481:protected final varargs void publishProgress(java.lang.Object[])
+cn.koolcloud.ipos.appstore.cache.base.Deque:
+    public abstract void addFirst(java.lang.Object)
+    public abstract void addLast(java.lang.Object)
+    public abstract boolean offerFirst(java.lang.Object)
+    public abstract boolean offerLast(java.lang.Object)
+    public abstract java.lang.Object removeFirst()
+    public abstract java.lang.Object removeLast()
+    public abstract java.lang.Object pollFirst()
+    public abstract java.lang.Object pollLast()
+    public abstract java.lang.Object getFirst()
+    public abstract java.lang.Object getLast()
+    public abstract java.lang.Object peekFirst()
+    public abstract java.lang.Object peekLast()
+    public abstract boolean removeFirstOccurrence(java.lang.Object)
+    public abstract boolean removeLastOccurrence(java.lang.Object)
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+    public abstract void push(java.lang.Object)
+    public abstract java.lang.Object pop()
+    public abstract boolean remove(java.lang.Object)
+    public abstract boolean contains(java.lang.Object)
+    public abstract int size()
+    public abstract java.util.Iterator iterator()
+    public abstract java.util.Iterator descendingIterator()
+cn.koolcloud.ipos.appstore.cache.base.FileNameGenerator:
+    21:21:public FileNameGenerator()
+cn.koolcloud.ipos.appstore.cache.base.Queue:
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+cn.koolcloud.ipos.appstore.cache.database.BaseSqlAdapter:
+    17:17:public android.database.sqlite.SQLiteDatabase getmDb()
+    52:66:public boolean excuteWriteAbleSql(java.lang.String)
+    71:85:public boolean excuteSql(java.lang.String,java.lang.String[])
+    89:105:public boolean insertSql(java.lang.String,android.content.ContentValues)
+    165:171:public android.database.sqlite.SQLiteDatabase getDb()
+    184:186:public void closeHelp()
+cn.koolcloud.ipos.appstore.cache.database.BaseSqlAdapter$SQLEntity:
+    206:207:public void setSql(java.lang.String)
+    214:215:public void setParams(java.lang.String[])
+cn.koolcloud.ipos.appstore.cache.database.CacheDB:
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+    private static final java.lang.String CATEGORY_TABLE_NAME
+    private static final java.lang.String CATEGORY_ID
+    private static final java.lang.String CATEGORY_NAME
+    private static final java.lang.String CATEGORY_HASH
+    private static final java.lang.String CATEGORY_ICON
+    private static final java.lang.String CATEGORY_PRIORITY
+    private static final java.lang.String NOTIFICATION_PROMOTION_TABLE_NAME
+    private static final java.lang.String NOTIFY_PROMOTION_ID
+    private static final java.lang.String NOTIFY_PROMOTION_TYPE
+    private static final java.lang.String NOTIFY_PROMOTION_TITLE
+    private static final java.lang.String NOTIFY_PROMOTION_DATE
+    private static final java.lang.String NOTIFY_PROMOTION_IMAGE
+    private static final java.lang.String NOTIFY_PROMOTION_DESCRIPTION
+    private static final java.lang.String AD_PROMOTION_TABLE_NAME
+    private static final java.lang.String APP_TABLE_NAME
+    private static final java.lang.String APP_ID
+    private static final java.lang.String APP_NAME
+    private static final java.lang.String APP_VERSION
+    private static final java.lang.String APP_SIZE
+    private static final java.lang.String APP_ICON
+    private static final java.lang.String APP_PACKAGE_NAME
+    private static final java.lang.String APP_VERSION_CODE
+    private static final java.lang.String APP_CATEGORY_ID
+    private static final java.lang.String APP_DOWNLOAD_ID
+    private static final java.lang.String APP_RATING
+    private static final java.lang.String APP_VENDOR
+    private static final java.lang.String APP_DATE
+    private static final java.lang.String AD_TYPE
+    private static final java.lang.String AD_IMG
+    private static final java.lang.String AD_URL
+    private static final java.lang.String AD_APP_ID
+    95:124:private void createCacheDB()
+    149:163:public java.util.List selectAllApps()
+    173:193:public java.util.List selectAllNotifyPromotions()
+    447:483:public void insertAdPromotions(java.util.List)
+    486:495:public void clearAppTableData()
+    498:507:public void clearAdPromotionTableData()
+    512:520:public void deleteCategoryById(int)
+    541:549:public void deleteCategoryByName(java.lang.String)
+    583:618:public java.util.List getUpdatedSoft(java.util.List)
+cn.koolcloud.ipos.appstore.common.AsyncHttpClient:
+    private static final java.lang.String USER_AGENT
+    27:27:public AsyncHttpClient()
+    133:137:public static cn.koolcloud.ipos.appstore.interfaces.Task requestGet(android.content.Context,java.lang.String,org.json.JSONObject,cn.koolcloud.ipos.appstore.interfaces.CallBack,int)
+cn.koolcloud.ipos.appstore.common.AsyncHttpClient$1TaskImpl:
+    91:91:public boolean cancel(boolean)
+    96:96:public android.os.AsyncTask getTask()
+cn.koolcloud.ipos.appstore.common.AsyncHttpClient$2TaskImpl
+cn.koolcloud.ipos.appstore.common.AsyncHttpTask:
+    static final java.lang.String LOG_TAG
+    73:76:public AsyncHttpTask(android.content.Context,java.lang.String,java.lang.String,org.json.JSONObject,cn.koolcloud.ipos.appstore.interfaces.CallBack,int)
+cn.koolcloud.ipos.appstore.constant.Constants:
+    public static final java.lang.String SER_KEY
+    public static final int APP_NEW_VERSION_UPDATE
+    public static final int APP_NO_INSTALLED_DOWNLOAD
+    public static final int APP_INSTALLED_OPEN
+    public static final int APP_DOWNLOADED_INSTALL
+    public static final int TYPE_APP_UPDATE
+    public static final int TYPE_NOTIFICATION_PROMOTION
+    public static final int TYPE_AD_TYPE_WEBVIEW
+    public static final int TYPE_AD_TYPE_APP
+    public static final java.lang.String REG_PACKAGE_MATCH
+    public static final java.lang.String REG_HTTPS_MATCH
+    public static final java.lang.String SEARCH_WORD_KEY
+    public static final java.lang.String CATEGORY_DEFAULT_HASH
+    public static final java.lang.String CATEGORY_LIST_POSITION
+    public static final java.lang.String APP_LIST_POSITION
+    public static final java.lang.String JSON_KEY_ONE
+    public static final java.lang.String JSON_KEY_TWO
+    public static final java.lang.String JSON_KEY_THREE
+    public static final java.lang.String JSON_KEY_FOUR
+    public static final java.lang.String JSON_KEY_FIVE
+    public static final java.lang.String JSON_KEY_ACTION
+    public static final java.lang.String JSON_KEY_USER
+    public static final java.lang.String JSON_KEY_STRATEGY
+    public static final java.lang.String JSON_KEY_CLIENT
+    public static final java.lang.String JSON_KEY_ID
+    public static final java.lang.String JSON_KEY_SN
+    public static final java.lang.String JSON_KEY_APPS
+    public static final java.lang.String JSON_KEY_VERSION
+    public static final java.lang.String JSON_KEY_VERSION_CODE
+    public static final java.lang.String JSON_KEY_VENDOR
+    public static final java.lang.String JSON_KEY_SIZE
+    public static final java.lang.String JSON_KEY_CATEGORIES
+    public static final java.lang.String JSON_KEY_APP_ID
+    public static final java.lang.String JSON_KEY_APP_IDS
+    public static final java.lang.String JSON_KEY_DOWNLOAD_ID
+    public static final java.lang.String JSON_KEY_COMMENT
+    public static final java.lang.String JSON_KEY_COMMENTS
+    public static final java.lang.String JSON_KEY_SCORE
+    public static final java.lang.String JSON_KEY_SCORES
+    public static final java.lang.String JSON_KEY_DETAILS
+    public static final java.lang.String JSON_KEY_TOTAL
+    public static final java.lang.String JSON_KEY_AVERAGE
+    public static final java.lang.String JSON_KEY_DATE
+    public static final java.lang.String JSON_KEY_NAME
+    public static final java.lang.String JSON_KEY_ICON
+    public static final java.lang.String JSON_KEY_PRIORITY
+    public static final java.lang.String JSON_KEY_DESCRIPTION
+    public static final java.lang.String JSON_KEY_NEW_FEATURE_DES
+    public static final java.lang.String JSON_KEY_CPU_INFO
+    public static final java.lang.String JSON_KEY_DISPLAY
+    public static final java.lang.String JSON_KEY_MEM_INFO
+    public static final java.lang.String JSON_KEY_SCREENSHOT1
+    public static final java.lang.String JSON_KEY_SCREENSHOT2
+    public static final java.lang.String JSON_KEY_SCREENSHOT3
+    public static final java.lang.String JSON_KEY_PRINTER_INFO
+    public static final java.lang.String JSON_KEY_RESOLUTION_INFO
+    public static final java.lang.String JSON_KEY_CARD_READER_INFO
+    public static final java.lang.String JSON_KEY_MANUFACTURER
+    public static final java.lang.String JSON_KEY_CLIENT_VERSION
+    public static final java.lang.String JSON_KEY_TERMINAL_ID
+    public static final java.lang.String JSON_KEY_TERMINAL_MODEL
+    public static final java.lang.String JSON_KEY_DOWNLOAD_APK_URL
+    public static final java.lang.String JSON_KEY_PACKAGE_NAME
+    public static final java.lang.String JSON_KEY_BAIDU_PUSH
+    public static final java.lang.String JSON_KEY_USER_ID
+    public static final java.lang.String JSON_KEY_CHANNEL_ID
+    public static final java.lang.String JSON_KEY_TYPE
+    public static final java.lang.String JSON_KEY_ANDROID_VERSION
+    public static final java.lang.String JSON_KEY_PROMOTIONS
+    public static final java.lang.String JSON_KEY_IMG
+    public static final java.lang.String JSON_KEY_URL
+    public static final java.lang.String JSON_KEY_TITLE
+    public static final java.lang.String JSON_KEY_IMAGE
+    public static final java.lang.String STRATEGY_UPDATE_FORCE
+    public static final java.lang.String STRATEGY_UPDATE_OPTION
+    public static final java.lang.String STRATEGY_UPDATE_NONE
+    public static final java.lang.String REQUEST_DATA
+    public static final java.lang.String REQUEST_HASH
+    public static final java.lang.String REQUEST_STATUS
+    public static final java.lang.String REQUEST_STATUS_OK
+    public static final java.lang.String REQUEST_STATUS_FORBIDDEN
+    public static final java.lang.String ACTION_TASK_STARTED
+    public static final java.lang.String ACTION_TASK_PAUSED
+    public static final java.lang.String ACTION_TASK_CANCEL
+    public static final java.lang.String ACTION_TASK_UPDATED
+    public static final java.lang.String ACTION_TASK_FINISHED
+    public static final java.lang.String ACTION_TASK_ERROR
+    public static final java.lang.String ACTION_TASK_COMPLETE_PROCESS
+    public static final int DOWNLOAD_UNFINISHED
+    public static final int DOWNLOAD_FINISHED
+    public static final int INSERT_DB_FAILED_ID
+    public static final java.lang.String TASK_PACKAGE_NAME
+    public static final java.lang.String TASK_ERROR_MES
+    public static final java.lang.String TASK_COMPLETE_PROCESS
+    16:16:public Constants()
+cn.koolcloud.ipos.appstore.download.common.DownloadConstants
+cn.koolcloud.ipos.appstore.download.common.DownloadUtil:
+    private static final java.lang.String TAG
+    30:52:public int getNetworkType()
+cn.koolcloud.ipos.appstore.download.common.DownloadVariable
+cn.koolcloud.ipos.appstore.download.common.DownloaderErrorException:
+    private static final long serialVersionUID
+cn.koolcloud.ipos.appstore.download.database.DownloadDBHelper:
+    private static final java.lang.String DATABASE_NAME
+    private static final int DATABASE_VERSION
+cn.koolcloud.ipos.appstore.download.database.DownloadDBOperator:
+    private static final java.lang.String TAG
+    45:46:public void closeDb()
+    168:213:public java.util.HashMap getAllTasks()
+    268:296:public int getTaskProgressByUrl(java.lang.String,java.lang.String)
+    364:379:public boolean isPauseFile(java.lang.String,java.lang.String)
+    410:419:public boolean deleteCompleteTaskByUrl(java.lang.String,java.lang.String)
+    428:442:public boolean isTaskDone(java.lang.String,java.lang.String)
+    452:484:public cn.koolcloud.ipos.appstore.download.entity.DownloadBean getCompleteTaskInfoByUrl(java.lang.String,java.lang.String)
+    493:526:public java.util.List getAllCompletedTask()
+cn.koolcloud.ipos.appstore.download.entity.DownloadBean:
+    52:52:public boolean deleteFromDoneDB(android.content.Context)
+cn.koolcloud.ipos.appstore.download.multithread.CancelDownloadState
+cn.koolcloud.ipos.appstore.download.multithread.CancelEvent
+cn.koolcloud.ipos.appstore.download.multithread.DownloadContext:
+    18:18:public cn.koolcloud.ipos.appstore.download.multithread.DownloadState getState()
+cn.koolcloud.ipos.appstore.download.multithread.DownloadOpenHelper:
+    private static final java.lang.String Download
+    private static final int VERSION
+cn.koolcloud.ipos.appstore.download.multithread.DownloadTaskReceiver:
+    54:54:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.download.multithread.Event:
+    public static final java.lang.String startEvent
+    public static final java.lang.String pauseEvent
+    public static final java.lang.String cancelEvent
+    public static final java.lang.String finishEvent
+cn.koolcloud.ipos.appstore.download.multithread.FileDownloader:
+    52:52:public int getThreadSize()
+cn.koolcloud.ipos.appstore.download.multithread.FinishDownloadState
+cn.koolcloud.ipos.appstore.download.multithread.FinishEvent
+cn.koolcloud.ipos.appstore.download.multithread.MultiThreadService:
+    public static final int IS_DOWNLOADING
+    public static final int IS_PAUSEING
+    public static final int HAVE_FINISHED
+cn.koolcloud.ipos.appstore.download.multithread.StateOpenHelper:
+    private static final java.lang.String state
+    private static final int VERSION
+cn.koolcloud.ipos.appstore.download.providers.DownloadManager
+cn.koolcloud.ipos.appstore.download.providers.Downloader:
+    private static final java.lang.String TAG
+    84:84:public cn.koolcloud.ipos.appstore.download.entity.DownloadBean getDownloaderInfo()
+    88:88:public int getDownloaderState()
+    96:100:protected void setDownloaderState(int)
+    615:618:public void stopDownloader()
+cn.koolcloud.ipos.appstore.entity.App:
+    private static final long serialVersionUID
+    33:33:public java.lang.String getImg()
+cn.koolcloud.ipos.appstore.entity.Category:
+    private static final long serialVersionUID
+    28:29:public void setHash(java.lang.String)
+    36:37:public void setIcon(java.lang.String)
+    44:45:public void setPriority(java.lang.String)
+    52:53:public void setId(java.lang.String)
+    60:61:public void setName(java.lang.String)
+cn.koolcloud.ipos.appstore.entity.Client:
+    private static final long serialVersionUID
+    26:27:public void setStrategy(java.lang.String)
+    34:35:public void setId(java.lang.String)
+    42:43:public void setVersion(java.lang.String)
+    50:51:public void setSize(java.lang.String)
+cn.koolcloud.ipos.appstore.entity.ResultSet:
+    public java.lang.Object dataObject
+    28:32:private ResultSet(java.lang.String,int,int,java.lang.String,java.lang.Object)
+    35:35:public int getRetcode()
+    38:39:public void setRetcode(int)
+    41:41:public java.lang.String getDescribe()
+    44:45:public void setDescribe(java.lang.String)
+    47:47:public java.lang.Object getDataObject()
+    50:51:public void setDataObject(java.lang.Object)
+cn.koolcloud.ipos.appstore.entity.ResultSet$RESPONSETYPE
+cn.koolcloud.ipos.appstore.entity.ResultSet$Response
+cn.koolcloud.ipos.appstore.fancycoverflow.FancyCoverFlow:
+    public static final int ACTION_DISTANCE_AUTO
+    public static final float SCALEDOWN_GRAVITY_TOP
+    public static final float SCALEDOWN_GRAVITY_CENTER
+    public static final float SCALEDOWN_GRAVITY_BOTTOM
+cn.koolcloud.ipos.appstore.fancycoverflow.FancyCoverFlow$LayoutParams
+cn.koolcloud.ipos.appstore.fancycoverflow.FancyCoverFlowItemWrapper:
+    81:83:public FancyCoverFlowItemWrapper(android.content.Context,android.util.AttributeSet)
+    86:88:public FancyCoverFlowItemWrapper(android.content.Context,android.util.AttributeSet,int)
+cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment:
+    public static final int SOFTWARE_DETAIL_LEFT_REQUEST
+    private static final int HANDLE_INSTALL_APP
+    private static final int HANDLE_REFRESH_BUTTON_STATUS
+    private static final int HANDLE_DOWNLOAD_PROCESS
+    private static final int HANDLE_DOWNLOAD_PROCESS_DONE
+    88:89:public static cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment getInstance()
+    80:80:static synthetic boolean access$8(cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment)
+    79:79:static synthetic cn.koolcloud.ipos.appstore.download.providers.Downloader access$9(cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment)
+cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment$MyDownloadReceiver:
+    588:592:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.fragment.AppDetailLeftFragment$RefreshDownloadProcessThread
+cn.koolcloud.ipos.appstore.fragment.AppDetailMainFragment:
+    public static final int SOFTWARE_DETAIL_MAIN_COMMENT_REQUEST
+cn.koolcloud.ipos.appstore.fragment.CategoryRightFragment:
+    public static final int HANDLE_REFRESH_ADAPTER
+    public static final int NORMAL_FRAGMENT_REQUEST
+    public static final int GENERAL_APPS_INSTALL_REQUEST
+    public static final int REFRESH_ADAPTER_DATA_RESOURCE
+cn.koolcloud.ipos.appstore.fragment.CategoryRightFragment$MyDownloadReceiver:
+    235:239:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.fragment.DownloadSettingFragment:
+    private static final int HANDLE_CLEAR_SD_CARD
+    private static final int HANDLE_CLEAR_INTERNAL_CACHE
+cn.koolcloud.ipos.appstore.fragment.MainRightFragment:
+    private static final int HANDLE_CACHE_CATEGORY_TO_SHOW
+    private static final int HANDLE_CACHE_AD_AND_SHOW
+    private static final int HANDLE_GALLERY_AUTO_CHANGE
+cn.koolcloud.ipos.appstore.fragment.MainRightFragment$CacheAdPromotionThread
+cn.koolcloud.ipos.appstore.fragment.UpdateSoftwareFragment$MyDownloadReceiver:
+    193:197:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.interfaces.CallBack:
+    15:15:public void onSuccess(java.lang.String)
+cn.koolcloud.ipos.appstore.interfaces.Task:
+    public abstract android.os.AsyncTask getTask()
+    public abstract boolean cancel(boolean)
+cn.koolcloud.ipos.appstore.receiver.MyDownloadReceiver:
+    44:46:public void downloadResumed(java.lang.String)
+cn.koolcloud.ipos.appstore.service.aidl.IMSCService$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_checkUpdate
+    static final int TRANSACTION_openAppDetail
+    23:30:public static cn.koolcloud.ipos.appstore.service.aidl.IMSCService asInterface(android.os.IBinder)
+cn.koolcloud.ipos.appstore.service.aidl.IMSCService$Stub$Proxy
+cn.koolcloud.ipos.appstore.service.aidl.ParcelableApp:
+    22:34:public ParcelableApp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,int,java.lang.String)
+    155:155:public java.lang.String getIconFileName()
+    159:159:public java.lang.String getSnapShortImageName(java.lang.String)
+    186:197:public void readFromParcel(android.os.Parcel)
+cn.koolcloud.ipos.appstore.utils.BuildingConfig
+cn.koolcloud.ipos.appstore.utils.ConvertUtils:
+    29:29:public ConvertUtils()
+    42:51:public static byte[] drawableToByte(android.graphics.drawable.Drawable)
+    64:69:public static java.lang.String inputSreamToString(java.io.InputStream)
+    81:97:public static byte[] InputStreamToByte(java.io.InputStream)
+    110:111:public static android.graphics.drawable.Drawable bitmapToDrawable(android.graphics.Bitmap)
+    123:125:public static byte[] bitmapToBytes(android.graphics.Bitmap)
+    137:140:public static android.graphics.Bitmap Bytes2Bimap(byte[])
+    154:172:public static android.graphics.Bitmap resizeBitmap(android.graphics.Bitmap,float)
+cn.koolcloud.ipos.appstore.utils.Env:
+    private static final java.lang.String SD_HOME
+    private static final java.lang.String SD_IMG
+    27:27:public Env()
+    56:63:public static java.io.File getDataDirectoryPath(java.lang.String)
+    80:92:public static java.io.File getAppDataDirectory()
+    162:163:public static void openAPK(java.io.File,android.content.Context)
+    166:174:public static android.content.Intent getInstallApp(java.io.File,android.content.Context)
+    178:185:public static int getVersionCode(android.content.Context)
+    246:268:public static java.lang.String getAPKPackageName(android.content.Context,java.io.File)
+    281:307:public static android.content.pm.PackageInfo getAPKPackageInfo(android.content.Context,java.io.File)
+    362:405:public static java.lang.String getDeviceInfo(android.content.Context)
+cn.koolcloud.ipos.appstore.utils.FileUtils:
+    public static final int S_IRWXU
+    public static final int S_IRUSR
+    public static final int S_IWUSR
+    public static final int S_IXUSR
+    public static final int S_IRWXG
+    public static final int S_IRGRP
+    public static final int S_IWGRP
+    public static final int S_IXGRP
+    public static final int S_IRWXO
+    public static final int S_IROTH
+    public static final int S_IWOTH
+    public static final int S_IXOTH
+    34:34:public FileUtils()
+    public static native boolean getFileStatus(java.lang.String,cn.koolcloud.ipos.appstore.utils.FileUtils$FileStatus)
+    public static native int setPermissions(java.lang.String,int,int,int)
+    public static native int getPermissions(java.lang.String,int[])
+    public static native int getFatVolumeId(java.lang.String)
+    102:108:public static boolean sync(java.io.FileOutputStream)
+    114:125:public static boolean copyFile(java.io.File,java.io.File)
+    134:154:public static boolean copyToFile(java.io.InputStream,java.io.File)
+    166:166:public static boolean isFilenameSafe(java.io.File)
+    178:221:public static java.lang.String readTextFile(java.io.File,int,java.lang.String)
+cn.koolcloud.ipos.appstore.utils.FileUtils$FileStatus
+cn.koolcloud.ipos.appstore.utils.InputStreamUtils
+cn.koolcloud.ipos.appstore.utils.JsonUtils:
+    31:31:public JsonUtils()
+cn.koolcloud.ipos.appstore.utils.MD5
+cn.koolcloud.ipos.appstore.utils.MyLog:
+    private static final java.lang.String TAG
+    22:24:private MyLog()
+    77:82:public static void v(java.lang.String)
+    93:98:public static void wtf(java.lang.String)
+cn.koolcloud.ipos.appstore.utils.MySPEdit:
+    private static final int DEFAULT_PROMOTION_DATA_ID
+    public static final java.lang.String PREFS_NAME
+    public static final java.lang.String TERMINAL_ID
+    public static final java.lang.String CATEGORY_HASH
+    public static final java.lang.String BAIDU_PUSH_USER_ID
+    public static final java.lang.String BAIDU_PUSH_CHANNEL_ID
+    public static final java.lang.String DELETE_APK_BTN_TAG
+    public static final java.lang.String PUSH_NOTIFICATION_TAG
+    public static final java.lang.String WIFI_SWITCH_TAG
+    public static final java.lang.String PROMOTION_DATA_ID
+    16:16:public MySPEdit()
+    44:46:public static int getPromotinDataID(android.content.Context)
+    112:114:public static void saveCategoryHash(android.content.Context,java.lang.String)
+cn.koolcloud.ipos.appstore.utils.NetUtil:
+    public static final java.lang.String WIFI
+    public static final java.lang.String MOBILE
+    public static final java.lang.String ALL
+    17:17:public NetUtil()
+    24:30:public static int getActiveType(android.content.Context)
+    42:48:public static boolean isWifiActive(android.content.Context)
+    52:58:public static boolean isMobileActive(android.content.Context)
+    62:68:public static boolean isCurrentNetworkAllowed(android.content.Context,java.lang.String)
+    110:116:public static boolean isMobileGPRS(android.content.Context)
+    124:128:public static android.net.NetworkInfo getWifiInfo(android.content.Context)
+    132:136:public static android.net.NetworkInfo getMobileInfo(android.content.Context)
+    140:145:public static boolean startMobileFeature(android.content.Context,java.lang.String)
+    149:154:public static boolean stopMobileFeature(android.content.Context,java.lang.String)
+    164:175:public static boolean isNetworkAvailable(android.content.Context)
+cn.koolcloud.ipos.appstore.utils.PixelUtil
+cn.koolcloud.ipos.appstore.utils.PushUtils:
+    public static final java.lang.String TAG
+    public static final java.lang.String RESPONSE_METHOD
+    public static final java.lang.String RESPONSE_CONTENT
+    public static final java.lang.String RESPONSE_ERRCODE
+    public static final java.lang.String ACTION_LOGIN
+    public static final java.lang.String ACTION_MESSAGE
+    public static final java.lang.String ACTION_RESPONSE
+    public static final java.lang.String ACTION_SHOW_MESSAGE
+    public static final java.lang.String EXTRA_ACCESS_TOKEN
+    public static final java.lang.String EXTRA_MESSAGE
+    21:21:public PushUtils()
+    81:96:public static java.util.List getTagsList(java.lang.String)
+    107:111:public static void setLogText(android.content.Context,java.lang.String)
+cn.koolcloud.ipos.appstore.utils.ToastUtil:
+    16:16:public ToastUtil()
+cn.koolcloud.ipos.appstore.utils.Utils:
+    15:15:public Utils()
+    18:18:public static java.lang.String getString(java.lang.String,java.lang.String)
+    22:30:public static int getInt(java.lang.String,int)
+    34:43:public static float getFloat(java.lang.String,float)
+    51:57:public static java.lang.Class stringToClass(java.lang.String)
+cn.koolcloud.ipos.appstore.utils.ViewUtils
+cn.koolcloud.ipos.appstore.views.AppStoreListView:
+    private static final int SCROLLBACK_HEADER
+    private static final int SCROLLBACK_FOOTER
+    private static final int SCROLL_DURATION
+    private static final int PULL_LOAD_MORE_DELTA
+    private static final float OFFSET_RADIO
+cn.koolcloud.ipos.appstore.views.AppStoreListViewFooter:
+    public static final int STATE_NORMAL
+    public static final int STATE_READY
+    public static final int STATE_LOADING
+    37:39:public AppStoreListViewFooter(android.content.Context,android.util.AttributeSet)
+    74:76:public void normal()
+    83:85:public void loading()
+cn.koolcloud.ipos.appstore.views.AppStoreListViewHeader:
+    public static final int STATE_NORMAL
+    public static final int STATE_READY
+    public static final int STATE_REFRESHING
+    51:53:public AppStoreListViewHeader(android.content.Context,android.util.AttributeSet)
+cn.koolcloud.ipos.appstore.views.DownloadProgressBar:
+    android.content.Context cxt
+    30:31:public DownloadProgressBar(android.content.Context)
+    34:46:public DownloadProgressBar(android.content.Context,android.util.AttributeSet)
+    57:59:public void setWH(int,int)
+    81:82:public void clearProgress()
+cn.koolcloud.ipos.appstore.views.ElasticHScrollView:
+    27:28:public ElasticHScrollView(android.content.Context)
+    31:32:public ElasticHScrollView(android.content.Context,android.util.AttributeSet)
+cn.koolcloud.ipos.appstore.views.GuideGallery:
+    private static final int TIME_DIFF
+cn.koolcloud.ipos.appstore.views.ReboundHorizotalScrollView:
+    private static final int MAX_X_OVERSCROLL_DISTANCE
+    private android.content.Context mContext
+    15:19:public ReboundHorizotalScrollView(android.content.Context)
+    22:26:public ReboundHorizotalScrollView(android.content.Context,android.util.AttributeSet)
+    29:33:public ReboundHorizotalScrollView(android.content.Context,android.util.AttributeSet,int)
+    36:39:private void initBounceDistance()
+cn.koolcloud.ipos.appstore.views.SmoothProgressBar:
+    private static final int INTERPOLATOR_ACCELERATE
+    private static final int INTERPOLATOR_LINEAR
+    private static final int INTERPOLATOR_ACCELERATEDECELERATE
+    private static final int INTERPOLATOR_DECELERATE
+cn.koolcloud.ipos.appstore.views.SmoothProgressDrawable:
+    private static final long FRAME_DURATION
+    private static final float OFFSET_PER_FRAME
+com.baidu.android.pushservice.BasicPushNotificationBuilder
+com.baidu.android.pushservice.BasicPushNotificationBuilder$1
+com.baidu.android.pushservice.CustomPushNotificationBuilder:
+    14:16:public CustomPushNotificationBuilder(android.content.Context,com.baidu.android.pushservice.apiproxy.CustomPushNotificationBuilder)
+    72:75:public android.app.Notification construct(android.content.Context)
+    98:113:public void setNotificationTitle(java.lang.String)
+    116:132:public void setNotificationText(java.lang.String)
+    173:189:public void setNotificationSound(android.net.Uri)
+    192:208:public void setNotificationVibrate(long[])
+com.baidu.android.pushservice.CustomPushNotificationBuilder$4
+com.baidu.android.pushservice.CustomPushNotificationBuilder$5
+com.baidu.android.pushservice.CustomPushNotificationBuilder$8
+com.baidu.android.pushservice.CustomPushNotificationBuilder$9
+com.baidu.android.pushservice.Internal
+com.baidu.android.pushservice.Internal$1
+com.baidu.android.pushservice.Internal$2
+com.baidu.android.pushservice.Internal$3
+com.baidu.android.pushservice.Internal$4
+com.baidu.android.pushservice.Internal$5
+com.baidu.android.pushservice.LoadExecutor:
+    private static final java.lang.String a
+    8:8:public LoadExecutor()
+com.baidu.android.pushservice.PushConstants:
+    public static final java.lang.String EXTRA_PUSH_MESSAGE
+    public static final java.lang.String EXTRA_PUSH_MESSAGE_STRING
+    public static final java.lang.String ACTION_MESSAGE
+    public static final java.lang.String ACTION_SDK_MESSAGE
+    public static final java.lang.String ACTION_METHOD
+    public static final java.lang.String ACTION_RECEIVE
+    public static final java.lang.String ACTION_RECEIVER_NOTIFICATION_CLICK
+    public static final java.lang.String ACTION_SDK_RECEIVE
+    public static final java.lang.String ACTION_WEB_RECEIVE
+    public static final java.lang.String EXTRA_WEB_BIND_API_KEY
+    public static final java.lang.String EXTRA_METHOD
+    public static final java.lang.String PACKAGE_NAME
+    public static final java.lang.String EXTRA_ERROR_CODE
+    public static final java.lang.String EXTRA_CONTENT
+    public static final java.lang.String EXTRA_TAGS_LIST
+    public static final java.lang.String EXTRA_APP_ID
+    public static final java.lang.String EXTRA_USER_ID
+    public static final java.lang.String EXTRA_APP
+    public static final java.lang.String EXTRA_ACCESS_TOKEN
+    public static final java.lang.String EXTRA_API_KEY
+    public static final java.lang.String EXTRA_BIND_NAME
+    public static final java.lang.String EXTRA_BIND_STATUS
+    public static final java.lang.String EXTRA_PUSH_SDK_VERSION
+    public static final java.lang.String EXTRA_MSG_KEY
+    public static final java.lang.String EXTRA_MSG
+    public static final java.lang.String EXTRA_CB_URL
+    public static final java.lang.String EXTRA_TIMESTAMP
+    public static final java.lang.String EXTRA_MSGID
+    public static final java.lang.String EXTRA_HASHCODE
+    public static final java.lang.String EXTRA_OPENTYPE
+    public static final java.lang.String EXTRA_EXTRA
+    public static final int OPEN_BY_USER
+    public static final int OPEN_BY_NOTIFICATION
+    public static final int BIND_STATUS_ONLINE
+    public static final int BIND_STATUS_OFFLINE
+    public static final java.lang.String METHOD_SEND_MSG_TO_SERVER
+    public static final java.lang.String METHOD_SEND_MSG_TO_USER
+    public static final java.lang.String METHOD_APPSTART
+    public static final java.lang.String METHOD_APPSTOP
+    public static final java.lang.String METHOD_SEND
+    public static final java.lang.String METHOD_BIND
+    public static final java.lang.String METHOD_UNBIND
+    public static final java.lang.String EXTRA_FETCH_TYPE
+    public static final java.lang.String EXTRA_FETCH_NUM
+    public static final java.lang.String METHOD_FETCH
+    public static final java.lang.String METHOD_COUNT
+    public static final java.lang.String EXTRA_MSG_IDS
+    public static final java.lang.String METHOD_DELETE
+    public static final java.lang.String METHOD_GBIND
+    public static final java.lang.String EXTRA_GID
+    public static final java.lang.String METHOD_SET_TAGS
+    public static final java.lang.String METHOD_DEL_TAGS
+    public static final java.lang.String EXTRA_TAGS
+    public static final java.lang.String EXTRA_NOTIFICATION_TITLE
+    public static final java.lang.String EXTRA_NOTIFICATION_CONTENT
+    public static final java.lang.String METHOD_GUNBIND
+    public static final java.lang.String METHOD_GINFO
+    public static final java.lang.String METHOD_GLIST
+    public static final java.lang.String METHOD_LISTTAGS
+    public static final java.lang.String METHOD_FETCHGMSG
+    public static final java.lang.String EXTRA_GROUP_FETCH_TYPE
+    public static final java.lang.String EXTRA_GROUP_FETCH_NUM
+    public static final java.lang.String METHOD_COUNTGMSG
+    public static final java.lang.String METHOD_ONLINE
+    public static final int ERROR_SUCCESS
+    public static final int ERROR_NETWORK_ERROR
+    public static final int ERROR_SERVICE_NOT_AVAILABLE
+    public static final int ERROR_SERVICE_NOT_AVAILABLE_TEMP
+    public static final int ERROR_UNKNOWN
+    public static final int ERROR_SERVER_INTERNAL_ERROR
+    public static final int ERROR_METHOD_ERROR
+    public static final int ERROR_PARAMS_ERROR
+    public static final int ERROR_AUTHENTICATION_FAILED
+    public static final int ERROR_QUOTA_USE_UP
+    public static final int ERROR_DATA_NOT_FOUND
+    public static final int ERROR_TIME_EXPIRES
+    public static final int ERROR_CHANNEL_TOKEN_TIMEOUT
+    public static final int ERROR_BIND_NOT_EXIST
+    public static final int ERROR_BIND_OVERLOAD
+    public static final int LOGIN_TYPE_API_KEY
+    public static final int LOGIN_TYPE_ACCESS_TOKEN
+    public static final int LOGIN_TYPE_BDUSS
+    public static final int LOGIN_TYPE_UNKNOWN
+    private static final int a
+    private static final java.lang.String b
+    15:15:public PushConstants()
+    108:116:public static java.lang.String rsaEncrypt(java.lang.String)
+    119:122:public static android.content.Intent createMethodIntent(android.content.Context)
+    125:129:public static void restartPushService(android.content.Context)
+    137:201:public static java.lang.String getErrorMsg(int)
+    219:252:private static byte[] a(byte[],java.lang.String,int)
+com.baidu.android.pushservice.PushManager:
+    9:9:public PushManager()
+    14:24:public static void init(android.content.Context,java.lang.String,java.lang.String)
+    28:38:public static void init(android.content.Context,java.lang.String)
+    42:51:public static void initFromAKSK(android.content.Context,java.lang.String)
+    55:67:public static void startWork(android.content.Context,java.lang.String,java.lang.String)
+    85:95:public static void sdkStartWork(android.content.Context,java.lang.String,int)
+    112:121:public static void resumeWork(android.content.Context)
+    125:135:public static boolean isPushEnabled(android.content.Context)
+    140:150:public static void activityStarted(android.app.Activity)
+    154:164:public static void activityStoped(android.app.Activity)
+    168:178:public static void setAccessToken(android.content.Context,java.lang.String)
+    182:191:public static void setApiKey(android.content.Context,java.lang.String)
+    194:204:public static void setBduss(android.content.Context,java.lang.String)
+    207:217:public static void bind(android.content.Context,int)
+    221:231:public static void sdkBind(android.content.Context,int,java.lang.String,int)
+    234:243:public static void unbind(android.content.Context)
+    247:257:public static void fetchMessages(android.content.Context,int,int)
+    260:270:public static void getMessageCounts(android.content.Context)
+    274:284:public static void deleteMessages(android.content.Context,java.lang.String[])
+    289:299:public static void sendMsgToUser(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    302:312:public static void bindGroup(android.content.Context,java.lang.String)
+    315:325:public static void setTags(android.content.Context,java.util.List)
+    328:337:public static void listTags(android.content.Context)
+    340:350:public static void delTags(android.content.Context,java.util.List)
+    353:363:public static void unbindGroup(android.content.Context,java.lang.String)
+    366:376:public static void getGroupInfo(android.content.Context,java.lang.String)
+    379:389:public static void getGroupList(android.content.Context)
+    393:403:public static void fetchGroupMessages(android.content.Context,java.lang.String,int,int)
+    407:417:public static void getGroupMessageCounts(android.content.Context,java.lang.String)
+    421:432:public static void setDefaultNotificationBuilder(android.content.Context,com.baidu.android.pushservice.PushNotificationBuilder)
+    451:462:public static void setMediaNotificationBuilder(android.content.Context,com.baidu.android.pushservice.PushNotificationBuilder)
+    466:476:public static boolean isConnected(android.content.Context)
+    482:492:public static void tryConnect(android.content.Context)
+    508:518:public static void disableLbs(android.content.Context)
+com.baidu.android.pushservice.PushManager$1
+com.baidu.android.pushservice.PushManager$10
+com.baidu.android.pushservice.PushManager$11
+com.baidu.android.pushservice.PushManager$12
+com.baidu.android.pushservice.PushManager$13
+com.baidu.android.pushservice.PushManager$14
+com.baidu.android.pushservice.PushManager$15
+com.baidu.android.pushservice.PushManager$16
+com.baidu.android.pushservice.PushManager$17
+com.baidu.android.pushservice.PushManager$18
+com.baidu.android.pushservice.PushManager$19
+com.baidu.android.pushservice.PushManager$2
+com.baidu.android.pushservice.PushManager$20
+com.baidu.android.pushservice.PushManager$21
+com.baidu.android.pushservice.PushManager$22
+com.baidu.android.pushservice.PushManager$23
+com.baidu.android.pushservice.PushManager$24
+com.baidu.android.pushservice.PushManager$25
+com.baidu.android.pushservice.PushManager$27
+com.baidu.android.pushservice.PushManager$28
+com.baidu.android.pushservice.PushManager$29
+com.baidu.android.pushservice.PushManager$3
+com.baidu.android.pushservice.PushManager$31
+com.baidu.android.pushservice.PushManager$32
+com.baidu.android.pushservice.PushManager$34
+com.baidu.android.pushservice.PushManager$36
+com.baidu.android.pushservice.PushManager$37
+com.baidu.android.pushservice.PushManager$4
+com.baidu.android.pushservice.PushManager$5
+com.baidu.android.pushservice.PushManager$6
+com.baidu.android.pushservice.PushManager$7
+com.baidu.android.pushservice.PushManager$8
+com.baidu.android.pushservice.PushManager$9
+com.baidu.android.pushservice.PushNotificationBuilder:
+    11:13:public PushNotificationBuilder(android.content.Context,com.baidu.android.pushservice.apiproxy.PushNotificationBuilder)
+    44:55:public void setNotificationTitle(java.lang.String)
+    57:68:public void setNotificationText(java.lang.String)
+    96:107:public void setNotificationSound(android.net.Uri)
+    109:120:public void setNotificationVibrate(long[])
+    public abstract android.app.Notification construct(android.content.Context)
+com.baidu.android.pushservice.PushNotificationBuilder$3
+com.baidu.android.pushservice.PushNotificationBuilder$4
+com.baidu.android.pushservice.PushNotificationBuilder$7
+com.baidu.android.pushservice.PushNotificationBuilder$8
+com.baidu.android.pushservice.PushSettings
+com.baidu.android.pushservice.PushSettings$1
+com.baidu.android.pushservice.apiproxy.BasicPushNotificationBuilder
+com.baidu.android.pushservice.apiproxy.CustomPushNotificationBuilder:
+    8:10:public CustomPushNotificationBuilder(com.baidu.android.pushservice.internal.CustomPushNotificationBuilder)
+    21:21:public android.app.Notification construct(android.content.Context)
+    28:29:public void setNotificationTitle(java.lang.String)
+    32:33:public void setNotificationText(java.lang.String)
+    44:45:public void setNotificationSound(android.net.Uri)
+    48:49:public void setNotificationVibrate(long[])
+com.baidu.android.pushservice.apiproxy.Internal
+com.baidu.android.pushservice.apiproxy.PushConstants:
+    7:7:public PushConstants()
+    9:9:public static android.content.Intent createMethodIntent(android.content.Context)
+    12:13:public static void restartPushService(android.content.Context)
+com.baidu.android.pushservice.apiproxy.PushManager:
+    9:9:public PushManager()
+    11:12:public static void init(android.content.Context,java.lang.String,java.lang.String)
+    14:15:public static void init(android.content.Context,java.lang.String)
+    17:18:public static void initFromAKSK(android.content.Context,java.lang.String)
+    20:21:public static void startWork(android.content.Context,java.lang.String,java.lang.String)
+    26:27:public static void sdkStartWork(android.content.Context,java.lang.String,int)
+    32:33:public static void resumeWork(android.content.Context)
+    35:35:public static boolean isPushEnabled(android.content.Context)
+    38:39:public static void activityStarted(android.app.Activity)
+    41:42:public static void activityStoped(android.app.Activity)
+    44:45:public static void setAccessToken(android.content.Context,java.lang.String)
+    47:48:public static void setApiKey(android.content.Context,java.lang.String)
+    50:51:public static void setBduss(android.content.Context,java.lang.String)
+    53:54:public static void bind(android.content.Context,int)
+    56:57:public static void sdkBind(android.content.Context,int,java.lang.String,int)
+    59:60:public static void unbind(android.content.Context)
+    62:63:public static void fetchMessages(android.content.Context,int,int)
+    65:66:public static void getMessageCounts(android.content.Context)
+    68:69:public static void deleteMessages(android.content.Context,java.lang.String[])
+    71:72:public static void sendMsgToUser(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    74:75:public static void bindGroup(android.content.Context,java.lang.String)
+    77:78:public static void setTags(android.content.Context,java.util.List)
+    80:81:public static void listTags(android.content.Context)
+    83:84:public static void delTags(android.content.Context,java.util.List)
+    86:87:public static void unbindGroup(android.content.Context,java.lang.String)
+    89:90:public static void getGroupInfo(android.content.Context,java.lang.String)
+    92:93:public static void getGroupList(android.content.Context)
+    95:96:public static void fetchGroupMessages(android.content.Context,java.lang.String,int,int)
+    98:99:public static void getGroupMessageCounts(android.content.Context,java.lang.String)
+    101:102:public static void setDefaultNotificationBuilder(android.content.Context,com.baidu.android.pushservice.apiproxy.PushNotificationBuilder)
+    111:112:public static void setMediaNotificationBuilder(android.content.Context,com.baidu.android.pushservice.apiproxy.PushNotificationBuilder)
+    114:114:public static boolean isConnected(android.content.Context)
+    117:118:public static void tryConnect(android.content.Context)
+    123:124:public static void disableLbs(android.content.Context)
+com.baidu.android.pushservice.apiproxy.PushNotificationBuilder:
+    9:11:public PushNotificationBuilder(com.baidu.android.pushservice.internal.PushNotificationBuilder)
+    27:28:public void setNotificationTitle(java.lang.String)
+    30:31:public void setNotificationText(java.lang.String)
+    39:40:public void setNotificationSound(android.net.Uri)
+    42:43:public void setNotificationVibrate(long[])
+    public abstract android.app.Notification construct(android.content.Context)
+com.baidu.android.pushservice.apiproxy.PushNotificationBuilder$1:
+    19:19:public android.app.Notification construct(android.content.Context)
+com.baidu.android.pushservice.apiproxy.PushSettings
+com.baidu.android.silentupdate.SilentManager:
+    private static final java.lang.String b
+    private static final java.lang.String c
+    private static final java.lang.String d
+    public static void enableDebugMode(boolean)
+    public static java.lang.String getKey()
+com.baidu.android.silentupdate.a:
+    a()
+    public static java.lang.String a(byte[],java.lang.String)
+com.baidu.android.silentupdate.b:
+    private static final java.lang.String a
+    b()
+com.baidu.android.silentupdate.c
+com.baidu.frontia.Frontia
+com.baidu.frontia.FrontiaApplication:
+    private static final java.lang.String a
+    private static final java.lang.String b
+    private static final java.lang.String c
+com.baidu.frontia.FrontiaQuery
+com.baidu.frontia.FrontiaQuery$SortOrder
+com.baidu.frontia.a
+com.baidu.frontia.api.FrontiaDeepLink
+com.baidu.frontia.api.FrontiaPush
+com.baidu.frontia.api.FrontiaPush$a
+com.baidu.frontia.api.FrontiaPush$a$1
+com.baidu.frontia.api.FrontiaPush$b
+com.baidu.frontia.api.FrontiaPush$b$1
+com.baidu.frontia.api.FrontiaPush$c
+com.baidu.frontia.api.FrontiaPush$c$1
+com.baidu.frontia.api.FrontiaPush$d
+com.baidu.frontia.api.FrontiaPush$d$1
+com.baidu.frontia.api.FrontiaPushListener
+com.baidu.frontia.api.FrontiaPushListener$CommonMessageListener
+com.baidu.frontia.api.FrontiaPushListener$DescribeMessageListener
+com.baidu.frontia.api.FrontiaPushListener$DescribeMessageResult
+com.baidu.frontia.api.FrontiaPushListener$ListMessageListener
+com.baidu.frontia.api.FrontiaPushListener$PushMessageListener
+com.baidu.frontia.api.FrontiaPushUtil
+com.baidu.frontia.api.FrontiaPushUtil$AndroidContent
+com.baidu.frontia.api.FrontiaPushUtil$DefaultNotificationStyle
+com.baidu.frontia.api.FrontiaPushUtil$DeployStatus
+com.baidu.frontia.api.FrontiaPushUtil$FrontiaPushBasicNotificationBuilder
+com.baidu.frontia.api.FrontiaPushUtil$FrontiaPushCustomNotificationBuilder
+com.baidu.frontia.api.FrontiaPushUtil$IOSContent
+com.baidu.frontia.api.FrontiaPushUtil$MessageContent
+com.baidu.frontia.api.FrontiaPushUtil$NotificationContent
+com.baidu.frontia.api.FrontiaPushUtil$Trigger
+com.baidu.frontia.api.FrontiaPushUtil$a
+com.baidu.frontia.framework.IModule
+org.apache.http.BuildConfig
+org.apache.http.Consts
+org.apache.http.ContentTooLongException
+org.apache.http.HttpConnectionFactory
+org.apache.http.HttpHeaders
+org.apache.http.MessageConstraintException
+org.apache.http.TruncatedChunkException
+org.apache.http.annotation.GuardedBy
+org.apache.http.annotation.Immutable
+org.apache.http.annotation.NotThreadSafe
+org.apache.http.annotation.ThreadSafe
+org.apache.http.auth.AuthOption
+org.apache.http.auth.AuthProtocolState
+org.apache.http.auth.AuthSchemeProvider
+org.apache.http.auth.AuthStateHC4
+org.apache.http.auth.ChallengeState
+org.apache.http.auth.ContextAwareAuthScheme
+org.apache.http.client.AuthCache
+org.apache.http.client.AuthenticationStrategy
+org.apache.http.client.BackoffManager
+org.apache.http.client.ConnectionBackoffStrategy
+org.apache.http.client.RedirectStrategy
+org.apache.http.client.ServiceUnavailableRetryStrategy
+org.apache.http.client.config.AuthSchemes
+org.apache.http.client.config.CookieSpecs
+org.apache.http.client.config.RequestConfig
+org.apache.http.client.config.RequestConfig$Builder
+org.apache.http.client.entity.DecompressingEntity
+org.apache.http.client.entity.DeflateDecompressingEntity
+org.apache.http.client.entity.DeflateInputStream
+org.apache.http.client.entity.DeflateInputStream$DeflateStream
+org.apache.http.client.entity.EntityBuilder
+org.apache.http.client.entity.GzipCompressingEntity
+org.apache.http.client.entity.GzipDecompressingEntity
+org.apache.http.client.entity.LazyDecompressingInputStream
+org.apache.http.client.entity.UrlEncodedFormEntityHC4
+org.apache.http.client.methods.AbstractExecutionAwareRequest
+org.apache.http.client.methods.AbstractExecutionAwareRequest$1
+org.apache.http.client.methods.AbstractExecutionAwareRequest$2
+org.apache.http.client.methods.CloseableHttpResponse
+org.apache.http.client.methods.Configurable
+org.apache.http.client.methods.HttpDeleteHC4
+org.apache.http.client.methods.HttpEntityEnclosingRequestBaseHC4
+org.apache.http.client.methods.HttpExecutionAware
+org.apache.http.client.methods.HttpGetHC4
+org.apache.http.client.methods.HttpHeadHC4
+org.apache.http.client.methods.HttpOptionsHC4
+org.apache.http.client.methods.HttpPatch
+org.apache.http.client.methods.HttpPostHC4
+org.apache.http.client.methods.HttpPutHC4
+org.apache.http.client.methods.HttpRequestBaseHC4
+org.apache.http.client.methods.HttpRequestWrapper
+org.apache.http.client.methods.HttpRequestWrapper$1
+org.apache.http.client.methods.HttpRequestWrapper$HttpEntityEnclosingRequestWrapper
+org.apache.http.client.methods.HttpTraceHC4
+org.apache.http.client.methods.RequestBuilder
+org.apache.http.client.methods.RequestBuilder$InternalEntityEclosingRequest
+org.apache.http.client.methods.RequestBuilder$InternalRequest
+org.apache.http.client.params.HttpClientParamConfig
+org.apache.http.client.protocol.HttpClientContext
+org.apache.http.client.protocol.RequestAcceptEncoding
+org.apache.http.client.protocol.RequestAddCookiesHC4
+org.apache.http.client.protocol.RequestAuthCache
+org.apache.http.client.protocol.RequestClientConnControl
+org.apache.http.client.protocol.RequestDefaultHeadersHC4
+org.apache.http.client.protocol.RequestExpectContinue
+org.apache.http.client.protocol.ResponseContentEncoding
+org.apache.http.client.protocol.ResponseProcessCookiesHC4
+org.apache.http.client.utils.CloneUtilsHC4
+org.apache.http.client.utils.DateUtils
+org.apache.http.client.utils.DateUtils$DateFormatHolder
+org.apache.http.client.utils.DateUtils$DateFormatHolder$1
+org.apache.http.client.utils.HttpClientUtils
+org.apache.http.client.utils.Idn
+org.apache.http.client.utils.JdkIdn
+org.apache.http.client.utils.Punycode
+org.apache.http.client.utils.Rfc3492Idn
+org.apache.http.client.utils.URIBuilder
+org.apache.http.client.utils.URIUtilsHC4
+org.apache.http.client.utils.URLEncodedUtilsHC4
+org.apache.http.concurrent.BasicFuture
+org.apache.http.concurrent.Cancellable
+org.apache.http.concurrent.FutureCallback
+org.apache.http.config.ConnectionConfig
+org.apache.http.config.ConnectionConfig$Builder
+org.apache.http.config.Lookup
+org.apache.http.config.MessageConstraints
+org.apache.http.config.MessageConstraints$Builder
+org.apache.http.config.Registry
+org.apache.http.config.RegistryBuilder
+org.apache.http.config.SocketConfig
+org.apache.http.config.SocketConfig$Builder
+org.apache.http.conn.ConnectionRequest
+org.apache.http.conn.DnsResolver
+org.apache.http.conn.EofSensorInputStreamHC4
+org.apache.http.conn.HttpClientConnectionManager
+org.apache.http.conn.HttpConnectionFactory
+org.apache.http.conn.HttpInetSocketAddress
+org.apache.http.conn.HttpRoutedConnection
+org.apache.http.conn.ManagedHttpClientConnection
+org.apache.http.conn.SchemePortResolver
+org.apache.http.conn.UnsupportedSchemeException
+org.apache.http.conn.scheme.LayeredSchemeSocketFactory
+org.apache.http.conn.scheme.LayeredSocketFactoryAdaptor
+org.apache.http.conn.scheme.SchemeLayeredSocketFactory
+org.apache.http.conn.scheme.SchemeLayeredSocketFactoryAdaptor
+org.apache.http.conn.scheme.SchemeLayeredSocketFactoryAdaptor2
+org.apache.http.conn.scheme.SchemeSocketFactory
+org.apache.http.conn.scheme.SchemeSocketFactoryAdaptor
+org.apache.http.conn.scheme.SocketFactoryAdaptor
+org.apache.http.conn.socket.ConnectionSocketFactory
+org.apache.http.conn.socket.LayeredConnectionSocketFactory
+org.apache.http.conn.socket.PlainConnectionSocketFactory
+org.apache.http.conn.ssl.AbstractVerifierHC4
+org.apache.http.conn.ssl.AllowAllHostnameVerifierHC4
+org.apache.http.conn.ssl.BrowserCompatHostnameVerifierHC4
+org.apache.http.conn.ssl.PrivateKeyDetails
+org.apache.http.conn.ssl.PrivateKeyStrategy
+org.apache.http.conn.ssl.SSLConnectionSocketFactory
+org.apache.http.conn.ssl.SSLContextBuilder
+org.apache.http.conn.ssl.SSLContextBuilder$KeyManagerDelegate
+org.apache.http.conn.ssl.SSLContextBuilder$TrustManagerDelegate
+org.apache.http.conn.ssl.SSLContexts
+org.apache.http.conn.ssl.SSLInitializationException
+org.apache.http.conn.ssl.StrictHostnameVerifierHC4
+org.apache.http.conn.ssl.TrustSelfSignedStrategy
+org.apache.http.conn.ssl.TrustStrategy
+org.apache.http.conn.util.InetAddressUtilsHC4
+org.apache.http.cookie.CookieRestrictionViolationException
+org.apache.http.cookie.CookieSpecProvider
+org.apache.http.entity.AbstractHttpEntityHC4
+org.apache.http.entity.BasicHttpEntityHC4
+org.apache.http.entity.BufferedHttpEntityHC4
+org.apache.http.entity.ByteArrayEntityHC4
+org.apache.http.entity.ContentType
+org.apache.http.entity.FileEntityHC4
+org.apache.http.entity.HttpEntityWrapperHC4
+org.apache.http.entity.InputStreamEntityHC4
+org.apache.http.entity.SerializableEntityHC4
+org.apache.http.entity.StringEntityHC4
+org.apache.http.impl.BHttpConnectionBase
+org.apache.http.impl.ConnSupport
+org.apache.http.impl.DefaultBHttpClientConnection
+org.apache.http.impl.DefaultBHttpClientConnectionFactory
+org.apache.http.impl.DefaultBHttpServerConnection
+org.apache.http.impl.DefaultBHttpServerConnectionFactory
+org.apache.http.impl.DefaultConnectionReuseStrategyHC4
+org.apache.http.impl.DefaultHttpRequestFactoryHC4
+org.apache.http.impl.DefaultHttpResponseFactoryHC4
+org.apache.http.impl.EnglishReasonPhraseCatalogHC4
+org.apache.http.impl.NoConnectionReuseStrategyHC4
+org.apache.http.impl.auth.AuthSchemeBaseHC4
+org.apache.http.impl.auth.BasicSchemeFactoryHC4
+org.apache.http.impl.auth.BasicSchemeHC4
+org.apache.http.impl.auth.DigestSchemeFactoryHC4
+org.apache.http.impl.auth.DigestSchemeHC4
+org.apache.http.impl.auth.HttpAuthenticator
+org.apache.http.impl.auth.HttpAuthenticator$1
+org.apache.http.impl.auth.HttpEntityDigester
+org.apache.http.impl.auth.NTLMEngineImpl
+org.apache.http.impl.auth.NTLMEngineImpl$CipherGen
+org.apache.http.impl.auth.NTLMEngineImpl$HMACMD5
+org.apache.http.impl.auth.NTLMEngineImpl$MD4
+org.apache.http.impl.auth.NTLMEngineImpl$NTLMMessage
+org.apache.http.impl.auth.NTLMEngineImpl$Type1Message
+org.apache.http.impl.auth.NTLMEngineImpl$Type2Message
+org.apache.http.impl.auth.NTLMEngineImpl$Type3Message
+org.apache.http.impl.auth.NTLMSchemeFactory
+org.apache.http.impl.auth.NTLMSchemeHC4
+org.apache.http.impl.auth.NTLMSchemeHC4$State
+org.apache.http.impl.auth.RFC2617SchemeHC4
+org.apache.http.impl.client.AIMDBackoffManager
+org.apache.http.impl.client.AuthenticationStrategyImpl
+org.apache.http.impl.client.BasicAuthCache
+org.apache.http.impl.client.BasicCookieStoreHC4
+org.apache.http.impl.client.BasicCredentialsProviderHC4
+org.apache.http.impl.client.BasicResponseHandlerHC4
+org.apache.http.impl.client.Clock
+org.apache.http.impl.client.CloseableHttpClient
+org.apache.http.impl.client.CloseableHttpResponseProxy
+org.apache.http.impl.client.DefaultBackoffStrategy
+org.apache.http.impl.client.DefaultConnectionKeepAliveStrategyHC4
+org.apache.http.impl.client.DefaultHttpRequestRetryHandlerHC4
+org.apache.http.impl.client.DefaultRedirectStrategy
+org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy
+org.apache.http.impl.client.DefaultUserTokenHandlerHC4
+org.apache.http.impl.client.EntityEnclosingRequestWrapperHC4
+org.apache.http.impl.client.EntityEnclosingRequestWrapperHC4$EntityWrapper
+org.apache.http.impl.client.FutureRequestExecutionMetrics
+org.apache.http.impl.client.FutureRequestExecutionMetrics$DurationCounter
+org.apache.http.impl.client.FutureRequestExecutionService
+org.apache.http.impl.client.HttpClientBuilder
+org.apache.http.impl.client.HttpClients
+org.apache.http.impl.client.HttpRequestFutureTask
+org.apache.http.impl.client.HttpRequestTaskCallable
+org.apache.http.impl.client.InternalHttpClient
+org.apache.http.impl.client.InternalHttpClient$1
+org.apache.http.impl.client.LaxRedirectStrategy
+org.apache.http.impl.client.MinimalHttpClient
+org.apache.http.impl.client.MinimalHttpClient$1
+org.apache.http.impl.client.NoopUserTokenHandler
+org.apache.http.impl.client.NullBackoffStrategy
+org.apache.http.impl.client.ProxyAuthenticationStrategy
+org.apache.http.impl.client.ProxyClient
+org.apache.http.impl.client.RedirectLocationsHC4
+org.apache.http.impl.client.StandardHttpRequestRetryHandler
+org.apache.http.impl.client.SystemClock
+org.apache.http.impl.client.SystemDefaultCredentialsProvider
+org.apache.http.impl.client.TargetAuthenticationStrategy
+org.apache.http.impl.conn.BasicHttpClientConnectionManager
+org.apache.http.impl.conn.BasicHttpClientConnectionManager$1
+org.apache.http.impl.conn.CPool
+org.apache.http.impl.conn.CPoolEntry
+org.apache.http.impl.conn.CPoolProxy
+org.apache.http.impl.conn.ConnectionShutdownException
+org.apache.http.impl.conn.DefaultHttpResponseParser
+org.apache.http.impl.conn.DefaultHttpResponseParserFactory
+org.apache.http.impl.conn.DefaultManagedHttpClientConnection
+org.apache.http.impl.conn.DefaultProxyRoutePlanner
+org.apache.http.impl.conn.DefaultRoutePlanner
+org.apache.http.impl.conn.DefaultSchemePortResolver
+org.apache.http.impl.conn.HttpClientConnectionOperator
+org.apache.http.impl.conn.InMemoryDnsResolver
+org.apache.http.impl.conn.LoggingInputStream
+org.apache.http.impl.conn.LoggingManagedHttpClientConnection
+org.apache.http.impl.conn.LoggingOutputStream
+org.apache.http.impl.conn.ManagedHttpClientConnectionFactory
+org.apache.http.impl.conn.PoolingHttpClientConnectionManager
+org.apache.http.impl.conn.PoolingHttpClientConnectionManager$1
+org.apache.http.impl.conn.PoolingHttpClientConnectionManager$ConfigData
+org.apache.http.impl.conn.PoolingHttpClientConnectionManager$InternalConnectionFactory
+org.apache.http.impl.conn.SystemDefaultDnsResolver
+org.apache.http.impl.conn.SystemDefaultRoutePlanner
+org.apache.http.impl.conn.SystemDefaultRoutePlanner$1
+org.apache.http.impl.conn.WireHC4
+org.apache.http.impl.cookie.AbstractCookieAttributeHandlerHC4
+org.apache.http.impl.cookie.AbstractCookieSpecHC4
+org.apache.http.impl.cookie.BasicClientCookie2HC4
+org.apache.http.impl.cookie.BasicClientCookieHC4
+org.apache.http.impl.cookie.BasicCommentHandlerHC4
+org.apache.http.impl.cookie.BasicDomainHandlerHC4
+org.apache.http.impl.cookie.BasicExpiresHandlerHC4
+org.apache.http.impl.cookie.BasicMaxAgeHandlerHC4
+org.apache.http.impl.cookie.BasicPathHandlerHC4
+org.apache.http.impl.cookie.BasicSecureHandlerHC4
+org.apache.http.impl.cookie.BestMatchSpecFactoryHC4
+org.apache.http.impl.cookie.BestMatchSpecHC4
+org.apache.http.impl.cookie.BrowserCompatSpecFactoryHC4
+org.apache.http.impl.cookie.BrowserCompatSpecFactoryHC4$SecurityLevel
+org.apache.http.impl.cookie.BrowserCompatSpecHC4
+org.apache.http.impl.cookie.BrowserCompatSpecHC4$1
+org.apache.http.impl.cookie.BrowserCompatSpecHC4$2
+org.apache.http.impl.cookie.BrowserCompatVersionAttributeHandler
+org.apache.http.impl.cookie.CookieSpecBaseHC4
+org.apache.http.impl.cookie.IgnoreSpec
+org.apache.http.impl.cookie.IgnoreSpecFactory
+org.apache.http.impl.cookie.NetscapeDomainHandlerHC4
+org.apache.http.impl.cookie.NetscapeDraftHeaderParserHC4
+org.apache.http.impl.cookie.NetscapeDraftSpecFactoryHC4
+org.apache.http.impl.cookie.NetscapeDraftSpecHC4
+org.apache.http.impl.cookie.PublicSuffixFilterHC4
+org.apache.http.impl.cookie.PublicSuffixListParserHC4
+org.apache.http.impl.cookie.RFC2109DomainHandlerHC4
+org.apache.http.impl.cookie.RFC2109SpecFactoryHC4
+org.apache.http.impl.cookie.RFC2109SpecHC4
+org.apache.http.impl.cookie.RFC2109VersionHandlerHC4
+org.apache.http.impl.cookie.RFC2965CommentUrlAttributeHandlerHC4
+org.apache.http.impl.cookie.RFC2965DiscardAttributeHandlerHC4
+org.apache.http.impl.cookie.RFC2965DomainAttributeHandlerHC4
+org.apache.http.impl.cookie.RFC2965PortAttributeHandlerHC4
+org.apache.http.impl.cookie.RFC2965SpecFactoryHC4
+org.apache.http.impl.cookie.RFC2965SpecHC4
+org.apache.http.impl.cookie.RFC2965VersionAttributeHandlerHC4
+org.apache.http.impl.entity.DisallowIdentityContentLengthStrategy
+org.apache.http.impl.entity.LaxContentLengthStrategyHC4
+org.apache.http.impl.entity.StrictContentLengthStrategyHC4
+org.apache.http.impl.execchain.BackoffStrategyExec
+org.apache.http.impl.execchain.ClientExecChain
+org.apache.http.impl.execchain.ConnectionHolder
+org.apache.http.impl.execchain.MainClientExec
+org.apache.http.impl.execchain.MinimalClientExec
+org.apache.http.impl.execchain.ProtocolExec
+org.apache.http.impl.execchain.Proxies
+org.apache.http.impl.execchain.RedirectExec
+org.apache.http.impl.execchain.RequestAbortedException
+org.apache.http.impl.execchain.RequestEntityExecHandler
+org.apache.http.impl.execchain.ResponseEntityWrapper
+org.apache.http.impl.execchain.ResponseProxyHandler
+org.apache.http.impl.execchain.RetryExec
+org.apache.http.impl.execchain.ServiceUnavailableRetryExec
+org.apache.http.impl.execchain.TunnelRefusedException
+org.apache.http.impl.io.AbstractMessageParserHC4
+org.apache.http.impl.io.AbstractMessageWriterHC4
+org.apache.http.impl.io.ChunkedInputStreamHC4
+org.apache.http.impl.io.ChunkedOutputStreamHC4
+org.apache.http.impl.io.ContentLengthInputStreamHC4
+org.apache.http.impl.io.ContentLengthOutputStreamHC4
+org.apache.http.impl.io.DefaultHttpRequestParser
+org.apache.http.impl.io.DefaultHttpRequestParserFactory
+org.apache.http.impl.io.DefaultHttpRequestWriter
+org.apache.http.impl.io.DefaultHttpRequestWriterFactory
+org.apache.http.impl.io.DefaultHttpResponseParser
+org.apache.http.impl.io.DefaultHttpResponseParserFactory
+org.apache.http.impl.io.DefaultHttpResponseWriter
+org.apache.http.impl.io.DefaultHttpResponseWriterFactory
+org.apache.http.impl.io.IdentityInputStreamHC4
+org.apache.http.impl.io.IdentityOutputStreamHC4
+org.apache.http.impl.io.SessionInputBufferImpl
+org.apache.http.impl.io.SessionOutputBufferImpl
+org.apache.http.impl.pool.BasicConnFactory
+org.apache.http.impl.pool.BasicConnPool
+org.apache.http.impl.pool.BasicPoolEntry
+org.apache.http.io.BufferInfo
+org.apache.http.io.HttpMessageParserFactory
+org.apache.http.io.HttpMessageWriterFactory
+org.apache.http.message.BasicHeaderValueFormatterHC4
+org.apache.http.message.BasicHeaderValueParserHC4
+org.apache.http.message.BasicLineFormatterHC4
+org.apache.http.message.BasicLineParserHC4
+org.apache.http.params.HttpParamConfig
+org.apache.http.params.HttpParamsNames
+org.apache.http.pool.AbstractConnPool
+org.apache.http.pool.AbstractConnPool$1
+org.apache.http.pool.AbstractConnPool$2
+org.apache.http.pool.AbstractConnPool$3
+org.apache.http.pool.AbstractConnPool$4
+org.apache.http.pool.ConnFactory
+org.apache.http.pool.ConnPool
+org.apache.http.pool.ConnPoolControl
+org.apache.http.pool.PoolEntry
+org.apache.http.pool.PoolEntryCallback
+org.apache.http.pool.PoolEntryFuture
+org.apache.http.pool.PoolStats
+org.apache.http.pool.RouteSpecificPool
+org.apache.http.protocol.BasicHttpContextHC4
+org.apache.http.protocol.ChainBuilder
+org.apache.http.protocol.HttpCoreContext
+org.apache.http.protocol.HttpProcessorBuilder
+org.apache.http.protocol.HttpRequestHandlerMapper
+org.apache.http.protocol.ImmutableHttpProcessor
+org.apache.http.protocol.RequestConnControlHC4
+org.apache.http.protocol.RequestContentHC4
+org.apache.http.protocol.RequestDateHC4
+org.apache.http.protocol.RequestTargetHostHC4
+org.apache.http.protocol.RequestUserAgentHC4
+org.apache.http.protocol.ResponseConnControlHC4
+org.apache.http.util.Args
+org.apache.http.util.Asserts
+org.apache.http.util.CharsetUtils
+org.apache.http.util.EntityUtilsHC4
+org.apache.http.util.NetUtils
+org.apache.http.util.TextUtils
+org.apache.http.util.VersionInfoHC4

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="RatingBar_modi" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxWidth">22.0px</item>
+        <item name="android:maxHeight">22.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_c</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_c</item>
+        <item name="android:minWidth">22.0px</item>
+        <item name="android:minHeight">22.0px</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="RatingBar_modi_huibaise" parent="@android:style/Widget.RatingBar">
+        <item name="android:maxWidth">22.0px</item>
+        <item name="android:maxHeight">22.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_huibaise</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_huibaise</item>
+        <item name="android:minWidth">22.0px</item>
+        <item name="android:minHeight">22.0px</item>
+        <item name="android:thumb">@null</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <style name="EditRatingBar_modi" parent="@android:style/Widget.RatingBar">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:maxWidth">47.0px</item>
+        <item name="android:maxHeight">56.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_big</item>
+        <item name="android:progressDrawable">@drawable/ratingbar_big</item>
+        <item name="android:minWidth">47.0px</item>
+        <item name="android:minHeight">56.0px</item>
+        <item name="android:thumb">@null</item>
+    </style>
+    <style name="progressBar_activity_wait">
+        <item name="android:maxWidth">24.0px</item>
+        <item name="android:maxHeight">23.0px</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@anim/progressbar_activity_waiting</item>
+        <item name="android:progressDrawable">@anim/progressbar_activity_waiting</item>
+        <item name="android:minWidth">24.0px</item>
+        <item name="android:minHeight">23.0px</item>
+    </style>
+    <style name="progressBar_download">
+        <item name="android:maxHeight">3.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_download</item>
+        <item name="android:minHeight">3.0px</item>
+    </style>
+    <style name="progressBar_star">
+        <item name="android:maxHeight">3.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_for_star</item>
+        <item name="android:minHeight">3.0px</item>
+    </style>
+    <style name="progressBar_star_huibaise">
+        <item name="android:maxHeight">15.0px</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_shenqianhui</item>
+        <item name="android:minHeight">15.0px</item>
+    </style>
+    <style name="dialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="sw_left_text">
+        <item name="android:textSize">20.0px</item>
+        <item name="android:textColor">@color/sw_download_count_text</item>
+    </style>
+    <style name="sw_main_title">
+        <item name="android:textSize">26.0px</item>
+        <item name="android:textColor">@color/sw_detail_title</item>
+    </style>
+    <style name="sw_main_text">
+        <item name="android:textSize">20.0px</item>
+        <item name="android:textColor">@color/sw_detail_text</item>
+        <item name="android:singleLine">false</item>
+    </style>
+    <style name="sw_icon_button_text">
+        <item name="android:textSize">18.0px</item>
+        <item name="android:textColor">#ff487da2</item>
+    </style>
+    <style name="sw_detail_normal_text">
+        <item name="android:textSize">17.0px</item>
+        <item name="android:textColor">#ff464646</item>
+    </style>
+    <style name="titleshadow">
+        <item name="android:textColor">#fff3f7f8</item>
+        <item name="android:shadowColor">#33000000</item>
+        <item name="android:shadowDy">-0.5</item>
+        <item name="android:shadowRadius">2.0</item>
+    </style>
+    <style name="NotificationTitle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18.0sp</item>
+    </style>
+    
+    <!-- activity dialog style -->
+    <style name="activity_dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+	
+    <!-- smooth progress bar -->
+    <style name="Theme.SmoothProgressBarDefaults" parent="android:Theme">
+        <item name="spbStyle">@style/SmoothProgressBar</item>
+    </style>
+    
+    <style name="SmoothProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="spb_color">@color/spb_default_color</item>
+        <item name="spb_sections_count">@integer/spb_default_sections_count</item>
+        <item name="spb_speed">@string/spb_default_speed</item>
+        <item name="spb_stroke_width">@dimen/spb_default_stroke_width</item>
+        <item name="spb_stroke_separator_length">@dimen/spb_default_stroke_separator_length</item>
+        <item name="spb_reversed">@bool/spb_default_reversed</item>
+        <item name="spb_mirror_mode">@bool/spb_default_mirror_mode</item>
+    </style>
+    
+    <style name="anim_activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_in_anim</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_out_anim</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_in_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_out_anim</item>
+    </style>
+    
+    <style name="MyTheme.NoTitleBar.Fullscreen" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+	    <item name="android:windowAnimationStyle">@style/anim_activity</item>
+	</style>
+    
+    <style name="MyTheme" parent="@style/AppStore.Theme">
+	    <item name="android:windowAnimationStyle">@style/anim_activity</item>
+	    <item name="android:actionBarTabStyle">@style/MyActionBarTabs</item>
+	</style>
+	
+    <!-- ActionBar tabs styles -->
+    <style name="MyActionBarTabs"
+           parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <!-- tab indicator -->
+        <item name="android:background">@drawable/actionbar_tab_selector</item>
+    </style>
+</resources>

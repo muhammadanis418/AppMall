@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="trans">#00000000</item>
+    <item type="drawable" name="transparent">#99555555</item>
+    <item type="drawable" name="processbar_for_star">#ff5fb7f0</item>
+    <item type="drawable" name="processbar_qianhui">#ffd8d6d6</item>
+    <item type="drawable" name="processbar_star">#ffc6c6c6</item>
+    <item type="drawable" name="processbar_download_bg">#ffd4dadf</item>
+    <item type="drawable" name="left_nav_selected">#ff9ed0ff</item>
+    <item type="drawable" name="blue_color">#ff78a8f5</item>
+    <item type="drawable" name="jindu_color">#ff31A6F3</item>
+</resources>
